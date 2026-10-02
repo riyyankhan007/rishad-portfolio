@@ -5,7 +5,7 @@ const projects=[
 {slug:"the-bear-house-m3m",name:"The Bear House — M3M Paragon 57",meta:"RETAIL INTERIOR · M3M",image:"/projects/bear-house-m3m/01.jpg"}];
 
 export default function Home(){return <main className="shell">
-<nav className="nav"><a href="/">MR / 26</a><div className="navlinks"><a href="/projects">Work</a><a href="/about">About</a><a href="/contact">Contact</a></div></nav>
+<nav className="nav"><a href="/">MR / 26</a><div className="navlinks"><a href="/">About</a><a href="/projects">Work</a><a href="/contact">Contact</a></div></nav>
 <section className="aboutHero">
 <div><div className="eyebrow">Civil Engineer / Retail Interior Designer</div><h1>Muhammad<br/>Rishad</h1><p className="lead">I work across retail interiors, technical documentation and site execution — translating design intent into spaces that can actually be built.</p><div className="heroActions"><a className="cta" href="/projects">View selected work <span>↗</span></a><a className="textlink" href="mailto:rishad.muhammad313@gmail.com">Start a conversation</a></div></div>
 <div className="profileVisual"><Image src="/projects/bear-house-jaipur/01.jpg" alt="The Bear House Pacific Mall Jaipur retail interior" fill priority sizes="(max-width: 800px) 100vw, 42vw" style={{objectFit:"cover"}}/><div className="imageLabel">01 / SELECTED WORK</div></div>
