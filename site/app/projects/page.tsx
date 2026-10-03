@@ -124,14 +124,7 @@ export default function ProjectsPage() {
                     boxShadow: "var(--shadow-md)",
                   }}
                 >
-                  <div
-                    style={{
-                      display: "grid",
-                      gridTemplateColumns: "1.15fr 0.85fr",
-                      gap: "clamp(30px, 5vw, 60px)",
-                      alignItems: "center",
-                    }}
-                  >
+                  <div className="project-listing-row">
                     {/* Media preview */}
                     <div
                       style={{
@@ -211,17 +204,7 @@ export default function ProjectsPage() {
                         {p.quote}
                       </p>
 
-                      <div
-                        style={{
-                          display: "grid",
-                          gridTemplateColumns: "repeat(3, 1fr)",
-                          gap: "12px",
-                          padding: "16px 0",
-                          borderTop: "1px solid var(--line-subtle)",
-                          borderBottom: "1px solid var(--line-subtle)",
-                          marginBottom: "24px",
-                        }}
-                      >
+                      <div className="project-listing-stats">
                         {p.stats.map((s) => (
                           <div key={s.label}>
                             <div

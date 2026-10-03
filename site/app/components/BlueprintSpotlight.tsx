@@ -155,9 +155,10 @@ export default function BlueprintSpotlight() {
             className="blueprint-image-container"
             style={{
               aspectRatio: "16 / 9",
-              minHeight: "360px",
+              minHeight: "clamp(220px, 35vw, 420px)",
               boxShadow: "0 20px 50px rgba(0,0,0,0.5)",
               border: "1px solid rgba(255,255,255,0.1)",
+              width: "100%",
             }}
           >
             {viewMode === "render" ? (
@@ -182,13 +183,13 @@ export default function BlueprintSpotlight() {
             <div
               style={{
                 position: "absolute",
-                bottom: "16px",
-                right: "16px",
+                bottom: "14px",
+                right: "14px",
                 background: "rgba(25, 23, 21, 0.85)",
                 color: "#ffffff",
-                padding: "6px 14px",
+                padding: "5px 12px",
                 borderRadius: "var(--radius-pill)",
-                fontSize: "11px",
+                fontSize: "10.5px",
                 fontFamily: "var(--font-mono)",
                 backdropFilter: "blur(8px)",
               }}
@@ -197,16 +198,8 @@ export default function BlueprintSpotlight() {
             </div>
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1.3fr 0.7fr",
-              gap: "30px",
-              marginTop: "24px",
-              alignItems: "center",
-            }}
-          >
-            <p style={{ color: "#d6cfc4", fontSize: "15px", lineHeight: "1.65" }}>
+          <div className="blueprint-bottom-grid">
+            <p style={{ color: "#d6cfc4", fontSize: "14.5px", lineHeight: "1.65" }}>
               {selectedItem.description}
             </p>
 

@@ -69,38 +69,37 @@ export default function Navbar() {
           </nav>
 
           <div className="nav-actions">
+            {/* RESUME BUTTON: Always visible */}
             <a
               href="/resume/Muhammad_Rishad_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-pill btn-pill-outline hide-on-phone"
+              className="btn-pill btn-pill-outline nav-btn-resume"
               download
+              aria-label="Download Muhammad Rishad Resume PDF"
             >
-              <span>Resume PDF</span>
-              <span style={{ fontSize: "11px" }}>↓</span>
+              <span className="resume-label-full">Resume PDF</span>
+              <span className="resume-label-short">Resume</span>
+              <span className="btn-arrow">↓</span>
             </a>
-            <Link href="/contact" className="btn-pill btn-pill-primary hide-on-phone">
-              <span>Let&apos;s Talk</span>
-              <span>↗</span>
+
+            {/* LET'S TALK BUTTON: Always visible */}
+            <Link
+              href="/contact"
+              className="btn-pill btn-pill-primary nav-btn-talk"
+              aria-label="Contact Muhammad Rishad"
+            >
+              <span className="talk-label-full">Let&apos;s Talk</span>
+              <span className="talk-label-short">Talk</span>
+              <span className="btn-arrow">↗</span>
             </Link>
+
+            {/* MOBILE MENU TOGGLE */}
             <button
               className="mobile-toggle-btn"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle navigation menu"
               aria-expanded={mobileMenuOpen}
-              style={{
-                display: "none",
-                fontSize: "22px",
-                width: "44px",
-                height: "44px",
-                borderRadius: "var(--radius-sm)",
-                border: "1px solid var(--line-medium)",
-                background: "rgba(255,255,255,0.8)",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "var(--ink-primary)",
-                cursor: "pointer",
-              }}
             >
               {mobileMenuOpen ? "✕" : "☰"}
             </button>
@@ -220,19 +219,6 @@ export default function Navbar() {
           to {
             opacity: 1;
             transform: translateY(0);
-          }
-        }
-        @media (max-width: 860px) {
-          .nav-links {
-            display: none !important;
-          }
-          .mobile-toggle-btn {
-            display: flex !important;
-          }
-        }
-        @media (max-width: 600px) {
-          .hide-on-phone {
-            display: none !important;
           }
         }
       `}</style>

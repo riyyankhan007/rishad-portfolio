@@ -37,8 +37,8 @@ export default function InteractiveResume() {
       {activeTab === "experience" && (
         <div className="timeline-list">
           <div className="timeline-entry">
-            <div>
-              <div className="timeline-period">OCT 2026 — PRESENT</div>
+            <div className="timeline-meta">
+              <div className="timeline-period">OCT 2024 — PRESENT</div>
               <div className="timeline-company">Do More Design Studio</div>
               <div style={{ fontSize: "11px", color: "var(--accent-terracotta)", marginTop: "4px" }}>
                 Bangalore, India
@@ -67,7 +67,7 @@ export default function InteractiveResume() {
           </div>
 
           <div className="timeline-entry">
-            <div>
+            <div className="timeline-meta">
               <div className="timeline-period">JUN 2024 — JUN 2025</div>
               <div className="timeline-company">Altisource</div>
               <div style={{ fontSize: "11px", color: "var(--ink-muted)", marginTop: "4px" }}>
@@ -94,7 +94,7 @@ export default function InteractiveResume() {
           </div>
 
           <div className="timeline-entry">
-            <div>
+            <div className="timeline-meta">
               <div className="timeline-period">MAY 2023 — MAY 2024</div>
               <div className="timeline-company">Shah Enterprises</div>
               <div style={{ fontSize: "11px", color: "var(--accent-terracotta)", marginTop: "4px" }}>
@@ -121,7 +121,7 @@ export default function InteractiveResume() {
           </div>
 
           <div className="timeline-entry">
-            <div>
+            <div className="timeline-meta">
               <div className="timeline-period">AUG 2022 — SEP 2022</div>
               <div className="timeline-company">Ecoparadigm</div>
               <div style={{ fontSize: "11px", color: "var(--ink-muted)", marginTop: "4px" }}>
@@ -150,18 +150,7 @@ export default function InteractiveResume() {
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           <div className="patent-banner" style={{ margin: 0 }}>
             <div className="patent-content">
-              <span
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  color: "var(--accent-brass)",
-                  fontSize: "12px",
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                  fontWeight: 600,
-                  display: "block",
-                  marginBottom: "8px",
-                }}
-              >
+              <span className="patent-eyebrow">
                 GRANTED INTERNATIONAL PATENT
               </span>
               <h3>German Patent Granted: Biodegradable Agro-Waste Material</h3>
@@ -174,20 +163,12 @@ export default function InteractiveResume() {
                 <span className="patent-badge-item">♻ Sustainable Material Science</span>
               </div>
             </div>
-            <div
-              style={{
-                background: "rgba(255, 255, 255, 0.05)",
-                padding: "28px",
-                borderRadius: "var(--radius-lg)",
-                border: "1px solid rgba(255, 255, 255, 0.12)",
-                textAlign: "center",
-              }}
-            >
-              <div style={{ fontSize: "42px", marginBottom: "8px" }}>🏆</div>
-              <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "20px", marginBottom: "8px" }}>
+            <div className="patent-award-card">
+              <div style={{ fontSize: "40px", marginBottom: "8px" }}>🏆</div>
+              <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "20px", marginBottom: "8px", color: "#ffffff" }}>
                 CSIR Winner
               </h4>
-              <p style={{ fontSize: "13px", color: "#ccc2b4", lineHeight: "1.5" }}>
+              <p style={{ fontSize: "13px", color: "#ccc2b4", lineHeight: "1.55" }}>
                 Winner of CSIR &ndash; Future Entrepreneurs Connect for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled materials.
               </p>
             </div>
@@ -198,7 +179,7 @@ export default function InteractiveResume() {
       {activeTab === "education" && (
         <div className="timeline-list">
           <div className="timeline-entry">
-            <div>
+            <div className="timeline-meta">
               <div className="timeline-period">2019 — 2023</div>
               <div className="timeline-company">Nitte Meenakshi Institute of Technology</div>
               <div style={{ fontSize: "11px", color: "var(--accent-terracotta)", marginTop: "4px" }}>
@@ -225,7 +206,7 @@ export default function InteractiveResume() {
               <p className="timeline-description">
                 &ldquo;My civil engineering training provided the rigorous foundation behind my spatial work: understanding structural load paths, concrete & steel behavior, building services, surveying, and material mechanics. This allows me to design retail interiors that are structurally sound, code-compliant, and immediately buildable.&rdquo;
               </p>
-              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "14px" }}>
+              <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "14px" }}>
                 <span className="skill-tag-pill">Structural Engineering</span>
                 <span className="skill-tag-pill">Construction Technology</span>
                 <span className="skill-tag-pill">Surveying & Benchmarking</span>
@@ -236,7 +217,7 @@ export default function InteractiveResume() {
           </div>
 
           <div className="timeline-entry">
-            <div>
+            <div className="timeline-meta">
               <div className="timeline-period">LANGUAGES</div>
               <div className="timeline-company">Multilingual Communication</div>
             </div>
@@ -245,22 +226,22 @@ export default function InteractiveResume() {
               <p className="timeline-description">
                 &ldquo;Managing fit-outs requires communicating clearly with corporate clients, design directors, municipal reviewers, and on-site craftsmen. I am fluent across four major languages:&rdquo;
               </p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", marginTop: "14px" }}>
-                <div style={{ padding: "12px", background: "var(--bg-canvas)", borderRadius: "var(--radius-sm)", textAlign: "center" }}>
-                  <div style={{ fontWeight: 600, fontSize: "14px" }}>English</div>
-                  <div style={{ fontSize: "11px", color: "var(--ink-muted)" }}>Professional</div>
+              <div className="resume-languages-grid">
+                <div className="language-badge-card">
+                  <div className="lang-title">English</div>
+                  <div className="lang-level">Professional</div>
                 </div>
-                <div style={{ padding: "12px", background: "var(--bg-canvas)", borderRadius: "var(--radius-sm)", textAlign: "center" }}>
-                  <div style={{ fontWeight: 600, fontSize: "14px" }}>Hindi</div>
-                  <div style={{ fontSize: "11px", color: "var(--ink-muted)" }}>Fluent</div>
+                <div className="language-badge-card">
+                  <div className="lang-title">Hindi</div>
+                  <div className="lang-level">Fluent</div>
                 </div>
-                <div style={{ padding: "12px", background: "var(--bg-canvas)", borderRadius: "var(--radius-sm)", textAlign: "center" }}>
-                  <div style={{ fontWeight: 600, fontSize: "14px" }}>Kannada</div>
-                  <div style={{ fontSize: "11px", color: "var(--ink-muted)" }}>Native</div>
+                <div className="language-badge-card">
+                  <div className="lang-title">Kannada</div>
+                  <div className="lang-level">Native</div>
                 </div>
-                <div style={{ padding: "12px", background: "var(--bg-canvas)", borderRadius: "var(--radius-sm)", textAlign: "center" }}>
-                  <div style={{ fontWeight: 600, fontSize: "14px" }}>Telugu</div>
-                  <div style={{ fontSize: "11px", color: "var(--ink-muted)" }}>Fluent</div>
+                <div className="language-badge-card">
+                  <div className="lang-title">Telugu</div>
+                  <div className="lang-level">Fluent</div>
                 </div>
               </div>
             </div>
@@ -314,24 +295,12 @@ export default function InteractiveResume() {
         </div>
       )}
 
-      <div
-        style={{
-          marginTop: "36px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "16px",
-          padding: "20px 28px",
-          background: "var(--bg-subtle)",
-          borderRadius: "var(--radius-lg)",
-        }}
-      >
-        <div>
-          <strong style={{ display: "block", fontSize: "15px" }}>
+      <div className="resume-download-banner">
+        <div style={{ maxWidth: "560px" }}>
+          <strong style={{ display: "block", fontSize: "14.5px" }}>
             Want to review my official resume document?
           </strong>
-          <span style={{ fontSize: "13px", color: "var(--ink-secondary)" }}>
+          <span style={{ fontSize: "12.5px", color: "var(--ink-secondary)", display: "block", marginTop: "4px" }}>
             Includes complete verified corporate history, academic credentials, and project references.
           </span>
         </div>
@@ -339,7 +308,7 @@ export default function InteractiveResume() {
           href="/resume/Muhammad_Rishad_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-pill btn-pill-primary"
+          className="btn-pill btn-pill-primary resume-download-btn"
           download
         >
           <span>Download Official Resume PDF</span>

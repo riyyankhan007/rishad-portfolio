@@ -64,14 +64,7 @@ export default function Contact() {
 
         <section>
           <div className="shell">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "clamp(40px, 6vw, 80px)",
-                alignItems: "start",
-              }}
-            >
+            <div className="contact-layout-grid">
               {/* CONTACT DETAILS & INFO */}
               <div className="reveal-on-scroll">
                 <h2
@@ -270,7 +263,7 @@ export default function Contact() {
                       />
                     </div>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" }}>
+                    <div className="contact-form-row">
                       <div>
                         <label style={{ display: "block", fontSize: "12px", fontWeight: 600, marginBottom: "6px" }}>
                           Email Address

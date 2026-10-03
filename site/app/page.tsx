@@ -6,6 +6,7 @@ import ScrollObserver from "./components/ScrollObserver";
 import InteractiveResume from "./components/InteractiveResume";
 import BlueprintSpotlight from "./components/BlueprintSpotlight";
 import PresentationDeck, { SlideItem } from "./components/PresentationDeck";
+import BrandLogos from "./components/BrandLogos";
 
 const projects = [
   {
@@ -92,14 +93,6 @@ const featuredDeckSlides: SlideItem[] = [
   },
 ];
 
-const brands = [
-  "Aditya Birla Group",
-  "The Bear House",
-  "VOX",
-  "Furlenco",
-  "Nobero",
-  "BLR Airport T2",
-];
 
 const marqueeWords = [
   "Retail Interior Design",
@@ -205,38 +198,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* BRANDS COLLABORATED */}
-        <section style={{ padding: "32px 0", borderBottom: "1px solid var(--line-subtle)" }}>
+        {/* BRANDS & CLIENT SPACES (SOLID BLACK BRAND LOGOS & TYPOGRAPHY) */}
+        <section className="brand-logos-section">
           <div className="shell">
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
-              <span
-                style={{
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "11px",
-                  letterSpacing: "0.12em",
-                  color: "var(--ink-muted)",
-                  textTransform: "uppercase",
-                }}
-              >
-                BRANDS & CLIENT SPACES I HAVE WORKED ON:
-              </span>
-              <div style={{ display: "flex", gap: "20px", flexWrap: "wrap", alignItems: "center" }}>
-                {brands.map((b) => (
-                  <span
-                    key={b}
-                    style={{
-                      fontFamily: "var(--font-sans)",
-                      fontSize: "13.5px",
-                      fontWeight: 600,
-                      color: "var(--ink-secondary)",
-                      letterSpacing: "0.02em",
-                    }}
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <BrandLogos />
           </div>
         </section>
 

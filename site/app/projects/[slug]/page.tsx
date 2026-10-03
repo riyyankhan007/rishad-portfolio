@@ -379,17 +379,7 @@ export default async function ProjectPage({
               </p>
 
               {/* SPECIFICATION PILLS */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(4, 1fr)",
-                  gap: "12px",
-                  padding: "16px 0",
-                  borderTop: "1px solid var(--line-subtle)",
-                  borderBottom: "1px solid var(--line-subtle)",
-                }}
-                className="reveal-on-scroll reveal-delay-3"
-              >
+              <div className="case-study-specs-bar reveal-on-scroll reveal-delay-3">
                 <div>
                   <div style={{ fontSize: "9.5px", fontFamily: "var(--font-mono)", color: "var(--ink-muted)", textTransform: "uppercase" }}>
                     AREA
@@ -443,14 +433,7 @@ export default async function ProjectPage({
         {/* FIRST PERSON INTRO & STRATEGY */}
         <section style={{ padding: "30px 0 60px" }}>
           <div className="shell">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1.15fr 0.85fr",
-                gap: "clamp(30px, 5vw, 70px)",
-                alignItems: "start",
-              }}
-            >
+            <div className="case-study-strategy-grid">
               <div className="reveal-on-scroll">
                 <span className="section-eyebrow">DESIGN INTENT & PHILOSOPHY</span>
                 <h2
@@ -532,14 +515,7 @@ export default async function ProjectPage({
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: p.drawingPreviews.length > 1 ? "repeat(2, 1fr)" : "1fr",
-                gap: "20px",
-                marginBottom: "30px",
-              }}
-            >
+            <div className="case-study-drawings-grid">
               {p.drawingPreviews.map((dwg) => (
                 <div
                   key={dwg.src}

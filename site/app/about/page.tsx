@@ -30,11 +30,11 @@ export default function About() {
               <h1
                 style={{
                   fontFamily: "var(--font-serif)",
-                  fontSize: "clamp(42px, 5.5vw, 72px)",
+                  fontSize: "clamp(32px, 4.5vw, 64px)",
                   fontWeight: 400,
-                  lineHeight: 1.08,
-                  letterSpacing: "-0.03em",
-                  marginBottom: "28px",
+                  lineHeight: 1.12,
+                  letterSpacing: "-0.02em",
+                  marginBottom: "24px",
                 }}
                 className="reveal-on-scroll reveal-delay-1"
               >
@@ -58,21 +58,14 @@ export default function About() {
         {/* NARRATIVE SECTION */}
         <section style={{ padding: "40px 0 80px" }}>
           <div className="shell">
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1.2fr 0.8fr",
-                gap: "clamp(40px, 6vw, 80px)",
-                alignItems: "start",
-              }}
-            >
+            <div className="about-narrative-grid">
               <div className="reveal-on-scroll">
                 <h2
                   style={{
                     fontFamily: "var(--font-serif)",
-                    fontSize: "32px",
+                    fontSize: "clamp(26px, 3.2vw, 34px)",
                     fontWeight: 400,
-                    marginBottom: "20px",
+                    marginBottom: "18px",
                   }}
                 >
                   My Journey: From Structures to Storefronts
@@ -82,8 +75,8 @@ export default function About() {
                   style={{
                     display: "flex",
                     flexDirection: "column",
-                    gap: "20px",
-                    fontSize: "16px",
+                    gap: "18px",
+                    fontSize: "15px",
                     lineHeight: 1.7,
                     color: "var(--ink-secondary)",
                   }}
@@ -107,36 +100,16 @@ export default function About() {
               </div>
 
               {/* SIDEBAR HIGHLIGHTS */}
-              <div
-                style={{
-                  background: "var(--bg-surface)",
-                  borderRadius: "var(--radius-xl)",
-                  padding: "36px",
-                  border: "1px solid var(--line-subtle)",
-                  boxShadow: "var(--shadow-md)",
-                }}
-                className="reveal-on-scroll reveal-delay-2"
-              >
-                <div style={{ position: "relative", height: "240px", borderRadius: "var(--radius-lg)", overflow: "hidden", marginBottom: "24px" }}>
+              <div className="about-sidebar-card reveal-on-scroll reveal-delay-2">
+                <div className="about-sidebar-media">
                   <Image
-                    src="/projects/bear-house-jaipur/02.jpg"
+                    src="/projects/bear-house-jaipur/slides/slide-02.jpg"
                     alt="Interior retail environment by Muhammad Rishad"
                     fill
-                    sizes="(max-width: 900px) 100vw, 30vw"
+                    sizes="(max-width: 900px) 100vw, 360px"
                     style={{ objectFit: "cover" }}
                   />
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "12px",
-                      left: "12px",
-                      background: "rgba(255,255,255,0.92)",
-                      padding: "6px 12px",
-                      borderRadius: "var(--radius-pill)",
-                      fontSize: "10px",
-                      fontFamily: "var(--font-mono)",
-                    }}
-                  >
+                  <div className="about-sidebar-badge">
                     THE BEAR HOUSE · JAIPUR
                   </div>
                 </div>
@@ -146,45 +119,36 @@ export default function About() {
                     fontFamily: "var(--font-serif)",
                     fontSize: "22px",
                     fontWeight: 500,
-                    marginBottom: "12px",
+                    marginBottom: "14px",
                   }}
                 >
                   Quick Facts About Me
                 </h3>
 
-                <ul
-                  style={{
-                    listStyle: "none",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "14px",
-                    fontSize: "14px",
-                    color: "var(--ink-secondary)",
-                  }}
-                >
-                  <li style={{ display: "flex", gap: "10px" }}>
-                    <span style={{ color: "var(--accent-terracotta)", fontWeight: "bold" }}>●</span>
+                <ul className="about-facts-list">
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Location:</strong> Bangalore, Karnataka, India</span>
                   </li>
-                  <li style={{ display: "flex", gap: "10px" }}>
-                    <span style={{ color: "var(--accent-terracotta)", fontWeight: "bold" }}>●</span>
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Degree:</strong> B.E. Civil Engineering (NMIT, GPA 7.65)</span>
                   </li>
-                  <li style={{ display: "flex", gap: "10px" }}>
-                    <span style={{ color: "var(--accent-terracotta)", fontWeight: "bold" }}>●</span>
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Patents:</strong> Granted German Patent for Biodegradable Agro-Waste Material</span>
                   </li>
-                  <li style={{ display: "flex", gap: "10px" }}>
-                    <span style={{ color: "var(--accent-terracotta)", fontWeight: "bold" }}>●</span>
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Awards:</strong> CSIR Winner &mdash; Future Entrepreneurs Connect</span>
                   </li>
-                  <li style={{ display: "flex", gap: "10px" }}>
-                    <span style={{ color: "var(--accent-terracotta)", fontWeight: "bold" }}>●</span>
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Key Software:</strong> AutoCAD 2D, Revit, 3D Visualization, Excel, BOQ</span>
                   </li>
                 </ul>
 
-                <div style={{ marginTop: "28px" }}>
+                <div style={{ marginTop: "24px" }}>
                   <a
                     href="/resume/Muhammad_Rishad_Resume.pdf"
                     target="_blank"
