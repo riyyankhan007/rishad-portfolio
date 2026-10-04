@@ -32,17 +32,30 @@ const blueprints: BlueprintItem[] = [
     specs: ["Curved Ceiling Detailing", "SPC Oak Mist Flooring", "Acoustic Wall Panels", "Material Library Layout"],
   },
   {
-    id: "tbh-jaipur-mep",
+    id: "tbh-jaipur-gfc",
     title: "The Bear House — Pacific Mall Jaipur",
-    project: "Comprehensive MEP & Fixture Layout",
-    scale: "1,916 SQ FT Flagship",
+    project: "Full GFC Construction & MEP Coordination",
+    scale: "1,916 SQ FT Flagship · 33 Sheets GFC",
     description:
       "“A retail flagship must look effortless to the shopper. My technical drawing package coordinated multi-tier lighting, power troughs for POS & island cash counters, CCTV security coverage, and HVAC diffuser paths so no utility clashes with custom oak millwork.”",
-    drawingSrc: "/projects/bear-house-jaipur/mep-p1.jpg",
+    drawingSrc: "/projects/bear-house-jaipur/gfc-p4.jpg",
     renderSrc: "/projects/bear-house-jaipur/01.jpg",
-    pdfLink: "/projects/bear-house-jaipur/technical.pdf",
+    pdfLink: "/projects/bear-house-jaipur/gfc-drawings.pdf",
     slug: "the-bear-house-pacific-jaipur",
-    specs: ["Fixture Zoning & Gondolas", "Ceiling Diffuser Coordination", "POS & Electrical Troughs", "1,916 SFT Floor Plate"],
+    specs: ["33-Sheet GFC Set", "Fixture Zoning & Gondolas", "Power & Electrical Troughs", "1,916 SFT Floor Plate"],
+  },
+  {
+    id: "tbh-m3m-gfc",
+    title: "The Bear House — M3M Paragon 57",
+    project: "30-Sheet Good-For-Construction (GFC) Package",
+    scale: "Commercial Retail Bay · Gurugram",
+    description:
+      "“Behind the photorealistic 3D visualization is an exhaustive 30-sheet construction drawing package. I engineered the retail fixture layouts, cash counter raceways, false ceiling levels @ 2850mm, and coordinated HVAC ducting paths to ensure flawless on-site execution.”",
+    drawingSrc: "/projects/bear-house-m3m/gfc-p3.jpg",
+    renderSrc: "/projects/bear-house-m3m/slides/slide-01.jpg",
+    pdfLink: "/projects/bear-house-m3m/gfc-drawings.pdf",
+    slug: "the-bear-house-m3m",
+    specs: ["30-Sheet GFC Set", "Mezzanine & Retail Layout", "Gypsum False Ceiling @ 2850mm", "Lighting Cove & HVAC Routing"],
   },
 ];
 

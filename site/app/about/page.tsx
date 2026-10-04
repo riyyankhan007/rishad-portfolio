@@ -144,6 +144,10 @@ export default function About() {
                   </li>
                   <li className="about-fact-item">
                     <span className="about-fact-bullet">●</span>
+                    <span><strong>Certifications:</strong> Autodesk Certified in BIM Revit Architecture & Structure</span>
+                  </li>
+                  <li className="about-fact-item">
+                    <span className="about-fact-bullet">●</span>
                     <span><strong>Key Software:</strong> AutoCAD 2D, Revit, 3D Visualization, Excel, BOQ</span>
                   </li>
                 </ul>
@@ -173,7 +177,7 @@ export default function About() {
               <span className="section-eyebrow">DETAILED TIMELINE</span>
               <h2 className="section-title">Professional Experience & Accreditations</h2>
               <p className="section-lead">
-                Explore each chapter of my career in my own words &mdash; click the tabs below to view my experience, patents, education, and technical capabilities.
+                Explore each chapter of my career in my own words &mdash; click the tabs below to view my experience, patents, verified certifications, education, and technical capabilities.
               </p>
             </div>
 

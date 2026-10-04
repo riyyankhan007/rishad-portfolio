@@ -7,6 +7,13 @@ import Footer from "../../components/Footer";
 import ScrollObserver from "../../components/ScrollObserver";
 import PresentationDeck, { SlideItem } from "../../components/PresentationDeck";
 
+interface DocumentItem {
+  label: string;
+  url: string;
+  badge?: string;
+  desc?: string;
+}
+
 interface ProjectData {
   title: string;
   subtitle: string;
@@ -22,7 +29,8 @@ interface ProjectData {
   materials: { name: string; desc: string }[];
   deckSlides: SlideItem[];
   drawingPreviews: { src: string; caption: string }[];
-  doc: string;
+  doc?: string;
+  docs?: DocumentItem[];
   nextSlug: string;
   nextTitle: string;
 }
@@ -115,10 +123,28 @@ const data: Record<string, ProjectData> = {
       },
     ],
     drawingPreviews: [
-      { src: "/projects/bear-house-jaipur/mep-p1.jpg", caption: "Comprehensive MEP & Fixture Layout Plan (AutoCAD DWG/PDF)" },
-      { src: "/projects/bear-house-jaipur/mep-p3.jpg", caption: "Lighting, Power Trench & Ceiling Diffuser Coordination Sheet" },
+      { src: "/projects/bear-house-jaipur/gfc-p4.jpg", caption: "GFC Sheet 04: Overall Store Fixture & Merchandise Zoning Layout" },
+      { src: "/projects/bear-house-jaipur/gfc-p7.jpg", caption: "GFC Sheet 07: Flooring Layout & Custom Skirting Detailing" },
+      { src: "/projects/bear-house-jaipur/gfc-p11.jpg", caption: "GFC Sheet 11: Gypsum False Ceiling Plan @ 3500mm FFL & Cove Detail" },
+      { src: "/projects/bear-house-jaipur/gfc-p14.jpg", caption: "GFC Sheet 14: Retail Lighting Fixture & Track Distribution Plan" },
+      { src: "/projects/bear-house-jaipur/mep-p1.jpg", caption: "MEP Sheet 01: Comprehensive MEP & Electrical Distribution Layout Plan" },
+      { src: "/projects/bear-house-jaipur/mep-p3.jpg", caption: "MEP Sheet 03: Multi-tier Lighting, Power Trench & Ceiling Diffuser Coordination" },
     ],
-    doc: "/projects/bear-house-jaipur/technical.pdf",
+    doc: "/projects/bear-house-jaipur/gfc-drawings.pdf",
+    docs: [
+      {
+        label: "Open Complete GFC Construction PDF Set (33 Sheets)",
+        url: "/projects/bear-house-jaipur/gfc-drawings.pdf",
+        badge: "33 SHEETS · GFC PACKAGE",
+        desc: "Complete architectural construction set covering fixture zoning, floor tile layout, false ceiling coves, and wall sections.",
+      },
+      {
+        label: "Open Comprehensive MEP Engineering Package (PDF)",
+        url: "/projects/bear-house-jaipur/mep-drawings.pdf",
+        badge: "MEP ENGINEERING PACKAGE",
+        desc: "Full engineering set coordinating multi-circuit lighting, HVAC diffusers, power floor raceways, and fire protection.",
+      },
+    ],
     nextSlug: "vox-turquoise-mumbai",
     nextTitle: "VOX — Turquoise Mumbai",
   },
@@ -213,6 +239,14 @@ const data: Record<string, ProjectData> = {
       { src: "/projects/vox-mumbai/gfc-p7.jpg", caption: "Reflected Ceiling Plan (RCP) with Fronto SV06 Black Oak detailing" },
     ],
     doc: "/projects/vox-mumbai/technical.pdf",
+    docs: [
+      {
+        label: "Open Complete GFC Construction PDF Set (22 Sheets)",
+        url: "/projects/vox-mumbai/technical.pdf",
+        badge: "22 SHEETS · FULL GFC",
+        desc: "Complete 22-sheet AutoCAD GFC set covering organic curved ceiling baffles, recessed lighting, and joinery sections.",
+      },
+    ],
     nextSlug: "the-bear-house-m3m",
     nextTitle: "The Bear House — M3M Paragon 57",
   },
@@ -230,7 +264,7 @@ const data: Record<string, ProjectData> = {
     spatialStrategy:
       "I utilized 3D visualization as an iterative design tool to study customer line of sight from multiple angles. I placed back-lit brand statement panels at key visual vanishing points, framed by rhythmic dark metal shelving. Display pedestals of varying heights create dynamic focal points that elevate garments into hero items.",
     engineeringExecution:
-      "Behind the photorealistic 3D renders are precise AutoCAD layouts ensuring compliance with mall MEP guidelines. I detailed fixture dimensions, hang bar clearances, drawer storage capacities, and cash counter ergonomics to streamline retail staff operations during peak shopping hours.",
+      "Behind the photorealistic 3D renders are precise AutoCAD layouts ensuring compliance with mall MEP guidelines. I detailed fixture dimensions, hang bar clearances, and cash counter ergonomics to streamline retail staff operations during peak shopping hours.",
     materials: [
       { name: "Charcoal Oak Veneer", desc: "Deep rich timber panels for backdrops and display islands" },
       { name: "Brushed Champagne Metal", desc: "Precision garment hanging rods and shelf brackets" },
@@ -296,10 +330,20 @@ const data: Record<string, ProjectData> = {
       },
     ],
     drawingPreviews: [
-      { src: "/projects/bear-house-m3m/slides/slide-02.jpg", caption: "3D Perspective Render — Merchandising Bay" },
-      { src: "/projects/bear-house-m3m/slides/slide-04.jpg", caption: "Visual Merchandising Detail & Cash Counter Composition" },
+      { src: "/projects/bear-house-m3m/gfc-p3.jpg", caption: "GFC Sheet 03: Mezzanine & Ground Level Fixture Layout Plan" },
+      { src: "/projects/bear-house-m3m/gfc-p6.jpg", caption: "GFC Sheet 06: Flooring Layout & Ceramic Tile Spec Legend" },
+      { src: "/projects/bear-house-m3m/gfc-p11.jpg", caption: "GFC Sheet 11: Gypsum False Ceiling Plan @ 2850mm FFL" },
+      { src: "/projects/bear-house-m3m/gfc-p15.jpg", caption: "GFC Sheet 15: HVAC Ducting & Diffuser Air Distribution Grid" },
     ],
-    doc: "",
+    doc: "/projects/bear-house-m3m/gfc-drawings.pdf",
+    docs: [
+      {
+        label: "Open Complete GFC Construction PDF Set (30 Sheets)",
+        url: "/projects/bear-house-m3m/gfc-drawings.pdf",
+        badge: "30 SHEETS · GFC PACKAGE",
+        desc: "Complete 30-sheet good-for-construction package with mezzanine zoning, ceiling coves, electrical trench, and joinery details.",
+      },
+    ],
     nextSlug: "the-bear-house-pacific-jaipur",
     nextTitle: "The Bear House — Pacific Mall Jaipur",
   },
@@ -549,28 +593,123 @@ export default async function ProjectPage({
               ))}
             </div>
 
-            {p.doc && (
+            {((p.docs && p.docs.length > 0) || p.doc) && (
               <div
                 style={{
-                  textAlign: "center",
-                  padding: "20px",
+                  padding: "clamp(22px, 3.5vw, 36px)",
                   background: "var(--bg-surface)",
-                  borderRadius: "var(--radius-lg)",
+                  borderRadius: "var(--radius-xl)",
                   border: "1px solid var(--line-subtle)",
+                  boxShadow: "var(--shadow-sm)",
+                  marginTop: "28px",
                 }}
                 className="reveal-on-scroll"
               >
-                <p style={{ fontSize: "13.5px", color: "var(--ink-secondary)", marginBottom: "12px" }}>
-                  Need to review the complete multi-page PDF technical set with all details, legends, and general notes?
-                </p>
-                <a
-                  href={p.doc}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-pill btn-pill-primary"
+                <div style={{ textAlign: "center", maxWidth: "680px", margin: "0 auto 20px" }}>
+                  <span
+                    style={{
+                      fontSize: "11px",
+                      fontFamily: "var(--font-mono)",
+                      color: "var(--accent-terracotta)",
+                      fontWeight: 600,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    COMPLETE TECHNICAL DRAWING PACKAGES
+                  </span>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-serif)",
+                      fontSize: "21px",
+                      fontWeight: 500,
+                      marginTop: "6px",
+                      marginBottom: "8px",
+                      color: "var(--ink-primary)",
+                    }}
+                  >
+                    Official Construction Blueprints & Coordination Sets
+                  </h3>
+                  <p style={{ fontSize: "13.5px", color: "var(--ink-secondary)", lineHeight: 1.6 }}>
+                    Direct access to the verified multi-page vector AutoCAD construction PDFs with all construction notes, dimensions, schedules, and legends.
+                  </p>
+                </div>
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "16px",
+                    flexWrap: "wrap",
+                  }}
                 >
-                  <span>Open Full Construction PDF Package ↗</span>
-                </a>
+                  {p.docs && p.docs.length > 0 ? (
+                    p.docs.map((docItem, idx) => (
+                      <div
+                        key={docItem.url}
+                        style={{
+                          flex: "1 1 320px",
+                          maxWidth: "460px",
+                          background: "var(--bg-canvas)",
+                          padding: "20px",
+                          borderRadius: "var(--radius-lg)",
+                          border: idx === 0 ? "1.5px solid var(--accent-terracotta)" : "1px solid var(--line-subtle)",
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "space-between",
+                          gap: "14px",
+                          boxShadow: idx === 0 ? "var(--shadow-sm)" : "none",
+                        }}
+                      >
+                        <div>
+                          {docItem.badge && (
+                            <span
+                              style={{
+                                display: "inline-block",
+                                fontSize: "10.5px",
+                                fontFamily: "var(--font-mono)",
+                                color: idx === 0 ? "var(--accent-terracotta)" : "var(--ink-secondary)",
+                                background: idx === 0 ? "var(--accent-terracotta-soft)" : "rgba(0, 0, 0, 0.04)",
+                                padding: "3px 10px",
+                                borderRadius: "var(--radius-pill)",
+                                fontWeight: 600,
+                                marginBottom: "10px",
+                              }}
+                            >
+                              {docItem.badge}
+                            </span>
+                          )}
+                          <h4 style={{ fontSize: "15px", fontWeight: 600, marginBottom: "6px", color: "var(--ink-primary)" }}>
+                            {docItem.label}
+                          </h4>
+                          {docItem.desc && (
+                            <p style={{ fontSize: "12.5px", color: "var(--ink-secondary)", lineHeight: 1.55 }}>
+                              {docItem.desc}
+                            </p>
+                          )}
+                        </div>
+                        <a
+                          href={docItem.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={idx === 0 ? "btn-pill btn-pill-primary" : "btn-pill btn-pill-secondary"}
+                          style={{ justifyContent: "center", width: "100%" }}
+                        >
+                          <span>{idx === 0 ? "Open GFC Package PDF ↗" : "Open MEP Package PDF ↗"}</span>
+                        </a>
+                      </div>
+                    ))
+                  ) : (
+                    <a
+                      href={p.doc}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn-pill btn-pill-primary"
+                    >
+                      <span>Open Full Construction PDF Package ↗</span>
+                    </a>
+                  )}
+                </div>
               </div>
             )}
           </div>

@@ -1,9 +1,82 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+
+interface CertificationItem {
+  id: string;
+  title: string;
+  issuer: string;
+  badge: string;
+  credentialId?: string;
+  description: string;
+  image: string;
+  pdf: string;
+}
+
+const certifications: CertificationItem[] = [
+  {
+    id: "bim-revit-arch",
+    title: "BIM Revit Architecture",
+    issuer: "Autodesk Authorized Training Center (ATC)",
+    badge: "AUTODESK ATC CERTIFIED",
+    credentialId: "AP0918097428645239788",
+    description: "Parametric 3D architectural modeling, family creation, detailed sectional documentation, and coordinated BIM schedules.",
+    image: "/certifications/bim-revit-architecture.jpg",
+    pdf: "/certifications/bim-revit-architecture.pdf",
+  },
+  {
+    id: "revit-struct",
+    title: "Revit Structure",
+    issuer: "Autodesk Authorized Training Center (ATC)",
+    badge: "AUTODESK ATC CERTIFIED",
+    credentialId: "AP0918097428655239788",
+    description: "Structural modeling, foundation detailing, reinforced concrete framing, and structural analytical model coordination.",
+    image: "/certifications/revit-structure.jpg",
+    pdf: "/certifications/revit-structure.pdf",
+  },
+  {
+    id: "csir-winner",
+    title: "CSIR Winner — Future Entrepreneurs Connect",
+    issuer: "Council of Scientific and Industrial Research",
+    badge: "NATIONAL AWARD WINNER",
+    description: "Honored for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled agro-waste composites.",
+    image: "/certifications/csir-award.jpg",
+    pdf: "/certifications/csir-award.pdf",
+  },
+  {
+    id: "coursera-gis",
+    title: "GIS Data Acquisition & Map Design",
+    issuer: "University of Toronto (via Coursera)",
+    badge: "UNIVERSITY OF TORONTO",
+    credentialId: "coursera.org/verify/89JW27F4V778",
+    description: "Geographic information systems, cartographic visualization, coordinate systems, and spatial data modeling.",
+    image: "/certifications/coursera-gis.jpg",
+    pdf: "/certifications/coursera-gis.pdf",
+  },
+  {
+    id: "glass-buildings",
+    title: "Glass in Buildings: Design & Applications",
+    issuer: "NPTEL / Architectural Faculty",
+    badge: "ADVANCED ARCHITECTURAL MATERIALS",
+    description: "Architectural glass selection, acoustic performance, thermal U-values, structural glazing systems, and daylighting standards.",
+    image: "/certifications/glass-in-buildings.jpg",
+    pdf: "/certifications/glass-in-buildings.pdf",
+  },
+  {
+    id: "civil-internship",
+    title: "Civil Engineering Field Internship",
+    issuer: "PES Structural & Infrastructure Division",
+    badge: "SITE EXECUTION & QA/QC",
+    credentialId: "PES/021/2022-23",
+    description: "On-site quality supervision, structural load inspections, material quality verification, and construction milestone compliance.",
+    image: "/certifications/civil-engineering-internship.jpg",
+    pdf: "/certifications/civil-engineering-internship.pdf",
+  },
+];
 
 export default function InteractiveResume() {
-  const [activeTab, setActiveTab] = useState<"experience" | "patents" | "education" | "skills">("experience");
+  const [activeTab, setActiveTab] = useState<"experience" | "patents" | "certifications" | "education" | "skills">("experience");
 
   return (
     <div className="resume-widget">
@@ -18,7 +91,13 @@ export default function InteractiveResume() {
           className={`resume-tab-btn ${activeTab === "patents" ? "active" : ""}`}
           onClick={() => setActiveTab("patents")}
         >
-          Patents & Innovation
+          Patents & Honors
+        </button>
+        <button
+          className={`resume-tab-btn ${activeTab === "certifications" ? "active" : ""}`}
+          onClick={() => setActiveTab("certifications")}
+        >
+          Certifications & BIM
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "education" ? "active" : ""}`}
@@ -151,27 +230,198 @@ export default function InteractiveResume() {
           <div className="patent-banner" style={{ margin: 0 }}>
             <div className="patent-content">
               <span className="patent-eyebrow">
-                GRANTED INTERNATIONAL PATENT
+                GRANTED INTERNATIONAL PATENT · DPMA GERMANY
               </span>
               <h3>German Patent Granted: Biodegradable Agro-Waste Material</h3>
               <p>
                 &ldquo;I developed a patented bio-composite material derived from agricultural waste designed as an eco-friendly direct replacement for single-use plastics. The German Patent Office officially granted the patent, recognizing its innovation in circular materials and reducing commercial waste footprints.&rdquo;
               </p>
               <div className="patent-badges-row">
-                <span className="patent-badge-item">🇩🇪 German Patent Office Granted</span>
+                <span className="patent-badge-item">🇩🇪 German Patent Office Granted (G11861DE)</span>
                 <span className="patent-badge-item">🌱 Circular Agro-Waste Composite</span>
                 <span className="patent-badge-item">♻ Sustainable Material Science</span>
               </div>
+              <div style={{ marginTop: "22px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <a
+                  href="/patent/german-patent-G11861DE.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-pill"
+                  style={{
+                    background: "var(--accent-brass)",
+                    color: "#191715",
+                    fontWeight: 600,
+                    fontSize: "13px",
+                  }}
+                >
+                  <span>Open Official German Patent Certificate (G11861DE) ↗</span>
+                </a>
+              </div>
             </div>
-            <div className="patent-award-card">
-              <div style={{ fontSize: "40px", marginBottom: "8px" }}>🏆</div>
-              <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "20px", marginBottom: "8px", color: "#ffffff" }}>
-                CSIR Winner
+            <div className="patent-award-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  maxWidth: "220px",
+                  aspectRatio: "1 / 1.41",
+                  borderRadius: "var(--radius-md)",
+                  overflow: "hidden",
+                  boxShadow: "0 8px 24px rgba(0,0,0,0.35)",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  background: "#ffffff",
+                }}
+              >
+                <Image
+                  src="/patent/patent-preview.jpg"
+                  alt="German Patent Certificate G11861DE"
+                  fill
+                  sizes="220px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+              <span style={{ fontSize: "11px", color: "var(--accent-brass)", fontFamily: "var(--font-mono)", textAlign: "center" }}>
+                Official DPMA Certificate G11861DE
+              </span>
+            </div>
+          </div>
+
+          <div
+            style={{
+              background: "var(--bg-surface)",
+              borderRadius: "var(--radius-xl)",
+              padding: "clamp(22px, 3.5vw, 34px)",
+              border: "1px solid var(--line-subtle)",
+              display: "grid",
+              gridTemplateColumns: "1.2fr 0.8fr",
+              gap: "24px",
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <span className="section-eyebrow">NATIONAL INNOVATION HONOR</span>
+              <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "22px", fontWeight: 500, marginBottom: "10px" }}>
+                CSIR Winner &mdash; Future Entrepreneurs Connect
               </h4>
-              <p style={{ fontSize: "13px", color: "#ccc2b4", lineHeight: "1.55" }}>
+              <p style={{ fontSize: "14px", color: "var(--ink-secondary)", lineHeight: 1.65, marginBottom: "16px" }}>
                 Winner of CSIR &ndash; Future Entrepreneurs Connect for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled materials.
               </p>
+              <a
+                href="/certifications/csir-award.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-pill btn-pill-primary"
+              >
+                <span>View Official CSIR Award Certificate PDF ↗</span>
+              </a>
             </div>
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  maxWidth: "240px",
+                  aspectRatio: "1.41 / 1",
+                  borderRadius: "var(--radius-md)",
+                  overflow: "hidden",
+                  boxShadow: "var(--shadow-md)",
+                  border: "1px solid var(--line-subtle)",
+                  background: "#ffffff",
+                }}
+              >
+                <Image
+                  src="/certifications/csir-award.jpg"
+                  alt="CSIR Certificate of Recognition"
+                  fill
+                  sizes="240px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {activeTab === "certifications" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))", gap: "20px" }}>
+            {certifications.map((cert) => (
+              <div
+                key={cert.id}
+                style={{
+                  background: "var(--bg-surface)",
+                  borderRadius: "var(--radius-lg)",
+                  border: "1px solid var(--line-subtle)",
+                  padding: "18px",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  boxShadow: "var(--shadow-sm)",
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      aspectRatio: "1.41 / 1",
+                      borderRadius: "var(--radius-sm)",
+                      overflow: "hidden",
+                      border: "1px solid var(--line-subtle)",
+                      background: "#ffffff",
+                      marginBottom: "14px",
+                    }}
+                  >
+                    <Image
+                      src={cert.image}
+                      alt={cert.title}
+                      fill
+                      sizes="340px"
+                      style={{ objectFit: "contain", background: "#fcfbfa" }}
+                    />
+                  </div>
+
+                  <span
+                    style={{
+                      fontSize: "10.5px",
+                      fontFamily: "var(--font-mono)",
+                      color: "var(--accent-terracotta)",
+                      fontWeight: 600,
+                      letterSpacing: "0.08em",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    {cert.badge}
+                  </span>
+
+                  <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "18px", fontWeight: 500, marginBottom: "4px", color: "var(--ink-primary)" }}>
+                    {cert.title}
+                  </h4>
+
+                  <span style={{ fontSize: "12px", color: "var(--ink-muted)", display: "block", marginBottom: "8px" }}>
+                    {cert.issuer} {cert.credentialId ? `· ${cert.credentialId}` : ""}
+                  </span>
+
+                  <p style={{ fontSize: "13px", color: "var(--ink-secondary)", lineHeight: 1.55 }}>
+                    {cert.description}
+                  </p>
+                </div>
+
+                <div style={{ marginTop: "16px", paddingTop: "12px", borderTop: "1px solid var(--line-subtle)" }}>
+                  <a
+                    href={cert.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-pill btn-pill-secondary"
+                    style={{ width: "100%", justifyContent: "center", fontSize: "12px" }}
+                  >
+                    <span>View Official Certificate PDF ↗</span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       )}
