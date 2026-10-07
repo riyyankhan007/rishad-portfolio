@@ -40,7 +40,7 @@ const certifications: CertificationItem[] = [
     title: "CSIR Winner — Future Entrepreneurs Connect",
     issuer: "Council of Scientific and Industrial Research",
     badge: "NATIONAL AWARD WINNER",
-    description: "Honored for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled agro-waste composites.",
+    description: "Honored for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled household waste.",
     image: "/certifications/csir-award.jpg",
     pdf: "/certifications/csir-award.pdf",
   },
@@ -76,11 +76,17 @@ const certifications: CertificationItem[] = [
 ];
 
 export default function InteractiveResume() {
-  const [activeTab, setActiveTab] = useState<"experience" | "patents" | "certifications" | "education" | "skills">("experience");
+  const [activeTab, setActiveTab] = useState<"sop" | "experience" | "patents" | "certifications" | "education" | "skills">("sop");
 
   return (
     <div className="resume-widget">
       <div className="resume-tabs-nav">
+        <button
+          className={`resume-tab-btn ${activeTab === "sop" ? "active" : ""}`}
+          onClick={() => setActiveTab("sop")}
+        >
+          Statement of Purpose (SOP)
+        </button>
         <button
           className={`resume-tab-btn ${activeTab === "experience" ? "active" : ""}`}
           onClick={() => setActiveTab("experience")}
@@ -91,28 +97,109 @@ export default function InteractiveResume() {
           className={`resume-tab-btn ${activeTab === "patents" ? "active" : ""}`}
           onClick={() => setActiveTab("patents")}
         >
-          Patents & Honors
+          Patents &amp; Honors
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "certifications" ? "active" : ""}`}
           onClick={() => setActiveTab("certifications")}
         >
-          Certifications & BIM
+          Certifications &amp; BIM
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "education" ? "active" : ""}`}
           onClick={() => setActiveTab("education")}
         >
-          Education & Background
+          Education &amp; Background
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "skills" ? "active" : ""}`}
           onClick={() => setActiveTab("skills")}
         >
-          Tools & Capabilities
+          Tools &amp; Capabilities
         </button>
       </div>
 
+      {/* TAB 1: STATEMENT OF PURPOSE (SOP) */}
+      {activeTab === "sop" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+          <div
+            style={{
+              background: "var(--bg-surface)",
+              borderRadius: "var(--radius-xl)",
+              padding: "clamp(24px, 4vw, 42px)",
+              border: "1px solid var(--line-subtle)",
+              boxShadow: "var(--shadow-sm)",
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "16px", marginBottom: "20px" }}>
+              <div>
+                <span className="section-eyebrow">PROFESSIONAL MANIFESTO</span>
+                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(24px, 3.2vw, 34px)", fontWeight: 500, lineHeight: 1.2, marginTop: "4px" }}>
+                  Statement of Purpose
+                </h3>
+                <p style={{ fontFamily: "var(--font-mono)", fontSize: "11.5px", color: "var(--accent-terracotta)", letterSpacing: "0.1em", textTransform: "uppercase", marginTop: "6px" }}>
+                  Muhammad Rishad &bull; Civil Engineering and Retail Designer
+                </p>
+              </div>
+              <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+                <span className="patent-badge-item">Civil Engineering &amp; Retail Design</span>
+                <span className="patent-badge-item">German Patent Holder</span>
+                <span className="patent-badge-item">CSIR Award Winner</span>
+              </div>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "20px", fontSize: "15px", lineHeight: 1.75, color: "var(--ink-secondary)" }}>
+              <p>
+                I have always been curious about how things work, how they are built, and how they can be made better. Growing up with a strong interest in nature, sports, and being outdoors, I became increasingly aware of the relationship between what we build and the environment around us. More than simply understanding problems, I have always been drawn to finding practical ways to solve them. This mindset has shaped many of my choices, from taking on research projects outside my required classes to playing competitive sports alongside my studies. Playing university-level football for four years and representing Bangalore Rugby Club at the South Asian Club Championship taught me how to work closely within a team, manage competing pressures, and stay persistent when faced with tough challenges. These experiences built my interest in a field where engineering, creativity, and hands-on problem-solving can be used to make a real impact on people and the environment.
+              </p>
+
+              <div
+                style={{
+                  background: "var(--bg-subtle)",
+                  borderLeft: "3px solid var(--accent-terracotta)",
+                  padding: "18px 24px",
+                  borderRadius: "0 var(--radius-md) var(--radius-md) 0",
+                  fontStyle: "italic",
+                  color: "var(--ink-primary)",
+                  fontSize: "15.5px",
+                  lineHeight: 1.6,
+                }}
+              >
+                &ldquo;Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.&rdquo;
+              </div>
+
+              <p>
+                After earning my Bachelor&apos;s degree in Civil Engineering, I worked across construction, interior execution, and design. As a site engineer on retail fit-out projects at Bangalore International Airport Terminal 2, I spent my time directly on construction sites, dealing with the daily realities of material coordination, vendors, paperwork, and the challenge of turning architectural drawings into real, functional spaces. Later, working as a retail designer for clothing stores and experience centres gave me a different perspective on how spatial flow, technical constraints, and user needs come together during the design phase.
+              </p>
+
+              <p>
+                However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a patent granted by the German Patent and Trademark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
+              </p>
+
+              <div style={{ paddingTop: "10px", borderTop: "1px solid var(--line-subtle)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "14px" }}>
+                <div>
+                  <strong style={{ display: "block", color: "var(--ink-primary)", fontSize: "14px" }}>Muhammad Rishad</strong>
+                  <span style={{ fontSize: "12px", color: "var(--ink-muted)" }}>Bangalore, Karnataka, India &bull; Available Nationwide</span>
+                </div>
+                <div style={{ display: "flex", gap: "10px" }}>
+                  <a
+                    href="/resume/Muhammad_Rishad_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-pill btn-pill-primary"
+                    download
+                  >
+                    <span>Download Official Resume PDF</span>
+                    <span>↓</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* TAB 2: MY EXPERIENCE */}
       {activeTab === "experience" && (
         <div className="timeline-list">
           <div className="timeline-entry">
@@ -124,22 +211,25 @@ export default function InteractiveResume() {
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">2D Designer & Retail Interior Planner</h3>
+              <h3 className="timeline-role">Lead Retail Interior Designer &amp; Space Planner</h3>
               <p className="timeline-description">
-                &ldquo;Here I spearhead retail layout planning and technical drawing documentation for premier national and international brands. My daily focus is crafting stores that elevate visual merchandising while ensuring flawless constructability.&rdquo;
+                &ldquo;Leading retail space planning, 3D concept development, and execution documentation for premier national and international brands. Dedicated to delivering high-efficiency commercial layouts and commanding store atmospheres.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
-                  I design retail store and restaurant layouts using AutoCAD for brands including <strong>Aditya Birla Group</strong> retail outlets, <strong>The Bear House</strong>, <strong>VOX</strong>, <strong>Furlenco</strong>, and <strong>Nobero</strong>.
+                  Led retail store layout planning and interior design for marquee brands including <strong>The Bear House</strong>, <strong>Sureena Chowdhri</strong>, <strong>VOX</strong>, <strong>Nobero</strong>, and <strong>Aditya Birla Group</strong>.
                 </li>
                 <li className="timeline-bullet-item">
-                  I develop complete GFC (Good For Construction) packages: floor layouts, reflected ceiling plans (RCP), lighting grids, wall fixture elevations, and joinery details.
+                  Designed the <strong>VOX Turquoise Mumbai Experience Center</strong> exclusively using the VOX catalog, creating an architect-focused spatial material studio.
                 </li>
                 <li className="timeline-bullet-item">
-                  I coordinate directly with mall technical teams, MEP consultants, and fabrication vendors to ensure seamless integration of HVAC, electrical troughs, and brand aesthetic guidelines.
+                  Independently led <strong>The Bear House &mdash; M3M Paragon 57</strong>: mezzanine floor designed, establishing seamless customer flow and sculpting a minimalistic facade.
                 </li>
                 <li className="timeline-bullet-item">
-                  I prepare comprehensive BOQs, material schedules, and cost estimations to assist procurement and budgeting.
+                  Prepared exhaustive technical drawing packages: floor layouts, lighting grids, wall fixture elevations, and joinery details.
+                </li>
+                <li className="timeline-bullet-item">
+                  Managed comprehensive <strong>Bill of Quantities (BOQ)</strong>, material selection, vendor management, labour coordination, and stage-wise QA/QC.
                 </li>
               </ul>
             </div>
@@ -156,7 +246,7 @@ export default function InteractiveResume() {
             <div>
               <h3 className="timeline-role">Inspection QC Engineer</h3>
               <p className="timeline-description">
-                &ldquo;In this quality control role, I evaluated physical built spaces against stringent engineering standards, building codes, and facility guidelines.&rdquo;
+                &ldquo;Enforced quality assurance benchmarks and facility compliance across commercial spaces and properties.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
@@ -183,14 +273,14 @@ export default function InteractiveResume() {
             <div>
               <h3 className="timeline-role">Site Engineer — Commercial Fit-Outs</h3>
               <p className="timeline-description">
-                &ldquo;I had hands-on site management responsibilities executing high-stakes commercial food & retail fit-outs inside Terminal 2 of Bangalore International Airport.&rdquo;
+                &ldquo;Supervised high-stakes commercial food and retail fit-outs inside Terminal 2 of Bangalore International Airport.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
                   Supervised execution of premier commercial fit-out projects: <strong>Bombay Brasserie</strong>, <strong>Wendy&apos;s</strong>, and <strong>KFC Ultra Bar</strong> at <strong>Bangalore International Airport Terminal 2</strong>.
                 </li>
                 <li className="timeline-bullet-item">
-                  Coordinated daily site activities, laser-level benching, contractor supervision, labor allocations, and tight airport airside security protocols.
+                  Coordinated daily site execution, layout setting, contractor supervision, labor allocations, and tight airport security protocols.
                 </li>
                 <li className="timeline-bullet-item">
                   Managed on-site technical QA/QC, stage-wise inspections, billings, material reconciliation, and progress reports.
@@ -210,7 +300,7 @@ export default function InteractiveResume() {
             <div>
               <h3 className="timeline-role">Sustainability Engineering Intern</h3>
               <p className="timeline-description">
-                &ldquo;Gained early research and field experience integrating circular economy principles into large-scale engineering infrastructure.&rdquo;
+                &ldquo;Gained early research and field experience integrating circular economy principles into engineering infrastructure.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
@@ -225,6 +315,7 @@ export default function InteractiveResume() {
         </div>
       )}
 
+      {/* TAB 3: PATENTS & HONORS */}
       {activeTab === "patents" && (
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           <div className="patent-banner" style={{ margin: 0 }}>
@@ -237,9 +328,9 @@ export default function InteractiveResume() {
                 &ldquo;I developed a patented bio-composite material derived from agricultural waste designed as an eco-friendly direct replacement for single-use plastics. The German Patent Office officially granted the patent, recognizing its innovation in circular materials and reducing commercial waste footprints.&rdquo;
               </p>
               <div className="patent-badges-row">
-                <span className="patent-badge-item">🇩🇪 German Patent Office Granted (G11861DE)</span>
-                <span className="patent-badge-item">🌱 Circular Agro-Waste Composite</span>
-                <span className="patent-badge-item">♻ Sustainable Material Science</span>
+                <span className="patent-badge-item">German Patent Office Granted (G11861DE)</span>
+                <span className="patent-badge-item">Circular Agro-Waste Composite</span>
+                <span className="patent-badge-item">Sustainable Material Science</span>
               </div>
               <div style={{ marginTop: "22px", display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a
@@ -304,7 +395,7 @@ export default function InteractiveResume() {
                 CSIR Winner &mdash; Future Entrepreneurs Connect
               </h4>
               <p style={{ fontSize: "14px", color: "var(--ink-secondary)", lineHeight: 1.65, marginBottom: "16px" }}>
-                Winner of CSIR &ndash; Future Entrepreneurs Connect for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled materials.
+                Winner of CSIR &ndash; Future Entrepreneurs Connect for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled household waste.
               </p>
               <a
                 href="/certifications/csir-award.pdf"
@@ -343,6 +434,7 @@ export default function InteractiveResume() {
         </div>
       )}
 
+      {/* TAB 4: CERTIFICATIONS & BIM */}
       {activeTab === "certifications" && (
         <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))", gap: "20px" }}>
@@ -368,43 +460,39 @@ export default function InteractiveResume() {
                       aspectRatio: "1.41 / 1",
                       borderRadius: "var(--radius-sm)",
                       overflow: "hidden",
-                      border: "1px solid var(--line-subtle)",
-                      background: "#ffffff",
                       marginBottom: "14px",
+                      background: "var(--bg-subtle)",
+                      border: "1px solid var(--line-subtle)",
                     }}
                   >
                     <Image
                       src={cert.image}
                       alt={cert.title}
                       fill
-                      sizes="340px"
-                      style={{ objectFit: "contain", background: "#fcfbfa" }}
+                      sizes="320px"
+                      style={{ objectFit: "cover" }}
                     />
                   </div>
-
                   <span
                     style={{
-                      fontSize: "10.5px",
+                      fontSize: "10px",
                       fontFamily: "var(--font-mono)",
                       color: "var(--accent-terracotta)",
                       fontWeight: 600,
                       letterSpacing: "0.08em",
                       display: "block",
-                      marginBottom: "6px",
+                      marginBottom: "4px",
                     }}
                   >
                     {cert.badge}
                   </span>
-
-                  <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "18px", fontWeight: 500, marginBottom: "4px", color: "var(--ink-primary)" }}>
+                  <h4 style={{ fontSize: "16px", fontWeight: 600, marginBottom: "4px" }}>
                     {cert.title}
                   </h4>
-
-                  <span style={{ fontSize: "12px", color: "var(--ink-muted)", display: "block", marginBottom: "8px" }}>
-                    {cert.issuer} {cert.credentialId ? `· ${cert.credentialId}` : ""}
-                  </span>
-
-                  <p style={{ fontSize: "13px", color: "var(--ink-secondary)", lineHeight: 1.55 }}>
+                  <p style={{ fontSize: "12px", color: "var(--ink-muted)", marginBottom: "8px" }}>
+                    {cert.issuer}
+                  </p>
+                  <p style={{ fontSize: "13px", color: "var(--ink-secondary)", lineHeight: 1.5 }}>
                     {cert.description}
                   </p>
                 </div>
@@ -414,10 +502,18 @@ export default function InteractiveResume() {
                     href={cert.pdf}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-pill btn-pill-secondary"
-                    style={{ width: "100%", justifyContent: "center", fontSize: "12px" }}
+                    style={{
+                      fontSize: "12px",
+                      fontWeight: 600,
+                      color: "var(--accent-terracotta)",
+                      textDecoration: "underline",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                    }}
                   >
-                    <span>View Official Certificate PDF ↗</span>
+                    <span>View Official Certificate (PDF)</span>
+                    <span>↗</span>
                   </a>
                 </div>
               </div>
@@ -426,6 +522,7 @@ export default function InteractiveResume() {
         </div>
       )}
 
+      {/* TAB 5: EDUCATION & BACKGROUND */}
       {activeTab === "education" && (
         <div className="timeline-list">
           <div className="timeline-entry">
@@ -437,16 +534,16 @@ export default function InteractiveResume() {
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">Bachelor of Engineering (B.E.) in Civil Engineering</h3>
+              <h3 className="timeline-role">B.E. in Civil Engineering</h3>
               <div
                 style={{
                   display: "inline-block",
-                  fontFamily: "var(--font-mono)",
-                  fontSize: "12px",
-                  background: "var(--accent-terracotta-soft)",
-                  color: "var(--accent-terracotta)",
-                  padding: "4px 12px",
+                  padding: "4px 10px",
                   borderRadius: "var(--radius-pill)",
+                  background: "var(--accent-brass-soft)",
+                  color: "var(--accent-brass)",
+                  fontSize: "12px",
+                  fontFamily: "var(--font-mono)",
                   marginBottom: "14px",
                   fontWeight: 600,
                 }}
@@ -454,14 +551,14 @@ export default function InteractiveResume() {
                 GPA: 7.65 / 10.0
               </div>
               <p className="timeline-description">
-                &ldquo;My civil engineering training provided the rigorous foundation behind my spatial work: understanding structural load paths, concrete & steel behavior, building services, surveying, and material mechanics. This allows me to design retail interiors that are structurally sound, code-compliant, and immediately buildable.&rdquo;
+                &ldquo;My civil engineering training provided the rigorous foundation behind my spatial work: understanding structural load paths, concrete &amp; steel behavior, building services, surveying, and material mechanics. This allows me to design retail interiors that are structurally sound, code-compliant, and immediately buildable.&rdquo;
               </p>
               <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "14px" }}>
                 <span className="skill-tag-pill">Structural Engineering</span>
                 <span className="skill-tag-pill">Construction Technology</span>
-                <span className="skill-tag-pill">Surveying & Benchmarking</span>
+                <span className="skill-tag-pill">Surveying &amp; Benchmarking</span>
                 <span className="skill-tag-pill">Building Materials</span>
-                <span className="skill-tag-pill">MEP Systems</span>
+                <span className="skill-tag-pill">QA/QC Compliance</span>
               </div>
             </div>
           </div>
@@ -472,9 +569,9 @@ export default function InteractiveResume() {
               <div className="timeline-company">Multilingual Communication</div>
             </div>
             <div>
-              <h3 className="timeline-role">Field & Stakeholder Communication</h3>
+              <h3 className="timeline-role">Field &amp; Stakeholder Communication</h3>
               <p className="timeline-description">
-                &ldquo;Managing fit-outs requires communicating clearly with corporate clients, design directors, municipal reviewers, and on-site craftsmen. I am fluent across four major languages:&rdquo;
+                &ldquo;Managing fit-outs requires communicating clearly with corporate clients, design directors, municipal reviewers, and on-site craftsmen. I communicate across six languages:&rdquo;
               </p>
               <div className="resume-languages-grid">
                 <div className="language-badge-card">
@@ -493,52 +590,61 @@ export default function InteractiveResume() {
                   <div className="lang-title">Telugu</div>
                   <div className="lang-level">Fluent</div>
                 </div>
+                <div className="language-badge-card">
+                  <div className="lang-title">Spanish</div>
+                  <div className="lang-level">Basic</div>
+                </div>
+                <div className="language-badge-card">
+                  <div className="lang-title">Italian</div>
+                  <div className="lang-level">Basic</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       )}
 
+      {/* TAB 6: TOOLS & CAPABILITIES */}
       {activeTab === "skills" && (
         <div className="skills-container-grid">
           <div className="skill-card">
-            <div className="skill-card-badge">TECHNICAL & CAD</div>
-            <h4>Drafting & Modeling</h4>
+            <div className="skill-card-badge">TECHNICAL &amp; CAD</div>
+            <h4>Drafting &amp; Modeling</h4>
             <div className="skill-tags-cloud">
               <span className="skill-tag-pill">AutoCAD 2D</span>
               <span className="skill-tag-pill">Revit Architecture</span>
-              <span className="skill-tag-pill">GFC Drawing Packages</span>
-              <span className="skill-tag-pill">Reflected Ceiling Plans</span>
-              <span className="skill-tag-pill">Millwork & Joinery Details</span>
+              <span className="skill-tag-pill">Revit Structure</span>
+              <span className="skill-tag-pill">Construction Drawing Packages</span>
               <span className="skill-tag-pill">Elevation Drafting</span>
-              <span className="skill-tag-pill">3D Space Visualization</span>
+              <span className="skill-tag-pill">3D Architectural Visualization</span>
+              <span className="skill-tag-pill">Spatial Layout Planning</span>
             </div>
           </div>
 
           <div className="skill-card">
             <div className="skill-card-badge">RETAIL DESIGN</div>
-            <h4>Spatial & Visual Experience</h4>
+            <h4>Spatial &amp; Visual Experience</h4>
             <div className="skill-tags-cloud">
               <span className="skill-tag-pill">Retail Space Planning</span>
               <span className="skill-tag-pill">Customer Circulation Flow</span>
               <span className="skill-tag-pill">Visual Merchandising (VM)</span>
-              <span className="skill-tag-pill">Fixture Detailing & Gondolas</span>
-              <span className="skill-tag-pill">Material Palette Selection</span>
+              <span className="skill-tag-pill">Material Selection</span>
               <span className="skill-tag-pill">Retail Lighting Design</span>
-              <span className="skill-tag-pill">Cash Counter & POS Ergonomics</span>
+              <span className="skill-tag-pill">Cash Counter &amp; POS Ergonomics</span>
+              <span className="skill-tag-pill">Store Space Optimization</span>
             </div>
           </div>
 
           <div className="skill-card">
-            <div className="skill-card-badge">ENGINEERING & SITE</div>
-            <h4>Execution & Coordination</h4>
+            <div className="skill-card-badge">ENGINEERING &amp; SITE</div>
+            <h4>Execution &amp; Coordination</h4>
             <div className="skill-tags-cloud">
-              <span className="skill-tag-pill">MEP Coordination</span>
-              <span className="skill-tag-pill">HVAC & Diffuser Alignment</span>
-              <span className="skill-tag-pill">Site Supervision & QA/QC</span>
+              <span className="skill-tag-pill">Project Management</span>
+              <span className="skill-tag-pill">Labour &amp; Vendor Management</span>
+              <span className="skill-tag-pill">Site Execution &amp; Supervision</span>
+              <span className="skill-tag-pill">QA/QC Standards</span>
               <span className="skill-tag-pill">Bill of Quantities (BOQ)</span>
-              <span className="skill-tag-pill">Vendor & Labor Management</span>
-              <span className="skill-tag-pill">Laser Level Setting</span>
+              <span className="skill-tag-pill">Material Quality Verification</span>
               <span className="skill-tag-pill">Commercial Fit-Outs</span>
             </div>
           </div>

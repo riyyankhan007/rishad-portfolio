@@ -4,44 +4,80 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollObserver from "./components/ScrollObserver";
 import InteractiveResume from "./components/InteractiveResume";
-import BlueprintSpotlight from "./components/BlueprintSpotlight";
 import PresentationDeck, { SlideItem } from "./components/PresentationDeck";
-import BrandLogos from "./components/BrandLogos";
 
 const projects = [
   {
+    slug: "sureena-chowdhri",
+    name: "Sureena Chowdhri — Flagship Boutique Jaipur",
+    meta: "JAIPUR · LUXURY DESIGNER BOUTIQUE",
+    role: "Adapted Concept Design, Detailed Drawings & Space Planning",
+    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    quote:
+      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, developed detailed drawings, and worked on the overall space planning and design elements throughout the project. Balancing traditional Rajasthani arched portals with contemporary luxury, I laid out welcoming bridal consultation lounges, bespoke brass garment rails, and an intuitive circular customer journey that celebrates couture craft.”",
+    tags: ["Adapted Concept Design", "Detailed Drawings", "Space Planning", "Store Design Elements"],
+  },
+  {
     slug: "the-bear-house-pacific-jaipur",
     name: "The Bear House — Pacific Mall Jaipur",
-    meta: "1,916 SQ FT · JAIPUR · FLAGSHIP STORE",
-    role: "Retail Space Planning, Fixture Detailing & MEP Coordination",
+    meta: "JAIPUR · FLAGSHIP STORE",
+    role: "Retail Space Planning, Project Management & QA/QC",
     image: "/projects/bear-house-jaipur/slides/slide-01.jpg",
     quote:
-      "“When designing this 1,916 sq. ft. flagship, my intent was to immerse shoppers in a warm, masculine, architectural atmosphere. I laid out sweeping circulation loops around custom timber gondolas, carefully balancing retail lighting tracks with HVAC diffuser slots to ensure zero clutter above the customer.”",
-    tags: ["Fixture Planning", "MEP Coordination", "Custom Joinery", "Retail Lighting"],
+      "“When designing this flagship store, my intent was to immerse shoppers in a warm, masculine, architectural atmosphere. I laid out sweeping circulation loops, leading project management, vendor coordination, material selection, and stage-wise QA/QC from initial layout setting to store opening.”",
+    tags: ["Retail Space Planning", "Project Management", "QA/QC", "Material Selection"],
   },
   {
     slug: "vox-turquoise-mumbai",
     name: "VOX — Turquoise Mumbai",
-    meta: "471 SQ FT · MUMBAI · LUXURY BOUTIQUE",
-    role: "Full GFC Drawing Package & Spatial Planning",
+    meta: "MUMBAI · LUXURY EXPERIENCE CENTER",
+    role: "Spatial Planning, Material Studio & Technical Execution",
     image: "/projects/vox-mumbai/slides/slide-01.jpg",
     quote:
-      "“In a 471 sq. ft. footprint, every millimeter dictates the customer’s sense of luxury. I sculpted organic curved flexi-ply ceiling baffles to stretch sightlines, integrated a tactile material library, and authored a 22-page GFC construction package with precise joinery details.”",
-    tags: ["Curved Ceiling Detailing", "GFC Documentation", "Material Library", "SPC Oak Mist"],
+      "“I designed this exclusive experience center by utilizing only the VOX product catalog and architectural systems. Sculpted curved flexi-ply ceiling baffles stretch sightlines, accompanied by an interactive material library for architects, comprehensive BOQ drafting, and vendor management.”",
+    tags: ["VOX Catalog Systems", "Material Selection", "Vendor Management", "BOQ & Costing"],
   },
   {
     slug: "the-bear-house-m3m",
     name: "The Bear House — M3M Paragon 57",
-    meta: "RETAIL INTERIOR · M3M · 3D VISUALIZATION",
-    role: "Concept Exploration, 3D Visualization & Technical Drafting",
+    meta: "GURUGRAM · FLAGSHIP STORE",
+    role: "Lead Designer & Technical Project Lead",
     image: "/projects/bear-house-m3m/slides/slide-01.jpg",
     quote:
-      "“Here I explored high-impact visual merchandising. Through photorealistic 3D rendering and AutoCAD space planning, I sculpted focal walls, perimeter shelving depths, and cash counter ergonomics to maximize retail dwell time and brand resonance.”",
-    tags: ["3D Visualization", "Perimeter Shelving", "POS Ergonomics", "Visual Merchandising"],
+      "“I led this project myself from concept through technical delivery. Mezzanine floor designed, establishing seamless customer flow and sculpted a minimalistic facade design that commands attention from the mall concourse while maintaining strict BOQ, labour coordination, and QA/QC control.”",
+    tags: ["Mezzanine Floor Designed", "Store Flow", "Minimalistic Facade", "Project Management"],
   },
 ];
 
 const featuredDeckSlides: SlideItem[] = [
+  {
+    id: "deck-sc-01",
+    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    title: "Storefront Arched Facade & Portal Threshold",
+    category: "SUREENA CHOWDHRI · JAIPUR",
+    designerNote: "Minimalist arched facade blending traditional Jaipur heritage with contemporary couture retail. Symmetrical window showcases draw shoppers into the central hall.",
+  },
+  {
+    id: "deck-sc-02",
+    image: "/projects/sureena-chowdhri/slides/slide-09.jpg",
+    title: "Main Retail Runway & Arched Display Niches",
+    category: "SUREENA CHOWDHRI · JAIPUR",
+    designerNote: "Fluid central customer circulation path framed by recessed plaster display niches and custom warm brass hanging systems.",
+  },
+  {
+    id: "deck-sc-03",
+    image: "/projects/sureena-chowdhri/slides/slide-11.jpg",
+    title: "Bridal Consultation Lounge & Private Salon",
+    category: "SUREENA CHOWDHRI · JAIPUR",
+    designerNote: "Dedicated couture discussion lounge designed for intimate bridal shopping experiences with custom curved banquette seating and warm diffused cove lighting.",
+  },
+  {
+    id: "deck-sc-04",
+    image: "/projects/sureena-chowdhri/slides/slide-14.jpg",
+    title: "Luxury Trial Suite & Backlit Arched Vanity",
+    category: "SUREENA CHOWDHRI · JAIPUR",
+    designerNote: "Private fitting suite with full-length perimeter backlit arched mirror, acoustic wall linings, and warm daylight-accurate illumination.",
+  },
   {
     id: "deck-01",
     image: "/projects/bear-house-jaipur/slides/slide-01.jpg",
@@ -54,14 +90,14 @@ const featuredDeckSlides: SlideItem[] = [
     image: "/projects/vox-mumbai/slides/slide-01.jpg",
     title: "Curved Black Oak Ceiling Baffles & Material Studio",
     category: "VOX · TURQUOISE MUMBAI",
-    designerNote: "Custom curved flexi-ply baffles finished in Fronto SV06 Black Oak to visually elongate a compact 471 SQ FT footprint.",
+    designerNote: "Custom curved flexi-ply baffles finished in Fronto SV06 Black Oak designed exclusively using the VOX catalog to visually elongate the boutique footprint.",
   },
   {
     id: "deck-03",
     image: "/projects/bear-house-jaipur/slides/slide-02.jpg",
-    title: "Primary Menswear Runway & Custom Timber Gondolas",
+    title: "Primary Menswear Runway & Custom Display Island",
     category: "THE BEAR HOUSE · JAIPUR",
-    designerNote: "Circulation loop flanking custom solid oak gondolas with dark bronze accents, balancing density with effortless movement.",
+    designerNote: "Circulation loop flanking custom solid oak display fixtures with dark bronze accents, balancing density with effortless customer movement.",
   },
   {
     id: "deck-04",
@@ -73,9 +109,9 @@ const featuredDeckSlides: SlideItem[] = [
   {
     id: "deck-05",
     image: "/projects/bear-house-m3m/slides/slide-01.jpg",
-    title: "Storefront Visual Merchandising & Elevation",
+    title: "Storefront Visual Merchandising & Minimalistic Facade",
     category: "THE BEAR HOUSE · M3M PARAGON",
-    designerNote: "High-contrast storefront portal designed to maximize footfall capture from the mall concourse using precision 3D lighting.",
+    designerNote: "Minimalistic facade design and high-contrast entrance portal delivering mezzanine floor designed visibility and clear line of sight to the upper level.",
   },
   {
     id: "deck-06",
@@ -84,25 +120,19 @@ const featuredDeckSlides: SlideItem[] = [
     category: "THE BEAR HOUSE · JAIPUR",
     designerNote: "Bespoke cash desk engineered with concealed wire raceways for POS terminals, barcode scanners, and receipt printers.",
   },
-  {
-    id: "deck-07",
-    image: "/projects/vox-mumbai/slides/slide-09.jpg",
-    title: "Panoramic Showroom Experience",
-    category: "VOX · TURQUOISE MUMBAI",
-    designerNote: "Complete spatial perspective demonstrating how disciplined space planning makes an intimate boutique feel expansive.",
-  },
 ];
 
-
 const marqueeWords = [
-  "Retail Interior Design",
-  "GFC Construction Packages",
-  "Fixture & Millwork Detailing",
-  "MEP & HVAC Coordination",
-  "3D Architectural Visualization",
+  "Civil Engineering",
+  "Retail Design",
+  "Interior & Spatial Design",
+  "Project Management",
+  "Labour & Vendor Management",
   "Site Execution & QA/QC",
-  "Retail Space Planning",
-  "Sustainable Material Innovation",
+  "Bill of Quantities (BOQ)",
+  "Material Selection",
+  "3D Architectural Visualization",
+  "Sustainable Innovation",
 ];
 
 export default function Home() {
@@ -119,15 +149,37 @@ export default function Home() {
               <div>
                 <div className="hero-eyebrow reveal-on-scroll">
                   <span>●</span>
-                  <span>Retail Interior Designer & Civil Engineer</span>
+                  <span>Civil Engineering &amp; Retail Design</span>
                 </div>
 
-                <h1 className="hero-title reveal-on-scroll reveal-delay-1">
-                  Designing retail spaces that <em>inspire emotion</em> and build with precision.
+                <h1
+                  className="hero-title reveal-on-scroll reveal-delay-1"
+                  style={{
+                    fontSize: "clamp(46px, 6.2vw, 78px)",
+                    lineHeight: 1.05,
+                    marginBottom: "10px",
+                    letterSpacing: "-0.03em",
+                  }}
+                >
+                  Muhammad Rishad
                 </h1>
 
+                <div
+                  className="reveal-on-scroll reveal-delay-1"
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "clamp(22px, 2.6vw, 32px)",
+                    color: "var(--accent-terracotta)",
+                    fontWeight: 400,
+                    marginBottom: "20px",
+                    lineHeight: 1.25,
+                  }}
+                >
+                  Civil Engineering and Retail Designer
+                </div>
+
                 <p className="hero-first-person reveal-on-scroll reveal-delay-2">
-                  I am <strong>Muhammad Rishad</strong>. I design retail environments where spatial beauty, customer psychology, and brand storytelling meet unyielding engineering constructability. Having a civil engineering degree isn&apos;t just my technical credential &mdash; it is my design superpower, ensuring every curved cove, fixture junction, and lighting grid translates flawlessly from paper to store opening.
+                  I position myself at the intersection of design, engineering and innovation.
                 </p>
 
                 <div className="hero-actions reveal-on-scroll reveal-delay-3">
@@ -139,19 +191,19 @@ export default function Home() {
                     href="#resume"
                     className="btn-pill btn-pill-outline"
                   >
-                    <span>My Story & Credentials</span>
+                    <span>My Story &amp; Credentials</span>
                     <span>↓</span>
                   </a>
                 </div>
 
                 <div className="hero-stats reveal-on-scroll reveal-delay-4">
                   <div className="hero-stat-item">
-                    <b>1,916+</b>
-                    <span>SQ FT Flagship Scope</span>
+                    <b>4+ Flagships</b>
+                    <span>Retail Stores Delivered</span>
                   </div>
                   <div className="hero-stat-item">
                     <b>2+ Yrs</b>
-                    <span>Commercial & Retail</span>
+                    <span>Commercial &amp; Retail</span>
                   </div>
                   <div className="hero-stat-item">
                     <b>1 Patent</b>
@@ -160,21 +212,21 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* HERO VISUAL FRAME */}
+              {/* HERO VISUAL FRAME — PERSONAL PHOTOGRAPH */}
               <div className="hero-visual-card reveal-on-scroll reveal-delay-2">
                 <Image
-                  src="/projects/bear-house-jaipur/slides/slide-01.jpg"
-                  alt="The Bear House Pacific Mall Jaipur retail interior designed by Muhammad Rishad"
+                  src="/rishad-photo.png"
+                  alt="Muhammad Rishad — Civil Engineering and Retail Designer"
                   fill
                   priority
                   sizes="(max-width: 900px) 100vw, 45vw"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "cover", objectPosition: "center top" }}
                 />
-                <div className="hero-visual-badge">FEATURED FLAGSHIP</div>
+                <div className="hero-visual-badge">MUHAMMAD RISHAD</div>
                 <div className="hero-visual-caption">
-                  <h3>The Bear House &mdash; Pacific Mall Jaipur</h3>
+                  <h3>Civil Engineering and Retail Designer</h3>
                   <p>
-                    Full retail space planning, fixture detailing & MEP technical coordination for a 1,916 SQ FT flagship store.
+                    Combining technical civil engineering rigor with retail design and practical innovation.
                   </p>
                 </div>
               </div>
@@ -198,54 +250,70 @@ export default function Home() {
           </div>
         </div>
 
-        {/* BRANDS & CLIENT SPACES (SOLID BLACK BRAND LOGOS & TYPOGRAPHY) */}
-        <section className="brand-logos-section">
-          <div className="shell">
-            <BrandLogos />
-          </div>
-        </section>
-
-        {/* PHILOSOPHY & DUAL LENS SECTION */}
+        {/* THE TRIPLE DISCIPLINE: DESIGN, ENGINEERING & INNOVATION (3 CARDS + SUREENA CHOWDHRI RENDERS) */}
         <section className="philosophy-section reveal-on-scroll">
           <div className="shell">
             <div className="section-header-centered">
-              <span className="section-eyebrow">THE DUAL DISCIPLINE</span>
+              <span className="section-eyebrow">THE TRIPLE DISCIPLINE</span>
               <h2 className="section-title">
-                Where Interior Elegance Meets Engineering Truth
+                Civil Engineering, Retail Design &amp; Spatial Innovation
               </h2>
               <p className="section-lead">
-                &ldquo;Too many designs fail at the construction phase because the designer doesn&apos;t understand site realities, and too many engineered spaces feel sterile because they lack spatial poetry. I bridge both worlds.&rdquo;
+                &ldquo;Exceptional retail environments require an uncompromised balance: captivating spatial design that elevates the brand, rigorous civil engineering that ensures buildability, and practical innovation that solves complex challenges.&rdquo;
               </p>
             </div>
 
-            <div className="dual-lens-grid">
+            {/* THREE DISCIPLINE CARDS */}
+            <div className="triple-lens-grid">
+              {/* CARD 1: DESIGN */}
               <div className="dual-lens-card designer">
-                <div className="dual-lens-number">01 / AESTHETIC SENSIBILITY</div>
-                <h3>The Retail Interior Designer</h3>
+                <div className="dual-lens-number">01 / CREATIVE DIRECTION</div>
+                <h3>Retail &amp; Spatial Design</h3>
                 <p>
-                  &ldquo;I treat retail spaces as immersive brand theaters. Every foot of customer journey is intentionally choreographed &mdash; from threshold transitions and focal product podiums to tactile materials like warm oak, micro-cement, and fluted acoustic surfaces. I design spaces where customers love to linger and shop.&rdquo;
+                  &ldquo;I lead retail space planning and interior design where spatial flow and brand storytelling elevate commercial environments. From intuitive customer circulation loops and visual merchandising focal walls to tactile material palettes, I craft destinations that captivate shoppers and drive engagement.&rdquo;
                 </p>
                 <div className="dual-lens-tags">
-                  <span className="dual-lens-tag">Customer Circulation Loops</span>
+                  <span className="dual-lens-tag">Retail Space Planning</span>
+                  <span className="dual-lens-tag">Customer Circulation Flow</span>
                   <span className="dual-lens-tag">Visual Merchandising</span>
-                  <span className="dual-lens-tag">Atmospheric Lighting</span>
-                  <span className="dual-lens-tag">Curved Architectural Baffles</span>
-                  <span className="dual-lens-tag">Material Board Curation</span>
+                  <span className="dual-lens-tag">Material Selection</span>
+                  <span className="dual-lens-tag">Spatial Layout Planning</span>
+                  <span className="dual-lens-tag">Lighting Design</span>
                 </div>
               </div>
 
+              {/* CARD 2: ENGINEERING */}
               <div className="dual-lens-card engineer">
                 <div className="dual-lens-number">02 / TECHNICAL RIGOR</div>
-                <h3>The Civil & MEP Engineer</h3>
+                <h3>Civil Engineering</h3>
                 <p>
-                  &ldquo;Design without constructability is just a sketch. My background in Civil Engineering (B.E., NMIT) enables me to speak the exact language of structural engineers, mall MEP inspectors, and master joiners. I coordinate HVAC diffusers, electrical troughs, slab core cuts, and laser levels before a single wall is framed.&rdquo;
+                  &ldquo;Design without constructability is only a drawing. Grounded in my Civil Engineering degree and hands-on site management at Bangalore International Airport Terminal 2 commercial fit-outs, I manage full <strong>site execution</strong>, <strong>QA/QC standards</strong>, comprehensive <strong>Bill of Quantities (BOQ)</strong>, <strong>vendor management</strong>, and end-to-end <strong>project management</strong> with exacting technical capabilities.&rdquo;
                 </p>
                 <div className="dual-lens-tags">
-                  <span className="dual-lens-tag">GFC Drawing Sets</span>
-                  <span className="dual-lens-tag">MEP & HVAC Integration</span>
-                  <span className="dual-lens-tag">Detailed Joinery Sections</span>
+                  <span className="dual-lens-tag">Site Execution &amp; Supervision</span>
+                  <span className="dual-lens-tag">QA/QC Standards</span>
                   <span className="dual-lens-tag">Bill of Quantities (BOQ)</span>
-                  <span className="dual-lens-tag">Airport T2 QA/QC Standards</span>
+                  <span className="dual-lens-tag">Vendor Management</span>
+                  <span className="dual-lens-tag">Project Management</span>
+                  <span className="dual-lens-tag">Labour Coordination</span>
+                  <span className="dual-lens-tag">Structural Load Coordination</span>
+                </div>
+              </div>
+
+              {/* CARD 3: INNOVATION */}
+              <div className="dual-lens-card innovator">
+                <div className="dual-lens-number">03 / APPLIED RESEARCH</div>
+                <h3>Practical Innovation</h3>
+                <p>
+                  &ldquo;Combined multidisciplinary knowledge with innovation to develop practical, thoughtful solutions for complex design challenges. I hold a granted <strong>German Patent (DE202023101691U1)</strong> for an eco-friendly biodegradable material substitute for single-use plastics, and was awarded by the <strong>CSIR</strong> for engineering a closed-loop hydroponics cultivation system from household waste.&rdquo;
+                </p>
+                <div className="dual-lens-tags">
+                  <span className="dual-lens-tag">German Patent Granted</span>
+                  <span className="dual-lens-tag">CSIR Award Winner</span>
+                  <span className="dual-lens-tag">Hydroponics from Household Waste</span>
+                  <span className="dual-lens-tag">Autodesk BIM Certified</span>
+                  <span className="dual-lens-tag">Sustainable Material Science</span>
+                  <span className="dual-lens-tag">Multidisciplinary Problem Solving</span>
                 </div>
               </div>
             </div>
@@ -258,7 +326,7 @@ export default function Home() {
             <div className="projects-header-bar reveal-on-scroll">
               <div>
                 <span className="section-eyebrow">CURATED PORTFOLIO</span>
-                <h2 className="section-title">Selected Retail Projects</h2>
+                <h2 className="section-title">Selected Works</h2>
               </div>
               <Link href="/projects" className="btn-pill btn-pill-outline">
                 <span>View All Works</span>
@@ -300,8 +368,8 @@ export default function Home() {
                         <p>{p.role}</p>
                       </div>
                       <div className="project-spec-item">
-                        <label>Focus</label>
-                        <p>{p.tags[0]} & {p.tags[1]}</p>
+                        <label>Core Focus</label>
+                        <p>{p.tags[0]} &amp; {p.tags[1]}</p>
                       </div>
                     </div>
 
@@ -322,7 +390,7 @@ export default function Home() {
                           textDecoration: "underline",
                         }}
                       >
-                        Inspect AutoCAD Drawings ↗
+                        {p.slug === "sureena-chowdhri" ? "Inspect Project Document ↗" : "Inspect Technical Drawings ↗"}
                       </Link>
                     </div>
                   </div>
@@ -337,35 +405,30 @@ export default function Home() {
           <div className="shell">
             <div className="section-header-centered reveal-on-scroll">
               <span className="section-eyebrow">CLIENT PRESENTATION DECK</span>
-              <h2 className="section-title">3D Visual Perspectives & Presentation Slides</h2>
+              <h2 className="section-title">3D Visual Perspectives &amp; Presentation Slides</h2>
               <p className="section-lead">
-                &ldquo;Here are high-resolution visual slides directly from my client concept presentations. Tap through the deck to examine lighting, materiality, and fixture layouts.&rdquo;
+                &ldquo;High-resolution visual slides rendered for client presentations across Sureena Chowdhri, The Bear House, and VOX. Tap through to examine spatial proportion, materiality, and lighting atmospheres.&rdquo;
               </p>
             </div>
 
             <div className="reveal-on-scroll reveal-delay-1">
               <PresentationDeck
-                projectTitle="Retail Concepts & 3D Visual Deck"
-                deckSubtitle="The Bear House, VOX & Commercial Environments"
+                projectTitle="Retail Concepts &amp; 3D Visual Deck"
+                deckSubtitle="Sureena Chowdhri, The Bear House &amp; VOX"
                 slides={featuredDeckSlides}
               />
             </div>
           </div>
         </section>
 
-        {/* BLUEPRINT SPOTLIGHT (AUTOCAD & GFC COMPARISON) */}
-        <div className="reveal-on-scroll">
-          <BlueprintSpotlight />
-        </div>
-
         {/* RESUME & CREDENTIALS SECTION */}
         <section id="resume" className="resume-section">
           <div className="shell">
             <div className="section-header-centered reveal-on-scroll">
               <span className="section-eyebrow">VERIFIED CREDENTIALS</span>
-              <h2 className="section-title">My Journey, Experience & Resume</h2>
+              <h2 className="section-title">My Journey, Experience &amp; Resume</h2>
               <p className="section-lead">
-                &ldquo;Here is the complete record of my work across Do More Design Studio, Bangalore International Airport Terminal 2 commercial fit-outs, my civil engineering degree, and my granted German patent.&rdquo;
+                &ldquo;Explore my Statement of Purpose (SOP), project leadership across Do More Design Studio, commercial airport fit-out execution at BLR T2, civil engineering degree, and granted German patent.&rdquo;
               </p>
             </div>
 
@@ -375,23 +438,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CALL TO ACTION */}
+        {/* CALL TO ACTION — CONTENT SECTION (CENTER-ALIGNED) */}
         <section style={{ padding: "60px 0 90px" }}>
           <div className="shell">
             <div
               style={{
                 background: "linear-gradient(135deg, var(--bg-subtle) 0%, var(--bg-surface) 100%)",
                 borderRadius: "var(--radius-xl)",
-                padding: "clamp(30px, 5vw, 60px)",
+                padding: "clamp(36px, 5vw, 64px)",
                 border: "1px solid var(--line-subtle)",
                 boxShadow: "var(--shadow-md)",
                 textAlign: "center",
-                maxWidth: "1000px",
+                maxWidth: "960px",
                 margin: "0 auto",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
               }}
               className="reveal-on-scroll"
             >
-              <span className="section-eyebrow">START A COLLABORATION</span>
+              <span
+                className="section-eyebrow"
+                style={{ textAlign: "center", display: "inline-block" }}
+              >
+                START A COLLABORATION
+              </span>
               <h2
                 style={{
                   fontFamily: "var(--font-serif)",
@@ -399,31 +470,33 @@ export default function Home() {
                   fontWeight: 400,
                   marginBottom: "16px",
                   lineHeight: 1.15,
+                  textAlign: "center",
                 }}
               >
-                Let&apos;s build a space that captivates your customers.
+                Let&apos;s build spaces that captivate you.
               </h2>
               <p
                 style={{
                   fontSize: "16px",
                   color: "var(--ink-secondary)",
                   maxWidth: "680px",
-                  margin: "0 auto 30px",
+                  margin: "0 auto 32px",
                   lineHeight: 1.6,
+                  textAlign: "center",
                 }}
               >
-                Whether you need a flagship retail store planned from scratch, 3D visualization concepts, or full Good-For-Construction technical drawing sets, I am ready to bring your vision to life.
+                Whether you need a flagship retail store planned from scratch, 3D visualization concepts, technical drawing sets, or turnkey vendor &amp; site management, I am ready to bring your vision to reality.
               </p>
-              <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap", width: "100%" }}>
                 <a
-                  href="mailto:rishad.muhammad313@gmail.com"
+                  href="mailto:shaikh.rishad7@gmail.com"
                   className="btn-pill btn-pill-primary"
                 >
                   <span>Email Me Directly</span>
                   <span>↗</span>
                 </a>
                 <a
-                  href="https://wa.me/919182397856?text=Hi%20Rishad,%20I%20would%20like%20to%20discuss%20a%20retail%20design%20project."
+                  href="https://wa.me/919182397856?text=Hi%20Muhammad%20Rishad,%20I%20would%20like%20to%20discuss%20a%20retail%20design%20project."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-pill btn-pill-outline"

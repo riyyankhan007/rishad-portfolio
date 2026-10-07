@@ -19,12 +19,25 @@ interface BlueprintItem {
 
 const blueprints: BlueprintItem[] = [
   {
-    id: "vox-gfc",
-    title: "VOX Turquoise Mumbai — 471 SQ FT",
-    project: "Curved Ceiling & Floor Plan GFC",
-    scale: "GFC REV-0 · 22 Sheets Package",
+    id: "sc-jaipur-plan",
+    title: "Sureena Chowdhri — Jaipur Flagship",
+    project: "Approved Store Layout & Spatial Plan",
+    scale: "Architectural Concept & Layout Set",
     description:
-      "“In retail interior design, the drawing is the contract between imagination and reality. For this compact 471 SFT luxury boutique, I drafted the custom curved flexi-ply ceiling baffles, recessed cove lighting, and SPC oak mist floor layout down to the millimeter.”",
+      "“For Sureena Chowdhri’s luxury boutique in Jaipur, I engineered the approved spatial layout plan establishing customer flow, entrance sightlines, private bridal consultation suites, cash counter ergonomics, and perimeter display arches.”",
+    drawingSrc: "/projects/sureena-chowdhri/layout.jpg",
+    renderSrc: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    pdfLink: "/projects/sureena-chowdhri/sureena-chowdhri-design-concept.pdf",
+    slug: "sureena-chowdhri",
+    specs: ["Approved Store Layout", "Arched Display Niches", "Bridal Consultation Lounge", "Cash Desk & Trial Suites"],
+  },
+  {
+    id: "vox-gfc",
+    title: "VOX Turquoise Mumbai — Experience Center",
+    project: "Curved Ceiling & Floor Plan Drawing Set",
+    scale: "Architectural Documentation Set",
+    description:
+      "“For this exclusive luxury experience center designed entirely from the VOX catalog, I drafted the custom curved flexi-ply ceiling baffles, recessed lighting coves, and SPC oak mist floor layout down to the millimeter.”",
     drawingSrc: "/projects/vox-mumbai/gfc-p3.jpg",
     renderSrc: "/projects/vox-mumbai/01.jpg",
     pdfLink: "/projects/vox-mumbai/technical.pdf",
@@ -34,28 +47,28 @@ const blueprints: BlueprintItem[] = [
   {
     id: "tbh-jaipur-gfc",
     title: "The Bear House — Pacific Mall Jaipur",
-    project: "Full GFC Construction & MEP Coordination",
-    scale: "1,916 SQ FT Flagship · 33 Sheets GFC",
+    project: "Comprehensive Construction Drawing Package",
+    scale: "Flagship Retail Documentation",
     description:
-      "“A retail flagship must look effortless to the shopper. My technical drawing package coordinated multi-tier lighting, power troughs for POS & island cash counters, CCTV security coverage, and HVAC diffuser paths so no utility clashes with custom oak millwork.”",
+      "“A retail flagship must look effortless to the shopper. My technical drawing package coordinated multi-tier lighting, power troughs for POS & island cash counters, CCTV security coverage, and service conduits so no utility clashes with custom oak finishes.”",
     drawingSrc: "/projects/bear-house-jaipur/gfc-p4.jpg",
     renderSrc: "/projects/bear-house-jaipur/01.jpg",
     pdfLink: "/projects/bear-house-jaipur/gfc-drawings.pdf",
     slug: "the-bear-house-pacific-jaipur",
-    specs: ["33-Sheet GFC Set", "Fixture Zoning & Gondolas", "Power & Electrical Troughs", "1,916 SFT Floor Plate"],
+    specs: ["Detailed Drawing Set", "Fixture Zoning & Islands", "Power & Electrical Troughs", "Material Specifications"],
   },
   {
     id: "tbh-m3m-gfc",
     title: "The Bear House — M3M Paragon 57",
-    project: "30-Sheet Good-For-Construction (GFC) Package",
+    project: "Mezzanine Floor Technical Layout Set",
     scale: "Commercial Retail Bay · Gurugram",
     description:
-      "“Behind the photorealistic 3D visualization is an exhaustive 30-sheet construction drawing package. I engineered the retail fixture layouts, cash counter raceways, false ceiling levels @ 2850mm, and coordinated HVAC ducting paths to ensure flawless on-site execution.”",
+      "“I led this project myself. Mezzanine floor designed, establishing seamless customer flow and sculpting a minimalistic facade. Behind the photorealistic 3D visualization is an exhaustive construction drawing set engineering retail fixture layouts, mezzanine customer flow, and cash counter raceways.”",
     drawingSrc: "/projects/bear-house-m3m/gfc-p3.jpg",
     renderSrc: "/projects/bear-house-m3m/slides/slide-01.jpg",
     pdfLink: "/projects/bear-house-m3m/gfc-drawings.pdf",
     slug: "the-bear-house-m3m",
-    specs: ["30-Sheet GFC Set", "Mezzanine & Retail Layout", "Gypsum False Ceiling @ 2850mm", "Lighting Cove & HVAC Routing"],
+    specs: ["Mezzanine Floor Designed", "Minimalistic Facade", "Cash Counter Raceways", "Fixture Layout Set"],
   },
 ];
 
@@ -68,9 +81,9 @@ export default function BlueprintSpotlight() {
       <div className="shell">
         <div className="blueprint-header">
           <span className="section-eyebrow">THE DRAFTING TABLE</span>
-          <h2 className="section-title">From 3D Vision to Technical Reality</h2>
+          <h2 className="section-title">Architectural Drafting &amp; Technical Documentation</h2>
           <p>
-            &ldquo;I don&apos;t just visualize retail concepts &mdash; I draw the exact construction blueprints that builders, joiners, and MEP contractors execute on site. Toggle between the photorealistic design render and my actual AutoCAD GFC drawing package below.&rdquo;
+            &ldquo;I don&apos;t just visualize retail concepts &mdash; I draw the exact construction blueprints that builders, joiners, and trade contractors execute on site. Toggle between the photorealistic design render and my actual AutoCAD technical drawings below.&rdquo;
           </p>
 
           <div style={{ display: "flex", gap: "12px", marginTop: "24px", flexWrap: "wrap" }}>

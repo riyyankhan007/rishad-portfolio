@@ -7,59 +7,75 @@ import ScrollObserver from "../components/ScrollObserver";
 export const metadata = {
   title: "Selected Retail Projects — Muhammad Rishad",
   description:
-    "Explore retail interior design case studies by Muhammad Rishad: The Bear House Pacific Mall Jaipur, VOX Turquoise Mumbai, and The Bear House M3M Paragon 57.",
+    "Explore retail space planning and interior design case studies by Muhammad Rishad: Sureena Chowdhri Jaipur, The Bear House Pacific Mall Jaipur, VOX Turquoise Mumbai, and The Bear House M3M Paragon 57.",
 };
 
 const projects = [
   {
     no: "01",
-    slug: "the-bear-house-pacific-jaipur",
-    name: "The Bear House — Pacific Mall Jaipur",
-    category: "Flagship Retail Store",
-    meta: "1,916 SQ FT · JAIPUR · NEW FLAGSHIP",
-    image: "/projects/bear-house-jaipur/01.jpg",
-    drawingPreview: "/projects/bear-house-jaipur/mep-p1.jpg",
-    scope: "Space Planning · Fixture Detailing · MEP Coordination · AutoCAD GFC",
+    slug: "sureena-chowdhri",
+    name: "Sureena Chowdhri — Flagship Boutique Jaipur",
+    category: "Luxury Designer Boutique",
+    meta: "JAIPUR · LUXURY COUTURE CONCEPT",
+    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    scope: "Adapted Concept Design · Detailed Drawings · Space Planning · Store Design Elements",
     quote:
-      "“My vision for this 1,916 sq ft store was to choreograph an expansive, masculine retail journey. I calibrated circulation aisles around central oak display tables, aligned ambient and accent lighting, and concealed all electrical feeds within floor troughs to maintain a clean ceiling plane.”",
+      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, developed detailed drawings, and worked on the overall space planning and design elements throughout the project. Balancing traditional arched portals with contemporary luxury, I laid out welcoming bridal consultation lounges, bespoke brass garment rails, and an intuitive circular customer journey that celebrates couture craft.”",
     stats: [
-      { label: "Carpet Area", value: "1,916 SQ FT" },
-      { label: "Location", value: "Pacific Mall, Jaipur" },
-      { label: "Deliverables", value: "Fixture Plans & MEP GFC" },
+      { label: "Location", value: "Jaipur, Rajasthan" },
+      { label: "Role", value: "Concept Adaptation & Space Planning" },
+      { label: "Deliverables", value: "3D Visual Deck & Project Document" },
     ],
   },
   {
     no: "02",
-    slug: "vox-turquoise-mumbai",
-    name: "VOX — Turquoise Mumbai",
-    category: "Luxury Boutique & Material Library",
-    meta: "471 SQ FT · MUMBAI · GFC PACKAGE",
-    image: "/projects/vox-mumbai/01.jpg",
-    drawingPreview: "/projects/vox-mumbai/gfc-p3.jpg",
-    scope: "Spatial Concept · Curved Ceiling Detailing · Joinery Sections · 22-Sheet GFC",
+    slug: "the-bear-house-pacific-jaipur",
+    name: "The Bear House — Pacific Mall Jaipur",
+    category: "Flagship Retail Store",
+    meta: "JAIPUR · NEW FLAGSHIP",
+    image: "/projects/bear-house-jaipur/01.jpg",
+    drawingPreview: "/projects/bear-house-jaipur/mep-p1.jpg",
+    scope: "Space Planning · Project Management · QA/QC · Material Selection",
     quote:
-      "“In a boutique of 471 sq ft, luxury is defined by spatial restraint and tactile precision. I designed curved ceiling baffles, an interactive material library for architects, and a seamless SPC oak mist floor layout. My 22-page GFC drawing set governed every millimeter of joinery.”",
+      "“My vision for this flagship store was to choreograph an expansive, masculine retail journey. I calibrated circulation aisles around central display islands, aligned ambient and accent lighting, and led project management and QA/QC to ensure every fixture junction was executed with precision.”",
     stats: [
-      { label: "Carpet Area", value: "471 SQ FT" },
-      { label: "Location", value: "Turquoise, Mumbai" },
-      { label: "Deliverables", value: "Full 22-Page GFC Set" },
+      { label: "Location", value: "Pacific Mall, Jaipur" },
+      { label: "Execution", value: "Project Management & QA/QC" },
+      { label: "Deliverables", value: "Full Construction Drawing Set" },
     ],
   },
   {
     no: "03",
+    slug: "vox-turquoise-mumbai",
+    name: "VOX — Turquoise Mumbai",
+    category: "Luxury Experience Center & Material Studio",
+    meta: "MUMBAI · MATERIAL STUDIO",
+    image: "/projects/vox-mumbai/01.jpg",
+    drawingPreview: "/projects/vox-mumbai/gfc-p3.jpg",
+    scope: "VOX Catalog Systems · Curved Ceiling Detailing · Material Selection · BOQ",
+    quote:
+      "“I designed this exclusive experience center by utilizing only the VOX product catalog and architectural systems. Sculpted curved flexi-ply ceiling baffles stretch sightlines, accompanied by an interactive material library for architects, comprehensive BOQ drafting, and vendor management.”",
+    stats: [
+      { label: "Location", value: "Turquoise, Mumbai" },
+      { label: "Catalog Integration", value: "100% VOX Products" },
+      { label: "Deliverables", value: "Architectural Drawing Package & BOQ" },
+    ],
+  },
+  {
+    no: "04",
     slug: "the-bear-house-m3m",
     name: "The Bear House — M3M Paragon 57",
-    category: "Visual Merchandising & 3D Interior",
-    meta: "RETAIL INTERIOR · GURUGRAM · 3D CONCEPT",
+    category: "Visual Merchandising & Store Architecture",
+    meta: "GURUGRAM · FLAGSHIP STORE",
     image: "/projects/bear-house-m3m/01.jpg",
     drawingPreview: "/projects/bear-house-m3m/image5.jpeg",
-    scope: "3D Visualization · Storefront Impact · Display Elevations · POS Layout",
+    scope: "Lead Project Designer · Mezzanine Floor Designed · Facade Design",
     quote:
-      "“At M3M Paragon 57, I investigated high-contrast retail merchandising. Using photorealistic 3D rendering and technical elevation drafting, I balanced illuminated brand logos, modular perimeter racks, and a welcoming customer cash desk that drives conversion.”",
+      "“I led this project myself from concept through technical delivery. Mezzanine floor designed, establishing seamless customer flow and sculpted a minimalistic facade design that commands attention from the mall concourse while maintaining strict BOQ, labour coordination, and QA/QC control.”",
     stats: [
-      { label: "Category", value: "Retail Apparel Concept" },
-      { label: "Location", value: "M3M Paragon 57" },
-      { label: "Deliverables", value: "3D Visuals & 2D Layouts" },
+      { label: "Location", value: "M3M Paragon 57, Gurugram" },
+      { label: "Design Feature", value: "Mezzanine floor designed" },
+      { label: "Key Features", value: "Mezzanine Flow & Minimalistic Facade" },
     ],
   },
 ];
@@ -91,7 +107,7 @@ export default function ProjectsPage() {
                 }}
                 className="reveal-on-scroll reveal-delay-1"
               >
-                Retail Interiors, Fixtures & Construction Drawings
+                Retail Interiors, Space Planning &amp; Technical Execution
               </h1>
 
               <p
@@ -102,7 +118,7 @@ export default function ProjectsPage() {
                 }}
                 className="reveal-on-scroll reveal-delay-2"
               >
-                &ldquo;Every project here represents a complete synthesis of spatial design, brand merchandising, and buildable AutoCAD documentation. Step inside each project to see the 3D renders alongside the technical drawings that made them real.&rdquo;
+                &ldquo;Every project here represents a complete synthesis of spatial planning, brand merchandising, and buildable technical documentation. Explore each case study to view 3D visual perspectives alongside technical drawing sets.&rdquo;
               </p>
             </div>
           </div>
@@ -112,7 +128,7 @@ export default function ProjectsPage() {
         <section>
           <div className="shell">
             <div style={{ display: "flex", flexDirection: "column", gap: "60px" }}>
-              {projects.map((p, idx) => (
+              {projects.map((p) => (
                 <div
                   key={p.slug}
                   className="reveal-on-scroll"
@@ -231,7 +247,7 @@ export default function ProjectsPage() {
                         ))}
                       </div>
 
-                      <div style={{ display: "flex", gap: "16px", alignItems: "center", flexWrap: "wrap" }}>
+                      <div style={{ display: "flex", gap: "16px", alignItems: "center", flexWrap: "wrap", marginTop: "24px" }}>
                         <Link
                           href={`/projects/${p.slug}`}
                           className="btn-pill btn-pill-primary"

@@ -33,66 +33,43 @@ export default function Navbar() {
     <header className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="shell">
         <div className="navbar-inner">
+          {/* LEFT SIDE: NAME & ROLE */}
           <Link href="/" className="brand-badge" onClick={() => setMobileMenuOpen(false)}>
             <div className="brand-monogram">MR</div>
             <div className="brand-meta">
               <span className="brand-name">Muhammad Rishad</span>
-              <span className="brand-role">Retail Interior Designer · Civil Eng.</span>
+              <span className="brand-role">Civil Engineering and Retail Designer</span>
             </div>
           </Link>
 
-          <nav className="nav-links">
-            <Link
-              href="/"
-              className={`nav-item ${pathname === "/" ? "active" : ""}`}
-            >
-              Overview
-            </Link>
-            <Link
-              href="/projects"
-              className={`nav-item ${pathname.startsWith("/projects") ? "active" : ""}`}
-            >
-              Selected Work
-            </Link>
-            <Link
-              href="/about"
-              className={`nav-item ${pathname === "/about" ? "active" : ""}`}
-            >
-              My Story & Resume
-            </Link>
-            <Link
-              href="/contact"
-              className={`nav-item ${pathname === "/contact" ? "active" : ""}`}
-            >
-              Contact
-            </Link>
-          </nav>
-
-          <div className="nav-actions">
-            {/* RESUME BUTTON: Always visible */}
-            <a
-              href="/resume/Muhammad_Rishad_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-pill btn-pill-outline nav-btn-resume"
-              download
-              aria-label="Download Muhammad Rishad Resume PDF"
-            >
-              <span className="resume-label-full">Resume PDF</span>
-              <span className="resume-label-short">Resume</span>
-              <span className="btn-arrow">↓</span>
-            </a>
-
-            {/* LET'S TALK BUTTON: Always visible */}
-            <Link
-              href="/contact"
-              className="btn-pill btn-pill-primary nav-btn-talk"
-              aria-label="Contact Muhammad Rishad"
-            >
-              <span className="talk-label-full">Let&apos;s Talk</span>
-              <span className="talk-label-short">Talk</span>
-              <span className="btn-arrow">↗</span>
-            </Link>
+          {/* RIGHT SIDE: NAVIGATION ITEMS TOGETHER */}
+          <div className="nav-actions-group">
+            <nav className="nav-links">
+              <Link
+                href="/"
+                className={`nav-item ${pathname === "/" ? "active" : ""}`}
+              >
+                Overview
+              </Link>
+              <Link
+                href="/projects"
+                className={`nav-item ${pathname.startsWith("/projects") ? "active" : ""}`}
+              >
+                Selected Work
+              </Link>
+              <Link
+                href="/about"
+                className={`nav-item ${pathname === "/about" ? "active" : ""}`}
+              >
+                Story and Resume
+              </Link>
+              <Link
+                href="/contact"
+                className={`nav-item ${pathname === "/contact" ? "active" : ""}`}
+              >
+                Contact
+              </Link>
+            </nav>
 
             {/* MOBILE MENU TOGGLE */}
             <button
@@ -141,7 +118,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                01 / Overview & Home
+                01 / Overview
               </Link>
               <Link
                 href="/projects"
@@ -155,7 +132,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                02 / Selected Retail Work
+                02 / Selected Work
               </Link>
               <Link
                 href="/about"
@@ -169,7 +146,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                03 / My Story & Resume
+                03 / Story and Resume
               </Link>
               <Link
                 href="/contact"
@@ -183,7 +160,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                04 / Contact & Inquiries
+                04 / Contact
               </Link>
             </div>
 
@@ -194,7 +171,7 @@ export default function Navbar() {
                 style={{ width: "100%", justifyContent: "center", padding: "14px" }}
                 download
               >
-                <span>Download Resume PDF (145 KB)</span>
+                <span>Download Resume PDF</span>
                 <span>↓</span>
               </a>
               <Link
@@ -210,18 +187,6 @@ export default function Navbar() {
         )}
       </div>
 
-      <style jsx>{`
-        @keyframes drawerSlideIn {
-          from {
-            opacity: 0;
-            transform: translateY(-10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </header>
   );
 }
