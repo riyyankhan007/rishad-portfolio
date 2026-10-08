@@ -39,7 +39,7 @@ export default function Footer() {
                 <Link href="/projects">Selected Work</Link>
               </li>
               <li>
-                <Link href="/patents">Patents &amp; CSIR Awards</Link>
+                <Link href="/ip">IP &amp; CSIR Awards</Link>
               </li>
               <li>
                 <Link href="/about">Story and Resume</Link>

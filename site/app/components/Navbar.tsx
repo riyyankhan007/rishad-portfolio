@@ -58,10 +58,10 @@ export default function Navbar() {
                 Selected Work
               </Link>
               <Link
-                href="/patents"
-                className={`nav-item ${pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "active" : ""}`}
+                href="/ip"
+                className={`nav-item ${pathname.startsWith("/ip") || pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "active" : ""}`}
               >
-                Patents &amp; Awards
+                IP &amp; Awards
               </Link>
               <Link
                 href="/about"
@@ -141,18 +141,18 @@ export default function Navbar() {
                 02 / Selected Work
               </Link>
               <Link
-                href="/patents"
+                href="/ip"
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
                   fontSize: "20px",
                   fontWeight: 600,
                   fontFamily: "var(--font-serif)",
-                  color: pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "var(--accent-terracotta)" : "var(--ink-primary)",
+                  color: pathname.startsWith("/ip") || pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "var(--accent-terracotta)" : "var(--ink-primary)",
                   padding: "8px 0",
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                03 / Patents &amp; CSIR Awards
+                03 / IP &amp; CSIR Awards
               </Link>
               <Link
                 href="/about"

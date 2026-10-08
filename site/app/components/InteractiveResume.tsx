@@ -98,7 +98,7 @@ export default function InteractiveResume() {
           className={`resume-tab-btn ${activeTab === "patents" ? "active" : ""}`}
           onClick={() => setActiveTab("patents")}
         >
-          Patents &amp; CSIR Awards
+          IP &amp; CSIR Awards
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "certifications" ? "active" : ""}`}
@@ -174,7 +174,7 @@ export default function InteractiveResume() {
               </p>
 
               <p>
-                However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a Registered German Utility Model for a Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA) registered by the German Patent and Trade Mark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
+                However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a Registered German Utility Model for a Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA) officially registered by the German DPMA (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
               </p>
 
               <div style={{ paddingTop: "10px", borderTop: "1px solid var(--line-subtle)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "14px" }}>
@@ -326,7 +326,7 @@ export default function InteractiveResume() {
               </span>
               <h3>Registered German Utility Model: Sustainable Material Composite Made from Biodegradable Waste</h3>
               <p>
-                &ldquo;I developed a registered German utility model for an eco-friendly sustainable material composite made from biodegradable waste (Utility Model No. 20 2022 106 106 - DPMA), designed as a circular direct replacement for single-use plastics in construction and commercial applications. Officially registered with the German Patent and Trade Mark Office (Deutsches Patent- und Markenamt).&rdquo;
+                &ldquo;I developed a registered German utility model for an eco-friendly sustainable material composite made from biodegradable waste (Utility Model No. 20 2022 106 106 - DPMA), designed as a circular direct replacement for single-use plastics in construction and commercial applications. Officially registered with the German DPMA (Deutsches Patent- und Markenamt).&rdquo;
               </p>
               <div className="patent-badges-row">
                 <span className="patent-badge-item">Utility Model No. 20 2022 106 106 · DPMA</span>
@@ -349,7 +349,7 @@ export default function InteractiveResume() {
                   <span>Open Official German Utility Model Certificate (No. 20 2022 106 106 - DPMA) ↗</span>
                 </a>
                 <Link
-                  href="/patents"
+                  href="/ip"
                   className="btn-pill btn-pill-outline"
                   style={{
                     color: "#ffffff",
@@ -357,7 +357,7 @@ export default function InteractiveResume() {
                     fontSize: "13px",
                   }}
                 >
-                  <span>Explore Dedicated Patents &amp; Awards Page ↗</span>
+                  <span>Explore Dedicated IP &amp; Awards Page ↗</span>
                 </Link>
               </div>
             </div>
