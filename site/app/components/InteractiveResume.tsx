@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface CertificationItem {
   id: string;
@@ -97,7 +98,7 @@ export default function InteractiveResume() {
           className={`resume-tab-btn ${activeTab === "patents" ? "active" : ""}`}
           onClick={() => setActiveTab("patents")}
         >
-          Patents &amp; Honors
+          Patents &amp; CSIR Awards
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "certifications" ? "active" : ""}`}
@@ -143,8 +144,8 @@ export default function InteractiveResume() {
               </div>
               <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
                 <span className="patent-badge-item">Civil Engineering &amp; Retail Design</span>
-                <span className="patent-badge-item">German Patent Holder</span>
-                <span className="patent-badge-item">CSIR Award Winner</span>
+                <span className="patent-badge-item">German Utility Model Holder · DPMA</span>
+                <span className="patent-badge-item">CSIR First Prize Winner</span>
               </div>
             </div>
 
@@ -173,7 +174,7 @@ export default function InteractiveResume() {
               </p>
 
               <p>
-                However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a patent granted by the German Patent and Trademark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
+                However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a Registered German Utility Model for a Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA) registered by the German Patent and Trade Mark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
               </p>
 
               <div style={{ paddingTop: "10px", borderTop: "1px solid var(--line-subtle)", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "14px" }}>
@@ -321,14 +322,14 @@ export default function InteractiveResume() {
           <div className="patent-banner" style={{ margin: 0 }}>
             <div className="patent-content">
               <span className="patent-eyebrow">
-                GRANTED INTERNATIONAL PATENT · DPMA GERMANY
+                REGISTERED GERMAN UTILITY MODEL · DPMA GERMANY
               </span>
-              <h3>German Patent Granted: Biodegradable Agro-Waste Material</h3>
+              <h3>Registered German Utility Model: Sustainable Material Composite Made from Biodegradable Waste</h3>
               <p>
-                &ldquo;I developed a patented bio-composite material derived from agricultural waste designed as an eco-friendly direct replacement for single-use plastics. The German Patent Office officially granted the patent, recognizing its innovation in circular materials and reducing commercial waste footprints.&rdquo;
+                &ldquo;I developed a registered German utility model for an eco-friendly sustainable material composite made from biodegradable waste (Utility Model No. 20 2022 106 106 - DPMA), designed as a circular direct replacement for single-use plastics in construction and commercial applications. Officially registered with the German Patent and Trade Mark Office (Deutsches Patent- und Markenamt).&rdquo;
               </p>
               <div className="patent-badges-row">
-                <span className="patent-badge-item">German Patent Office Granted (G11861DE)</span>
+                <span className="patent-badge-item">Utility Model No. 20 2022 106 106 · DPMA</span>
                 <span className="patent-badge-item">Circular Agro-Waste Composite</span>
                 <span className="patent-badge-item">Sustainable Material Science</span>
               </div>
@@ -345,8 +346,19 @@ export default function InteractiveResume() {
                     fontSize: "13px",
                   }}
                 >
-                  <span>Open Official German Patent Certificate (G11861DE) ↗</span>
+                  <span>Open Official German Utility Model Certificate (No. 20 2022 106 106 - DPMA) ↗</span>
                 </a>
+                <Link
+                  href="/patents"
+                  className="btn-pill btn-pill-outline"
+                  style={{
+                    color: "#ffffff",
+                    borderColor: "rgba(255,255,255,0.3)",
+                    fontSize: "13px",
+                  }}
+                >
+                  <span>Explore Dedicated Patents &amp; Awards Page ↗</span>
+                </Link>
               </div>
             </div>
             <div className="patent-award-card" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px" }}>
@@ -365,14 +377,14 @@ export default function InteractiveResume() {
               >
                 <Image
                   src="/patent/patent-preview.jpg"
-                  alt="German Patent Certificate G11861DE"
+                  alt="German Utility Model Certificate No. 20 2022 106 106 - DPMA"
                   fill
                   sizes="220px"
                   style={{ objectFit: "cover" }}
                 />
               </div>
               <span style={{ fontSize: "11px", color: "var(--accent-brass)", fontFamily: "var(--font-mono)", textAlign: "center" }}>
-                Official DPMA Certificate G11861DE
+                Official DPMA Registration No. 20 2022 106 106
               </span>
             </div>
           </div>
@@ -392,19 +404,27 @@ export default function InteractiveResume() {
             <div>
               <span className="section-eyebrow">NATIONAL INNOVATION HONOR</span>
               <h4 style={{ fontFamily: "var(--font-serif)", fontSize: "22px", fontWeight: 500, marginBottom: "10px" }}>
-                CSIR Winner &mdash; Future Entrepreneurs Connect
+                CSIR-SERC First Prize Winner &mdash; Future Entrepreneurs Connect
               </h4>
               <p style={{ fontSize: "14px", color: "var(--ink-secondary)", lineHeight: 1.65, marginBottom: "16px" }}>
-                Winner of CSIR &ndash; Future Entrepreneurs Connect for designing an eco-friendly closed-loop hydroponics cultivation system engineered entirely from recycled household waste.
+                Awarded First Prize by the Council of Scientific and Industrial Research – Structural Engineering Research Centre (CSIR-SERC) Chennai during the One Week One Lab Campaign for engineering a space-saving hydroponics cultivation system from household waste.
               </p>
-              <a
-                href="/certifications/csir-award.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-pill btn-pill-primary"
-              >
-                <span>View Official CSIR Award Certificate PDF ↗</span>
-              </a>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <a
+                  href="/certifications/csir-award.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-pill btn-pill-primary"
+                >
+                  <span>View Official CSIR Award Certificate PDF ↗</span>
+                </a>
+                <Link
+                  href="/patents"
+                  className="btn-pill btn-pill-outline"
+                >
+                  <span>Read Full Research &amp; Award Story ↗</span>
+                </Link>
+              </div>
             </div>
 
             <div style={{ display: "flex", justifyContent: "center" }}>

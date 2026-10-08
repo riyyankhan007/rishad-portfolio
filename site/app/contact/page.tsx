@@ -354,7 +354,7 @@ export default function Contact() {
                     Official Resume &amp; Portfolio
                   </strong>
                   <p style={{ fontSize: "13px", color: "var(--ink-secondary)", marginTop: "12px", lineHeight: 1.5 }}>
-                    Verified documentation of work history, German patent certificate, CSIR award, and Autodesk BIM accreditations.
+                    Verified documentation of work history, German Utility Model certificate (DPMA No. 20 2022 106 106), CSIR First Prize award, and Autodesk BIM accreditations.
                   </p>
                 </div>
 

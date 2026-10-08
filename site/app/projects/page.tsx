@@ -17,14 +17,15 @@ const projects = [
     name: "Sureena Chowdhri — Flagship Boutique Jaipur",
     category: "Luxury Designer Boutique",
     meta: "JAIPUR · LUXURY COUTURE CONCEPT",
-    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
-    scope: "Adapted Concept Design · Detailed Drawings · Space Planning · Store Design Elements",
+    image: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png",
+    drawingPreview: "/projects/sureena-chowdhri/gfc-sheet-28-facade.jpg",
+    scope: "Complete 36-Sheet GFC Drawing Set · Concept Adaptation · Space Planning · Fixture Detailing",
     quote:
-      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, developed detailed drawings, and worked on the overall space planning and design elements throughout the project. Balancing traditional arched portals with contemporary luxury, I laid out welcoming bridal consultation lounges, bespoke brass garment rails, and an intuitive circular customer journey that celebrates couture craft.”",
+      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, drafted the complete 36-sheet Good For Construction (GFC) drawing package, and engineered space planning and retail elements throughout the project. Balancing traditional arched portals with contemporary luxury, I laid out bridal consultation lounges, bespoke brass garment rails, and an intuitive customer circulation journey.”",
     stats: [
       { label: "Location", value: "Jaipur, Rajasthan" },
-      { label: "Role", value: "Concept Adaptation & Space Planning" },
-      { label: "Deliverables", value: "3D Visual Deck & Project Document" },
+      { label: "Role", value: "Concept Adaptation & GFC Package" },
+      { label: "Deliverables", value: "36-Sheet GFC Set & 3D Concept Deck" },
     ],
   },
   {

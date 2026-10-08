@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "Muhammad Rishad Portfolio",
     images: [
       {
-        url: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+        url: "/projects/sureena chowdhri/01.jpg",
         width: 1200,
         height: 630,
         alt: "Sureena Chowdhri Flagship Store by Muhammad Rishad",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Muhammad Rishad — Civil Engineering and Retail Designer",
     description:
       "Bridging the art of retail space planning and interior design with civil engineering precision.",
-    images: ["/projects/sureena-chowdhri/slides/slide-07.jpg"],
+    images: ["/projects/sureena chowdhri/01.jpg"],
   },
 };
 

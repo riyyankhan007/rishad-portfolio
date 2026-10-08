@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata = {
   title: "My Story, SOP & Resume — Muhammad Rishad",
   description:
-    "Learn about Muhammad Rishad's Statement of Purpose (SOP), journey from civil engineering to retail design across The Bear House, Sureena Chowdhri, VOX, Nobero, BLR T2, and his granted German patent.",
+    "Learn about Muhammad Rishad's Statement of Purpose (SOP), journey from civil engineering to retail design across The Bear House, Sureena Chowdhri, VOX, Nobero, BLR T2, and his registered German Utility Model (DPMA).",
 };
 
 export default function About() {
@@ -79,8 +79,8 @@ export default function About() {
                 </div>
                 <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
                   <span className="patent-badge-item">Civil Engineering &amp; Retail Design</span>
-                  <span className="patent-badge-item">German Patent Holder</span>
-                  <span className="patent-badge-item">CSIR Award Winner</span>
+                  <span className="patent-badge-item">German Utility Model Holder · DPMA</span>
+                  <span className="patent-badge-item">CSIR First Prize Winner</span>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export default function About() {
                 </p>
 
                 <p>
-                  However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a patent granted by the German Patent and Trademark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
+                  However, my interest in sustainability grew naturally alongside this work. During my final year of university, I chose to investigate a bio-based alternative material to replace single-use plastics in construction, even though it was completely outside my curriculum. This research eventually led to a Registered German Utility Model for a Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA) registered by the German Patent and Trade Mark Office (Deutsches Patent- und Markenamt). Following that, I independently built a space-saving hydroponic system that used household waste to grow crops. Presenting this to scientists at the Council of Scientific and Industrial Research &ndash; Structural Engineering Research Centre (CSIR-SERC) during the Future Entrepreneurs Connect event&mdash;part of India&apos;s G20 Presidency initiative earned the project first-place recognition. These projects were selfless attempts driven purely by a desire to find solutions for the environment and society, rather than just fulfilling a curriculum requirement. Working directly on sites and in design studios has shown me that sustainability cannot just be a technical afterthought or a checklist item; it has to be built into the very way buildings are planned, designed, and lived in.
                 </p>
               </div>
             </div>
@@ -202,11 +202,11 @@ export default function About() {
                   </li>
                   <li className="about-fact-item">
                     <span className="about-fact-bullet">●</span>
-                    <span><strong>Patents:</strong> Granted German Patent for Biodegradable Agro-Waste Material</span>
+                    <span><strong>Utility Model / IP:</strong> Registered German Utility Model: Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA)</span>
                   </li>
                   <li className="about-fact-item">
                     <span className="about-fact-bullet">●</span>
-                    <span><strong>Awards:</strong> CSIR Winner &mdash; Hydroponics from Household Waste</span>
+                    <span><strong>Awards:</strong> CSIR-SERC First Prize Winner &mdash; Hydroponics from Household Waste</span>
                   </li>
                   <li className="about-fact-item">
                     <span className="about-fact-bullet">●</span>
@@ -243,7 +243,7 @@ export default function About() {
               <span className="section-eyebrow">DETAILED TIMELINE</span>
               <h2 className="section-title">Professional Experience, SOP &amp; Accreditations</h2>
               <p className="section-lead">
-                Explore each chapter of my career &mdash; click the tabs below to read my Statement of Purpose (SOP), verified work history, patents, certifications, and technical capabilities.
+                Explore each chapter of my career &mdash; click the tabs below to read my Statement of Purpose (SOP), verified work history, registered German utility model, CSIR awards, certifications, and technical capabilities.
               </p>
             </div>
 

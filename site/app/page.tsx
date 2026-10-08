@@ -11,11 +11,18 @@ const projects = [
     slug: "sureena-chowdhri",
     name: "Sureena Chowdhri — Flagship Boutique Jaipur",
     meta: "JAIPUR · LUXURY DESIGNER BOUTIQUE",
-    role: "Adapted Concept Design, Detailed Drawings & Space Planning",
-    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    role: "Complete 36-Sheet GFC Set, Concept Adaptation & Space Planning",
+    image: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png",
+    previewThumbs: [
+      { src: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png", label: "Flagship Facade Render" },
+      { src: "/projects/sureena-chowdhri/gfc-sheet-28-facade.jpg", label: "GFC Facade Blueprint (Sheet 26)" },
+      { src: "/projects/sureena-chowdhri/render images/Opulent Indian Fashion Boutique Interior.png", label: "Bridal Grand Salon" },
+      { src: "/projects/sureena-chowdhri/gfc-sheet-19-niche-details.jpg", label: "GFC Arched Niches (Sheet 17.A)" },
+      { src: "/projects/sureena-chowdhri/gfc-sheet-34-cash-counter.jpg", label: "GFC Cash Millwork (Sheet 32)" },
+    ],
     quote:
-      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, developed detailed drawings, and worked on the overall space planning and design elements throughout the project. Balancing traditional Rajasthani arched portals with contemporary luxury, I laid out welcoming bridal consultation lounges, bespoke brass garment rails, and an intuitive circular customer journey that celebrates couture craft.”",
-    tags: ["Adapted Concept Design", "Detailed Drawings", "Space Planning", "Store Design Elements"],
+      "“For Sureena Chowdhri's Jaipur flagship, I adapted the concept design into the store environment, drafted the complete 36-sheet Good For Construction (GFC) drawing package, and engineered space planning and retail elements throughout the project. Balancing traditional Rajasthani arched portals with contemporary luxury, I laid out welcoming bridal consultation lounges, bespoke brass garment rails, and an intuitive circular customer journey that celebrates couture craft.”",
+    tags: ["36-Sheet GFC Package", "Concept Adaptation", "Space Planning", "Store Design Elements"],
   },
   {
     slug: "the-bear-house-pacific-jaipur",
@@ -52,31 +59,31 @@ const projects = [
 const featuredDeckSlides: SlideItem[] = [
   {
     id: "deck-sc-01",
-    image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
+    image: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png",
     title: "Storefront Arched Facade & Portal Threshold",
     category: "SUREENA CHOWDHRI · JAIPUR",
-    designerNote: "Minimalist arched facade blending traditional Jaipur heritage with contemporary couture retail. Symmetrical window showcases draw shoppers into the central hall.",
+    designerNote: "Flagship arched boutique storefront designed with imperial maroon and gold accents, authentic Jaipur heritage arched portals, and full-height transparent showcase glazing.",
   },
   {
     id: "deck-sc-02",
-    image: "/projects/sureena-chowdhri/slides/slide-09.jpg",
-    title: "Main Retail Runway & Arched Display Niches",
+    image: "/projects/sureena-chowdhri/render images/Opulent Indian Fashion Boutique Interior.png",
+    title: "Opulent Indian Fashion Boutique Interior & Grand Runway",
     category: "SUREENA CHOWDHRI · JAIPUR",
-    designerNote: "Fluid central customer circulation path framed by recessed plaster display niches and custom warm brass hanging systems.",
+    designerNote: "Central bridal couture axis anchored by custom crystal chandeliers, sculpted lime-plaster arches, and brass-trimmed display islands celebrating heritage craftsmanship.",
   },
   {
     id: "deck-sc-03",
-    image: "/projects/sureena-chowdhri/slides/slide-11.jpg",
-    title: "Bridal Consultation Lounge & Private Salon",
+    image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Lounge (1).png",
+    title: "VIP Bridal Consultation Lounge & Banquette Suite",
     category: "SUREENA CHOWDHRI · JAIPUR",
-    designerNote: "Dedicated couture discussion lounge designed for intimate bridal shopping experiences with custom curved banquette seating and warm diffused cove lighting.",
+    designerNote: "Bespoke curved banquette seating in muted earth velvet with satin brass side tables, engineered for intimate family styling sessions.",
   },
   {
     id: "deck-sc-04",
-    image: "/projects/sureena-chowdhri/slides/slide-14.jpg",
-    title: "Luxury Trial Suite & Backlit Arched Vanity",
+    image: "/projects/sureena-chowdhri/render images/Warm Terracotta Boutique Fitting Room.png",
+    title: "Luxury Trial Suite with Backlit Arched Vanity",
     category: "SUREENA CHOWDHRI · JAIPUR",
-    designerNote: "Private fitting suite with full-length perimeter backlit arched mirror, acoustic wall linings, and warm daylight-accurate illumination.",
+    designerNote: "Spacious private fitting suite featuring custom full-length arched vanity mirror with 360-degree perimeter backlighting for bridal fitting accuracy.",
   },
   {
     id: "deck-01",
@@ -179,7 +186,7 @@ export default function Home() {
                 </div>
 
                 <p className="hero-first-person reveal-on-scroll reveal-delay-2">
-                  I position myself at the intersection of design, engineering and innovation.
+                  I position myself at the intersection of design, engineering and innovation, with almost three years of experience in site execution and design combined, a Registered German Utility Model (DPMA), and a Council of Scientific and Industrial Research (CSIR) award.
                 </p>
 
                 <div className="hero-actions reveal-on-scroll reveal-delay-3">
@@ -202,12 +209,12 @@ export default function Home() {
                     <span>Retail Stores Delivered</span>
                   </div>
                   <div className="hero-stat-item">
-                    <b>2+ Yrs</b>
-                    <span>Commercial &amp; Retail</span>
+                    <b>~3 Yrs</b>
+                    <span>Site Execution &amp; Design</span>
                   </div>
                   <div className="hero-stat-item">
-                    <b>1 Patent</b>
-                    <span>German Patent Granted</span>
+                    <b>German IP</b>
+                    <span>Registered Utility Model (DPMA)</span>
                   </div>
                 </div>
               </div>
@@ -256,7 +263,7 @@ export default function Home() {
             <div className="section-header-centered">
               <span className="section-eyebrow">THE TRIPLE DISCIPLINE</span>
               <h2 className="section-title">
-                Civil Engineering, Retail Design &amp; Spatial Innovation
+                Engineering · Design · Innovation
               </h2>
               <p className="section-lead">
                 &ldquo;Exceptional retail environments require an uncompromised balance: captivating spatial design that elevates the brand, rigorous civil engineering that ensures buildability, and practical innovation that solves complex challenges.&rdquo;
@@ -268,7 +275,7 @@ export default function Home() {
               {/* CARD 1: DESIGN */}
               <div className="dual-lens-card designer">
                 <div className="dual-lens-number">01 / CREATIVE DIRECTION</div>
-                <h3>Retail &amp; Spatial Design</h3>
+                <h3>Retail and Design Space</h3>
                 <p>
                   &ldquo;I lead retail space planning and interior design where spatial flow and brand storytelling elevate commercial environments. From intuitive customer circulation loops and visual merchandising focal walls to tactile material palettes, I craft destinations that captivate shoppers and drive engagement.&rdquo;
                 </p>
@@ -276,6 +283,7 @@ export default function Home() {
                   <span className="dual-lens-tag">Retail Space Planning</span>
                   <span className="dual-lens-tag">Customer Circulation Flow</span>
                   <span className="dual-lens-tag">Visual Merchandising</span>
+                  <span className="dual-lens-tag">Autodesk BIM</span>
                   <span className="dual-lens-tag">Material Selection</span>
                   <span className="dual-lens-tag">Spatial Layout Planning</span>
                   <span className="dual-lens-tag">Lighting Design</span>
@@ -305,13 +313,12 @@ export default function Home() {
                 <div className="dual-lens-number">03 / APPLIED RESEARCH</div>
                 <h3>Practical Innovation</h3>
                 <p>
-                  &ldquo;Combined multidisciplinary knowledge with innovation to develop practical, thoughtful solutions for complex design challenges. I hold a granted <strong>German Patent (DE202023101691U1)</strong> for an eco-friendly biodegradable material substitute for single-use plastics, and was awarded by the <strong>CSIR</strong> for engineering a closed-loop hydroponics cultivation system from household waste.&rdquo;
+                  &ldquo;Combined multidisciplinary knowledge with innovation to develop practical, thoughtful solutions for complex design challenges. I hold a <strong>Registered German Utility Model: Sustainable Material Composite Made from Biodegradable Waste (Utility Model No. 20 2022 106 106 - DPMA)</strong>, and was awarded <strong>First Prize by the CSIR</strong> for engineering a space-saving hydroponics cultivation system from household waste.&rdquo;
                 </p>
                 <div className="dual-lens-tags">
-                  <span className="dual-lens-tag">German Patent Granted</span>
-                  <span className="dual-lens-tag">CSIR Award Winner</span>
+                  <span className="dual-lens-tag">Registered German Utility Model (DPMA)</span>
+                  <span className="dual-lens-tag">CSIR First Prize Winner</span>
                   <span className="dual-lens-tag">Hydroponics from Household Waste</span>
-                  <span className="dual-lens-tag">Autodesk BIM Certified</span>
                   <span className="dual-lens-tag">Sustainable Material Science</span>
                   <span className="dual-lens-tag">Multidisciplinary Problem Solving</span>
                 </div>
@@ -349,6 +356,49 @@ export default function Home() {
                       style={{ objectFit: "cover" }}
                     />
                     <div className="project-media-tag">{`0${index + 1} / CASE STUDY`}</div>
+
+                    {p.previewThumbs && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          bottom: "16px",
+                          left: "16px",
+                          right: "16px",
+                          display: "flex",
+                          gap: "8px",
+                          zIndex: 3,
+                          background: "rgba(25, 23, 21, 0.78)",
+                          backdropFilter: "blur(12px)",
+                          padding: "8px 12px",
+                          borderRadius: "var(--radius-md)",
+                          overflowX: "auto",
+                        }}
+                      >
+                        {p.previewThumbs.map((thumb) => (
+                          <div
+                            key={thumb.src}
+                            style={{
+                              position: "relative",
+                              width: "60px",
+                              height: "40px",
+                              borderRadius: "var(--radius-xs)",
+                              overflow: "hidden",
+                              flexShrink: 0,
+                              border: "1px solid rgba(255, 255, 255, 0.4)",
+                            }}
+                            title={thumb.label}
+                          >
+                            <Image
+                              src={thumb.src}
+                              alt={thumb.label}
+                              fill
+                              sizes="60px"
+                              style={{ objectFit: "cover" }}
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   <div className="project-content-side">
@@ -390,7 +440,7 @@ export default function Home() {
                           textDecoration: "underline",
                         }}
                       >
-                        {p.slug === "sureena-chowdhri" ? "Inspect Project Document ↗" : "Inspect Technical Drawings ↗"}
+                        {p.slug === "sureena-chowdhri" ? "Inspect 36-Sheet GFC Drawings ↗" : "Inspect Technical Drawings ↗"}
                       </Link>
                     </div>
                   </div>
@@ -428,7 +478,7 @@ export default function Home() {
               <span className="section-eyebrow">VERIFIED CREDENTIALS</span>
               <h2 className="section-title">My Journey, Experience &amp; Resume</h2>
               <p className="section-lead">
-                &ldquo;Explore my Statement of Purpose (SOP), project leadership across Do More Design Studio, commercial airport fit-out execution at BLR T2, civil engineering degree, and granted German patent.&rdquo;
+                &ldquo;Explore my Statement of Purpose (SOP), project leadership across Do More Design Studio, commercial airport fit-out execution at BLR T2, civil engineering degree, and registered German Utility Model (DPMA).&rdquo;
               </p>
             </div>
 

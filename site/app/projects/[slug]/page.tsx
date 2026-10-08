@@ -12,6 +12,7 @@ interface DocumentItem {
   url: string;
   badge?: string;
   desc?: string;
+  btnLabel?: string;
 }
 
 interface ProjectData {
@@ -44,156 +45,128 @@ const data: Record<string, ProjectData> = {
     area: "Luxury Designer Flagship",
     location: "Jaipur, Rajasthan",
     client: "Sureena Chowdhri",
-    myRole: "Store Environment Concept Adaptation, Detailed Drawings & Space Planning",
+    myRole: "Store Concept Adaptation, Complete 36-Sheet GFC Drawing Set & Space Planning",
     firstPersonIntro:
-      "“For the Jaipur flagship boutique of luxury designer brand Sureena Chowdhri, I adapted the concept design into the store environment, developed detailed drawings, and worked on the overall space planning and design elements throughout the project.”",
+      "“For the Jaipur flagship boutique of luxury designer brand Sureena Chowdhri, I adapted the concept design into the store environment, authored the comprehensive 36-sheet Good For Construction (GFC) drawing set, and engineered the overall space planning and store design elements throughout the project.”",
     spatialStrategy:
       "My design intent was to celebrate the timeless romance of Rajasthani architectural heritage within a contemporary luxury retail setting. I sculpted sweeping arched portals, private couture bridal consultation lounges, and delicate brass hanging details that frame each garment like a work of art, while choreographing an intuitive circular customer journey past recessed lime-plaster wall niches.",
-    engineeringExecution: "",
-    materials: [],
+    engineeringExecution:
+      "For Sureena Chowdhri's flagship boutique, I translated conceptual aesthetics into a buildable architectural package, drafting the full 36-sheet GFC set (Rev 2, 957 SFT). I dimensioned floor plans and wall partitions, detailed custom satin brass hanging rails, designed cash desk ergonomics with concealed wire routing, coordinated Nexion Endless Beige and mosaic flooring transitions, and engineered gypsum false ceiling coves at 3600mm FFL.",
+    materials: [
+      { name: "Textured Micro-Cement Plaster", desc: "Warm earthy Rajasthani wall finish with soft diffuse light reflectance" },
+      { name: "Brushed Satin Warm Brass", desc: "Custom perimeter garment hanging rails, reveal joints, and brand signature" },
+      { name: "Neutral Fluted Millwork", desc: "Bespoke cash desk, concealed cable management, and display island cabinetry" },
+      { name: "Architectural 3000K Lighting", desc: "Concealed perimeter cove LEDs and high-CRI spotlights calibrated for bridal embroidery" },
+    ],
     deckSlides: [
       {
-        id: "sc-slide-07",
-        image: "/projects/sureena-chowdhri/slides/slide-07.jpg",
-        title: "Storefront Facade & Arched Entrance Portal",
-        category: "SLIDE 07 / STOREFRONT FACADE",
-        designerNote: "Minimalist arched facade blending traditional Jaipur architecture with contemporary high-fashion retail.",
+        id: "sc-render-01",
+        image: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png",
+        title: "Flagship Facade & Arched Entrance Portal",
+        category: "RENDER 01 / STOREFRONT FACADE",
+        designerNote: "Signature arched boutique storefront designed with imperial maroon and gold accents, authentic Jaipur heritage arched portals, and full-height transparent showcase glazing.",
       },
       {
-        id: "sc-slide-08",
-        image: "/projects/sureena-chowdhri/slides/slide-08.jpg",
-        title: "Symmetrical Showcase Window & Display Framing",
-        category: "SLIDE 08 / WINDOW DISPLAY",
-        designerNote: "Recessed display showcase framed with clean plaster reveal lines to hero featured seasonal couture.",
+        id: "sc-render-02",
+        image: "/projects/sureena-chowdhri/render images/Opulent Indian Fashion Boutique Interior.png",
+        title: "Opulent Central Runway & Bridal Grand Salon",
+        category: "RENDER 02 / CENTRAL RUNWAY",
+        designerNote: "Central bridal couture axis anchored by custom crystal chandeliers, sculpted lime-plaster arches, and brass-trimmed display islands celebrating heritage craftsmanship.",
       },
       {
-        id: "sc-slide-09",
-        image: "/projects/sureena-chowdhri/slides/slide-09.jpg",
-        title: "Central Retail Runway & Arched Display Niches",
-        category: "SLIDE 09 / CENTRAL RUNWAY",
-        designerNote: "Fluid customer walkway flanked by brass perimeter hanging systems and warm micro-cement plaster.",
+        id: "sc-render-03",
+        image: "/projects/sureena-chowdhri/render images/Serene Luxury Boutique Showroom.png",
+        title: "Serene Showroom Vista & Perimeter Merchandising",
+        category: "RENDER 03 / SHOWROOM VISTA",
+        designerNote: "Minimalist spatial balance pairing soft diffuse cove illumination with brushed satin brass apparel rails and warm micro-cement architectural surfaces.",
       },
       {
-        id: "sc-slide-10",
-        image: "/projects/sureena-chowdhri/slides/slide-10.jpg",
-        title: "Perimeter Couture Hanging Systems & Warm Illumination",
-        category: "SLIDE 10 / PERIMETER MERCHANDISING",
-        designerNote: "Satin brass hanging bars engineered to support heavy bridal ensembles with concealed anchor detailing.",
+        id: "sc-render-04",
+        image: "/projects/sureena-chowdhri/render images/Warm Arched Boutique Showroom.png",
+        title: "Signature Rajasthani Wall Niches & Couture Bays",
+        category: "RENDER 04 / ARCHED COUTURE WALL",
+        designerNote: "Authentic multi-arched display wall detailed in accordance with GFC Sheet 19 (Dwg 17.A), framing couture bridal pieces within recessed plaster alcoves.",
       },
       {
-        id: "sc-slide-11",
-        image: "/projects/sureena-chowdhri/slides/slide-11.jpg",
-        title: "Bridal Consultation Lounge & Private Salon",
-        category: "SLIDE 11 / CONSULTATION SALON",
-        designerNote: "Dedicated couture discussion lounge designed for intimate bridal shopping experiences with custom curved banquette seating.",
+        id: "sc-render-05",
+        image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Fitting Rooms.png",
+        title: "Private Fitting Room Corridor & Threshold",
+        category: "RENDER 05 / TRIAL CORRIDOR",
+        designerNote: "Acoustically insulated transition corridor guiding bridal clients towards private consultation fitting suites with soft cove wall washes.",
       },
       {
-        id: "sc-slide-12",
-        image: "/projects/sureena-chowdhri/slides/slide-12.jpg",
-        title: "Bespoke Cash Desk & Brass Brand Signature",
-        category: "SLIDE 12 / CASH COUNTER",
-        designerNote: "Custom fluted cash desk featuring recessed cable routing, discreet storage, and illuminated brand signage.",
+        id: "sc-render-06",
+        image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Lounge (1).png",
+        title: "VIP Bridal Consultation Lounge & Banquette Suite",
+        category: "RENDER 06 / VIP BRIDAL SALON",
+        designerNote: "Bespoke curved banquette seating in muted earth velvet with satin brass side tables, engineered for intimate family styling sessions.",
       },
       {
-        id: "sc-slide-13",
-        image: "/projects/sureena-chowdhri/slides/slide-13.jpg",
-        title: "Fitting Room Threshold & Curved Corridor",
-        category: "SLIDE 13 / TRIAL CORRIDOR",
-        designerNote: "Acoustically softened transition corridor guiding clients from the sales floor to private trial suites.",
+        id: "sc-render-07",
+        image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Lounge.png",
+        title: "Bridal Salon Dwell Space & Client Hospitality",
+        category: "RENDER 07 / SALON PERSPECTIVE",
+        designerNote: "Alternate vantage of the private bridal lounge highlighting natural daylight modulation, tactile bouclé upholstery, and brushed brass reveal trims.",
       },
       {
-        id: "sc-slide-14",
-        image: "/projects/sureena-chowdhri/slides/slide-14.jpg",
-        title: "Luxury Trial Suite & Backlit Arched Vanity Mirror",
-        category: "SLIDE 14 / TRIAL SUITE 1",
-        designerNote: "Spacious private fitting suite featuring full-length perimeter backlit arched mirror and warm daylight-accurate illumination.",
+        id: "sc-render-08",
+        image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Showroom (1).png",
+        title: "Couture Hanging Rails & Architectural Wall Niches",
+        category: "RENDER 08 / PERIMETER MERCHANDISING",
+        designerNote: "Precision heavy-duty brass apparel rails anchored with concealed structural fixings, engineered for heavy bridal lehengas and sherwanis.",
       },
       {
-        id: "sc-slide-15",
-        image: "/projects/sureena-chowdhri/slides/slide-15.jpg",
-        title: "Secondary Trial Suite & Fitting Ergonomics",
-        category: "SLIDE 15 / TRIAL SUITE 2",
-        designerNote: "Ergonomically planned fitting room with tailored accessory hooks, luxurious lounge bench, and plush velvet curtains.",
+        id: "sc-render-09",
+        image: "/projects/sureena-chowdhri/render images/Warm Mediterranean Boutique Showroom.png",
+        title: "Warm Terracotta Stucco & Curated Apparel Display",
+        category: "RENDER 09 / MATERIAL PERSPECTIVE",
+        designerNote: "Tactile harmony between hand-applied textured terracotta plaster, continuous travertine flooring transitions, and calibrated 3000K high-CRI lighting.",
       },
       {
-        id: "sc-slide-16",
-        image: "/projects/sureena-chowdhri/slides/slide-16.jpg",
-        title: "Puja Niche & Cultural Architectural Feature",
-        category: "SLIDE 16 / ARCHITECTURAL NICHE",
-        designerNote: "Reverent architectural niche thoughtfully integrated into the layout honoring cultural traditions.",
-      },
-      {
-        id: "sc-slide-17",
-        image: "/projects/sureena-chowdhri/slides/slide-17.jpg",
-        title: "Digital Display Feature & Window Integration",
-        category: "SLIDE 17 / MULTIMEDIA PORTAL",
-        designerNote: "Multimedia integration zone designed for digital campaign showcases and runway film projection.",
-      },
-      {
-        id: "sc-slide-18",
-        image: "/projects/sureena-chowdhri/slides/slide-18.jpg",
-        title: "Back-of-House (BOH) Transition & Service Access",
-        category: "SLIDE 18 / BOH TRANSITION",
-        designerNote: "Discreet staff and stockroom access point maintaining pristine customer-facing aesthetics.",
-      },
-      {
-        id: "sc-slide-19",
-        image: "/projects/sureena-chowdhri/slides/slide-19.jpg",
-        title: "Material Detail: Warm Textured Plaster & Brushed Brass",
-        category: "SLIDE 19 / MATERIAL TACTILITY",
-        designerNote: "Close-up perspective highlighting tactile synergy between earthy micro-cement plaster and metallic brass.",
-      },
-      {
-        id: "sc-slide-20",
-        image: "/projects/sureena-chowdhri/slides/slide-20.jpg",
-        title: "Ceiling Lighting Grid & Architectural Coves",
-        category: "SLIDE 20 / CEILING COVES",
-        designerNote: "Concealed 3000K LED coves and precision spotlight tracks highlighting fabric embroidery textures.",
-      },
-      {
-        id: "sc-slide-21",
-        image: "/projects/sureena-chowdhri/slides/slide-21.jpg",
-        title: "Full Storefront Perspective & Concourse Presence",
-        category: "SLIDE 21 / FULL PERSPECTIVE",
-        designerNote: "Elevated view showing transparent storefront presence inviting footfall into the tranquil interior.",
-      },
-      {
-        id: "sc-slide-22",
-        image: "/projects/sureena-chowdhri/slides/slide-22.jpg",
-        title: "Couture Merchandising Wall & Accessory Shelving",
-        category: "SLIDE 22 / ACCESSORY BAYS",
-        designerNote: "Custom tiered brass accessory shelving designed for clutch bags, jewellery, and bridal footwear.",
-      },
-      {
-        id: "sc-slide-23",
-        image: "/projects/sureena-chowdhri/slides/slide-23.jpg",
-        title: "Lounge Seating Axis & Customer Dwell Space",
-        category: "SLIDE 23 / LOUNGE AXIS",
-        designerNote: "Plush seating arrangement positioned to maximize customer dwell time during personalized appointments.",
-      },
-      {
-        id: "sc-slide-24",
-        image: "/projects/sureena-chowdhri/slides/slide-24.jpg",
-        title: "Twilight Storefront Illumination & Warm Glow",
-        category: "SLIDE 24 / EVENING ELEVATION",
-        designerNote: "Evening perspective showcasing warm amber illumination framing the arched storefront facade.",
-      },
-      {
-        id: "sc-slide-25",
-        image: "/projects/sureena-chowdhri/slides/slide-25.jpg",
-        title: "Master Architectural Concept Overview",
-        category: "SLIDE 25 / CONCEPT OVERVIEW",
-        designerNote: "Comprehensive 3D visual summary representing the full fusion of heritage archways and modern retail design.",
+        id: "sc-render-10",
+        image: "/projects/sureena-chowdhri/render images/Warm Terracotta Boutique Fitting Room.png",
+        title: "Luxury Trial Suite with Backlit Arched Vanity",
+        category: "RENDER 10 / VIP FITTING SUITE",
+        designerNote: "Spacious private fitting suite featuring custom full-length arched vanity mirror with 360-degree perimeter backlighting for bridal fitting accuracy.",
       },
     ],
-    drawingPreviews: [],
-    doc: "/projects/sureena-chowdhri/sureena-chowdhri-design-concept.pdf",
+    drawingPreviews: [
+      {
+        src: "/projects/sureena-chowdhri/gfc-sheet-28-facade.jpg",
+        caption: "GFC Sheet 26 (Slide 28): External Facade Elevation, Entrance Plan & Proposed Lollipop Signage",
+      },
+      {
+        src: "/projects/sureena-chowdhri/gfc-sheet-23-show-window.jpg",
+        caption: "GFC Sheet 21 (Slide 23): Show Window Elevation S10, 75\" Digital Display & Planter Box Integration",
+      },
+      {
+        src: "/projects/sureena-chowdhri/gfc-sheet-19-niche-details.jpg",
+        caption: "GFC Sheet 17.A (Slide 19): Architectural Niche Details (473x363mm Arches), Elevation E3 & Key Plan",
+      },
+      {
+        src: "/projects/sureena-chowdhri/gfc-sheet-21-wall-elevation.jpg",
+        caption: "GFC Sheet 19 (Slide 21): Couture Hanging Wall Elevations E6 & E7, Concealed LED Lighting & Trial Rooms",
+      },
+      {
+        src: "/projects/sureena-chowdhri/gfc-sheet-34-cash-counter.jpg",
+        caption: "GFC Sheet 32 (Slide 34): Bespoke Cash Counter Millwork — Isometric Views, Curved Radius & Terracotta Tiles",
+      },
+    ],
+    doc: "/projects/sureena-chowdhri/sureena-chowdhri-gfc-drawings.pdf",
     docs: [
       {
-        label: "Open Official Sureena Chowdhri Design Concept (PDF)",
+        label: "Open Complete Architectural GFC Construction Drawing Set (36 Sheets · PDF)",
+        url: "/projects/sureena-chowdhri/sureena-chowdhri-gfc-drawings.pdf",
+        badge: "36 SHEETS · GFC SET R2",
+        desc: "Official Good For Construction (GFC) drawing package (Rev 2, 957 sq ft) covering partition plans, fixture zoning, electrical DB distribution, flooring layout, and false ceiling details.",
+        btnLabel: "Download 36-Sheet GFC Drawing Set (PDF) ↗",
+      },
+      {
+        label: "Open Official Sureena Chowdhri Design Concept Presentation (PDF)",
         url: "/projects/sureena-chowdhri/sureena-chowdhri-design-concept.pdf",
-        badge: "OFFICIAL PROJECT DOCUMENT · PDF",
+        badge: "OFFICIAL CONCEPT DECK · PDF",
         desc: "Complete official Sureena Chowdhri Jaipur design concept presentation, store environment spatial planning, and interior visual deck.",
+        btnLabel: "Open Design Concept Deck (PDF) ↗",
       },
     ],
     nextSlug: "the-bear-house-pacific-jaipur",
@@ -300,12 +273,14 @@ const data: Record<string, ProjectData> = {
         url: "/projects/bear-house-jaipur/gfc-drawings.pdf",
         badge: "33 SHEETS · CONSTRUCTION SET",
         desc: "Complete architectural construction set covering fixture zoning, floor tile layout, false ceiling coves, and wall sections.",
+        btnLabel: "Download 33-Sheet GFC Set (PDF) ↗",
       },
       {
         label: "Open Engineering & Services Package (PDF)",
         url: "/projects/bear-house-jaipur/mep-drawings.pdf",
         badge: "ENGINEERING PACKAGE",
         desc: "Full engineering set coordinating multi-circuit lighting, power floor raceways, and safety systems.",
+        btnLabel: "Open MEP Services Package (PDF) ↗",
       },
     ],
     nextSlug: "vox-turquoise-mumbai",
@@ -632,6 +607,7 @@ export default async function ProjectPage({
                 projectTitle={p.title}
                 deckSubtitle="3D Architectural Perspectives & Client Visual Deck"
                 slides={p.deckSlides}
+                badgeLabel="3D RENDERS"
               />
             </div>
           </div>
@@ -640,75 +616,37 @@ export default async function ProjectPage({
         {/* FIRST PERSON INTRO & STRATEGY */}
         <section style={{ padding: "30px 0 60px" }}>
           <div className="shell">
-            <div className="case-study-strategy-grid" style={p.materials.length === 0 ? { display: "block" } : {}}>
-              <div className="reveal-on-scroll" style={p.materials.length === 0 ? { maxWidth: "860px", margin: "0 auto" } : {}}>
-                <span className="section-eyebrow">DESIGN INTENT & PHILOSOPHY</span>
-                <h2
-                  style={{
-                    fontFamily: "var(--font-serif)",
-                    fontSize: "28px",
-                    fontWeight: 400,
-                    marginBottom: "18px",
-                  }}
-                >
-                  In My Words: The Spatial Strategy
-                </h2>
+            <div
+              className="reveal-on-scroll"
+              style={{
+                maxWidth: "920px",
+                margin: "0 auto",
+                background: "var(--bg-surface)",
+                borderRadius: "var(--radius-xl)",
+                padding: "clamp(28px, 4vw, 48px)",
+                border: "1px solid var(--line-subtle)",
+                boxShadow: "var(--shadow-sm)",
+              }}
+            >
+              <span className="section-eyebrow">DESIGN INTENT &amp; PHILOSOPHY</span>
+              <h2
+                style={{
+                  fontFamily: "var(--font-serif)",
+                  fontSize: "clamp(26px, 3.2vw, 36px)",
+                  fontWeight: 400,
+                  marginBottom: "20px",
+                }}
+              >
+                In My Words: The Spatial Strategy
+              </h2>
 
-                <div style={{ fontSize: "15px", lineHeight: 1.7, color: "var(--ink-secondary)", display: "flex", flexDirection: "column", gap: "18px" }}>
-                  <p style={{ fontSize: "17px", color: "var(--ink-primary)", fontStyle: "italic", borderLeft: "3px solid var(--accent-terracotta)", paddingLeft: "16px" }}>
-                    {p.firstPersonIntro}
-                  </p>
-                  {p.spatialStrategy && <p>{p.spatialStrategy}</p>}
-                  {p.engineeringExecution && <p>{p.engineeringExecution}</p>}
-                </div>
+              <div style={{ fontSize: "15.5px", lineHeight: 1.75, color: "var(--ink-secondary)", display: "flex", flexDirection: "column", gap: "20px" }}>
+                <p style={{ fontSize: "17.5px", color: "var(--ink-primary)", fontStyle: "italic", borderLeft: "3px solid var(--accent-terracotta)", paddingLeft: "18px", lineHeight: 1.6 }}>
+                  {p.firstPersonIntro}
+                </p>
+                {p.spatialStrategy && <p>{p.spatialStrategy}</p>}
+                {p.engineeringExecution && <p>{p.engineeringExecution}</p>}
               </div>
-
-              {/* MATERIAL PALETTE (TACTILE PALETTE) — REMOVED FOR SUREENA CHOWDHRI */}
-              {p.materials && p.materials.length > 0 && (
-                <div
-                  style={{
-                    background: "var(--bg-surface)",
-                    borderRadius: "var(--radius-xl)",
-                    padding: "clamp(22px, 3.5vw, 34px)",
-                    border: "1px solid var(--line-subtle)",
-                    boxShadow: "var(--shadow-md)",
-                  }}
-                  className="reveal-on-scroll reveal-delay-2"
-                >
-                  <span className="section-eyebrow">TACTILE PALETTE</span>
-                  <h3
-                    style={{
-                      fontFamily: "var(--font-serif)",
-                      fontSize: "21px",
-                      fontWeight: 500,
-                      marginBottom: "18px",
-                    }}
-                  >
-                    Specified Materials &amp; Finishes
-                  </h3>
-
-                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                    {p.materials.map((m) => (
-                      <div
-                        key={m.name}
-                        style={{
-                          padding: "12px 14px",
-                          background: "var(--bg-canvas)",
-                          borderRadius: "var(--radius-md)",
-                          border: "1px solid var(--line-subtle)",
-                        }}
-                      >
-                        <strong style={{ display: "block", fontSize: "13.5px", color: "var(--ink-primary)" }}>
-                          {m.name}
-                        </strong>
-                        <span style={{ fontSize: "12px", color: "var(--ink-muted)", marginTop: "2px", display: "block" }}>
-                          {m.desc}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </section>
@@ -863,10 +801,23 @@ export default async function ProjectPage({
                           href={docItem.url}
                           target="_blank"
                           rel="noreferrer"
-                          className={idx === 0 ? "btn-pill btn-pill-primary" : "btn-pill btn-pill-secondary"}
-                          style={{ justifyContent: "center", width: "100%" }}
+                          className={idx === 0 ? "btn-pill btn-pill-primary doc-card-btn" : "btn-pill btn-pill-secondary doc-card-btn"}
+                          style={{
+                            justifyContent: "center",
+                            width: "100%",
+                            maxWidth: "100%",
+                            whiteSpace: "normal",
+                            textAlign: "center",
+                            padding: "11px 18px",
+                            height: "auto",
+                            minHeight: "44px",
+                            lineHeight: 1.35,
+                            wordBreak: "break-word",
+                            overflowWrap: "break-word",
+                            boxSizing: "border-box",
+                          }}
                         >
-                          <span>{docItem.label} ↗</span>
+                          <span>{docItem.btnLabel || "Open Document (PDF) ↗"}</span>
                         </a>
                       </div>
                     ))

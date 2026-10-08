@@ -39,6 +39,9 @@ export default function Footer() {
                 <Link href="/projects">Selected Work</Link>
               </li>
               <li>
+                <Link href="/patents">Patents &amp; CSIR Awards</Link>
+              </li>
+              <li>
                 <Link href="/about">Story and Resume</Link>
               </li>
               <li>
@@ -88,7 +91,7 @@ export default function Footer() {
           <div style={{ display: "flex", gap: "24px", fontFamily: "var(--font-mono)", fontSize: "11px" }}>
             <span>AUTOCAD · REVIT · BIM</span>
             <span>BLR · T2 ALUMNI</span>
-            <span>GERMAN PATENT HOLDER</span>
+            <span>REGISTERED GERMAN UTILITY MODEL (DPMA)</span>
           </div>
         </div>
       </div>

@@ -58,6 +58,12 @@ export default function Navbar() {
                 Selected Work
               </Link>
               <Link
+                href="/patents"
+                className={`nav-item ${pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "active" : ""}`}
+              >
+                Patents &amp; Awards
+              </Link>
+              <Link
                 href="/about"
                 className={`nav-item ${pathname === "/about" ? "active" : ""}`}
               >
@@ -135,6 +141,20 @@ export default function Navbar() {
                 02 / Selected Work
               </Link>
               <Link
+                href="/patents"
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 600,
+                  fontFamily: "var(--font-serif)",
+                  color: pathname.startsWith("/patents") || pathname.startsWith("/awards") ? "var(--accent-terracotta)" : "var(--ink-primary)",
+                  padding: "8px 0",
+                  borderBottom: "1px solid var(--line-subtle)",
+                }}
+              >
+                03 / Patents &amp; CSIR Awards
+              </Link>
+              <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 style={{
@@ -146,7 +166,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                03 / Story and Resume
+                04 / Story and Resume
               </Link>
               <Link
                 href="/contact"
@@ -160,7 +180,7 @@ export default function Navbar() {
                   borderBottom: "1px solid var(--line-subtle)",
                 }}
               >
-                04 / Contact
+                05 / Contact
               </Link>
             </div>
 

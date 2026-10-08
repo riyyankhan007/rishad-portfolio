@@ -21,15 +21,15 @@ const blueprints: BlueprintItem[] = [
   {
     id: "sc-jaipur-plan",
     title: "Sureena Chowdhri — Jaipur Flagship",
-    project: "Approved Store Layout & Spatial Plan",
-    scale: "Architectural Concept & Layout Set",
+    project: "GFC Facade Blueprint & Concept Architecture",
+    scale: "GFC Set R2 · 957 SFT · Architectural Package",
     description:
-      "“For Sureena Chowdhri’s luxury boutique in Jaipur, I engineered the approved spatial layout plan establishing customer flow, entrance sightlines, private bridal consultation suites, cash counter ergonomics, and perimeter display arches.”",
-    drawingSrc: "/projects/sureena-chowdhri/layout.jpg",
-    renderSrc: "/projects/sureena-chowdhri/slides/slide-07.jpg",
-    pdfLink: "/projects/sureena-chowdhri/sureena-chowdhri-design-concept.pdf",
+      "“For Sureena Chowdhri’s luxury boutique in Jaipur, I drafted the full 36-sheet GFC architectural construction drawing set — coordinating customer flow, entrance sightlines, bridal consultation suites, cash counter ergonomics, and perimeter display arches down to the millimeter.”",
+    drawingSrc: "/projects/sureena-chowdhri/gfc-sheet-28-facade.jpg",
+    renderSrc: "/projects/sureena-chowdhri/render images/Luxury Boutique Storefront in Warm Maroon and Gold.png",
+    pdfLink: "/projects/sureena-chowdhri/sureena-chowdhri-gfc-drawings.pdf",
     slug: "sureena-chowdhri",
-    specs: ["Approved Store Layout", "Arched Display Niches", "Bridal Consultation Lounge", "Cash Desk & Trial Suites"],
+    specs: ["36-Sheet GFC Package", "External Facade Elevation", "Arched Heritage Portals", "Lollipop Signage Detailing"],
   },
   {
     id: "vox-gfc",

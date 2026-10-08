@@ -15,12 +15,14 @@ interface PresentationDeckProps {
   projectTitle: string;
   deckSubtitle: string;
   slides: SlideItem[];
+  badgeLabel?: string;
 }
 
 export default function PresentationDeck({
   projectTitle,
   deckSubtitle,
   slides,
+  badgeLabel,
 }: PresentationDeckProps) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -130,7 +132,7 @@ export default function PresentationDeck({
               letterSpacing: "0.08em",
             }}
           >
-            PPT SLIDEDECK
+            {badgeLabel || "3D VISUAL DECK"}
           </span>
           <div>
             <h4
