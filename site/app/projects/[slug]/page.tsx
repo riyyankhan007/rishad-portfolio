@@ -161,13 +161,6 @@ const data: Record<string, ProjectData> = {
         desc: "Official Good For Construction (GFC) drawing package (Rev 2, 957 sq ft) covering partition plans, fixture zoning, electrical DB distribution, flooring layout, and false ceiling details.",
         btnLabel: "Download 36-Sheet GFC Drawing Set (PDF) ↗",
       },
-      {
-        label: "Open Official Sureena Chowdhri Design Concept Presentation (PDF)",
-        url: "/projects/sureena-chowdhri/sureena-chowdhri-design-concept.pdf",
-        badge: "OFFICIAL CONCEPT DECK · PDF",
-        desc: "Complete official Sureena Chowdhri Jaipur design concept presentation, store environment spatial planning, and interior visual deck.",
-        btnLabel: "Open Design Concept Deck (PDF) ↗",
-      },
     ],
     nextSlug: "the-bear-house-pacific-jaipur",
     nextTitle: "The Bear House — Pacific Mall Jaipur",
@@ -487,6 +480,19 @@ const data: Record<string, ProjectData> = {
   },
 };
 
+function getProject(slug: string): ProjectData | undefined {
+  if (!slug) return undefined;
+  if (data[slug]) return data[slug];
+  try {
+    const decoded = decodeURIComponent(slug).trim().toLowerCase();
+    if (data[decoded]) return data[decoded];
+    const hyphenated = decoded.replace(/\s+/g, "-");
+    return data[hyphenated];
+  } catch {
+    return undefined;
+  }
+}
+
 export function generateStaticParams() {
   return Object.keys(data).map((slug) => ({ slug }));
 }
@@ -497,7 +503,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const p = data[slug];
+  const p = getProject(slug);
   if (!p) return {};
   return {
     title: `${p.title} — Retail Interior Design Case Study`,
@@ -516,7 +522,7 @@ export default async function ProjectPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const p = data[slug];
+  const p = getProject(slug);
   if (!p) notFound();
 
   return (
@@ -758,7 +764,7 @@ export default async function ProjectPage({
                         key={docItem.url}
                         style={{
                           flex: "1 1 320px",
-                          maxWidth: "460px",
+                          maxWidth: p.docs && p.docs.length === 1 ? "560px" : "460px",
                           background: "var(--bg-canvas)",
                           padding: "20px",
                           borderRadius: "var(--radius-lg)",
