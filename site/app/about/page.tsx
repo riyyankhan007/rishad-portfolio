@@ -214,7 +214,7 @@ export default function About() {
                   </li>
                   <li className="about-fact-item">
                     <span className="about-fact-bullet">●</span>
-                    <span><strong>Languages:</strong> English, Hindi, Kannada, Telugu, Spanish (Basic), Italian (Basic)</span>
+                    <span><strong>Languages:</strong> English, Hindi, Kannada, Telugu, Spanish (Conversational), Italian (Basic)</span>
                   </li>
                 </ul>
 

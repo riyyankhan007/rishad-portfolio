@@ -150,6 +150,42 @@ export default function InteractiveResume() {
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "20px", fontSize: "15px", lineHeight: 1.75, color: "var(--ink-secondary)" }}>
+              {/* OFFICIAL RESUME SUMMARY */}
+              <div
+                style={{
+                  background: "linear-gradient(135deg, rgba(199, 91, 57, 0.08) 0%, rgba(206, 155, 62, 0.08) 100%)",
+                  border: "1px solid rgba(199, 91, 57, 0.25)",
+                  borderRadius: "var(--radius-lg)",
+                  padding: "20px 24px",
+                }}
+              >
+                <span
+                  style={{
+                    fontSize: "11px",
+                    fontFamily: "var(--font-mono)",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    color: "var(--accent-terracotta)",
+                    fontWeight: 600,
+                    display: "block",
+                    marginBottom: "8px",
+                  }}
+                >
+                  Executive Summary &bull; Official Resume Profile
+                </span>
+                <p
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: 1.7,
+                    color: "var(--ink-primary)",
+                    margin: 0,
+                    fontWeight: 500,
+                  }}
+                >
+                  &ldquo;I am a Civil Engineer and Retail Designer who operates at the absolute intersection of engineering, design, and intellectual innovation. Based in Bangalore, I have spent the last 2.5+ years bringing spaces to life for marquee brands, managing the entire pipeline across space planning, layout development, 3D visualisation, BOQ preparation, and hands-on site QC and execution. More than an engineer or designer, I am an expansive, lateral thinker driven by intense intellectual curiosity. Validated by a Council of Scientific and Industrial Research (CSIR) award and a Registered German Utility Model (DPMA).&rdquo;
+                </p>
+              </div>
+
               <p>
                 I have always been curious about how things work, how they are built, and how they can be made better. Growing up with a strong interest in nature, sports, and being outdoors, I became increasingly aware of the relationship between what we build and the environment around us. More than simply understanding problems, I have always been drawn to finding practical ways to solve them. This mindset has shaped many of my choices, from taking on research projects outside my required classes to playing competitive sports alongside my studies. Playing university-level football for four years and representing Bangalore Rugby Club at the South Asian Club Championship taught me how to work closely within a team, manage competing pressures, and stay persistent when faced with tough challenges. These experiences built my interest in a field where engineering, creativity, and hands-on problem-solving can be used to make a real impact on people and the environment.
               </p>
@@ -205,32 +241,32 @@ export default function InteractiveResume() {
         <div className="timeline-list">
           <div className="timeline-entry">
             <div className="timeline-meta">
-              <div className="timeline-period">OCT 2024 — PRESENT</div>
-              <div className="timeline-company">Do More Design Studio</div>
+              <div className="timeline-period">OCT 2025 — PRESENT</div>
+              <div className="timeline-company">DO MORE DESIGN PVT LTD</div>
               <div style={{ fontSize: "11px", color: "var(--accent-terracotta)", marginTop: "4px" }}>
                 Bangalore, India
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">Lead Retail Interior Designer &amp; Space Planner</h3>
+              <h3 className="timeline-role">Retail Designer</h3>
               <p className="timeline-description">
-                &ldquo;Leading retail space planning, 3D concept development, and execution documentation for premier national and international brands. Dedicated to delivering high-efficiency commercial layouts and commanding store atmospheres.&rdquo;
+                &ldquo;Operating across space planning, layout development, 3D visualisation, BOQ preparation, and hands-on site QC and execution for marquee brands.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
-                  Led retail store layout planning and interior design for marquee brands including <strong>The Bear House</strong>, <strong>Sureena Chowdhri</strong>, <strong>VOX</strong>, <strong>Nobero</strong>, and <strong>Aditya Birla Group</strong>.
+                  Developed and adapted retail/interior designs from brand language into 2D layouts and 3D models for <strong>Aditya Birla Group brands</strong>, <strong>VOX</strong>, <strong>Sureena Chowdhri</strong>, <strong>The Bear House</strong>, <strong>Sleepwell</strong> &amp; <strong>Furlenco</strong>.
                 </li>
                 <li className="timeline-bullet-item">
-                  Designed the <strong>VOX Turquoise Mumbai Experience Center</strong> exclusively using the VOX catalog, creating an architect-focused spatial material studio.
+                  Produced GFC/construction drawings, façade studies and design documentation using <strong>AutoCAD</strong> &amp; <strong>SketchUp</strong>, translating 3D design intent into execution-ready details.
                 </li>
                 <li className="timeline-bullet-item">
-                  Independently led <strong>The Bear House &mdash; M3M Paragon 57</strong>: mezzanine floor designed, establishing seamless customer flow and sculpting a minimalistic facade.
+                  Coordinated MEP, site conditions, materials and design revisions with clients, consultants, vendors, mall teams and site execution teams.
                 </li>
                 <li className="timeline-bullet-item">
-                  Prepared exhaustive technical drawing packages: floor layouts, lighting grids, wall fixture elevations, and joinery details.
+                  Prepared BOQs, quantities and specifications, supporting procurement, budgeting and project execution.
                 </li>
                 <li className="timeline-bullet-item">
-                  Managed comprehensive <strong>Bill of Quantities (BOQ)</strong>, material selection, vendor management, labour coordination, and stage-wise QA/QC.
+                  Developed site-specific technical and engineering solutions across <strong>40+ retail stores</strong>, adapting design, services and construction details to existing site constraints while maintaining brand standards and execution feasibility.
                 </li>
               </ul>
             </div>
@@ -245,19 +281,22 @@ export default function InteractiveResume() {
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">Inspection QC Engineer</h3>
+              <h3 className="timeline-role">Inspection QC Analyst</h3>
               <p className="timeline-description">
-                &ldquo;Enforced quality assurance benchmarks and facility compliance across commercial spaces and properties.&rdquo;
+                &ldquo;Conducted property/site inspections ensuring rigorous adherence to civil, facility, and safety guidelines.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
-                  Conducted comprehensive property and fit-out site inspections ensuring adherence to civil, architectural, and safety guidelines.
+                  Conducted property/site inspections ensuring adherence to civil and facility guidelines.
                 </li>
                 <li className="timeline-bullet-item">
-                  Verified corrective actions directly with contractors and vendors, enforcing quality assurance benchmarks.
+                  Verified corrective actions with contractors and vendors while maintaining quality control.
                 </li>
                 <li className="timeline-bullet-item">
-                  Authored technical inspection reports featuring photographic punch-lists, defect tracking, and compliance notes.
+                  Prepared detailed inspection reports with findings, photographic records, and compliance notes.
+                </li>
+                <li className="timeline-bullet-item">
+                  Assisted in monitoring safety practices and compliance on assigned properties.
                 </li>
               </ul>
             </div>
@@ -272,19 +311,22 @@ export default function InteractiveResume() {
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">Site Engineer — Commercial Fit-Outs</h3>
+              <h3 className="timeline-role">Site Engineer</h3>
               <p className="timeline-description">
-                &ldquo;Supervised high-stakes commercial food and retail fit-outs inside Terminal 2 of Bangalore International Airport.&rdquo;
+                &ldquo;Supervised execution of commercial fit-out projects inside Terminal 2 of Bangalore International Airport.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
-                  Supervised execution of premier commercial fit-out projects: <strong>Bombay Brasserie</strong>, <strong>Wendy&apos;s</strong>, and <strong>KFC Ultra Bar</strong> at <strong>Bangalore International Airport Terminal 2</strong>.
+                  Supervised execution of commercial fit-out projects (<strong>Bombay Brasserie</strong>, <strong>Wendy&apos;s</strong>, <strong>KFC Ultra Bar</strong> at Bangalore International Airport Terminal 2).
                 </li>
                 <li className="timeline-bullet-item">
-                  Coordinated daily site execution, layout setting, contractor supervision, labor allocations, and tight airport security protocols.
+                  Coordinated daily site activities, layout setting, and contractor/labor management.
                 </li>
                 <li className="timeline-bullet-item">
-                  Managed on-site technical QA/QC, stage-wise inspections, billings, material reconciliation, and progress reports.
+                  Ensured quality standards and safety compliance throughout construction stages.
+                </li>
+                <li className="timeline-bullet-item">
+                  Managed project documentation including billing, payroll, progress reports, and vendor procurement.
                 </li>
               </ul>
             </div>
@@ -299,16 +341,22 @@ export default function InteractiveResume() {
               </div>
             </div>
             <div>
-              <h3 className="timeline-role">Sustainability Engineering Intern</h3>
+              <h3 className="timeline-role">Sustainability Intern</h3>
               <p className="timeline-description">
                 &ldquo;Gained early research and field experience integrating circular economy principles into engineering infrastructure.&rdquo;
               </p>
               <ul className="timeline-bullets">
                 <li className="timeline-bullet-item">
-                  Assisted in the design and technical documentation of a 100 TPD (Tonnes Per Day) biogas digester facility.
+                  Assisted in design &amp; documentation of a 100 TPD biogas digester.
                 </li>
                 <li className="timeline-bullet-item">
-                  Conducted field data collection, environmental sampling, and site inspections at decentralized solid waste management centers.
+                  Managed vendor relations and procurement documentation.
+                </li>
+                <li className="timeline-bullet-item">
+                  Conducted site inspections at waste management centres.
+                </li>
+                <li className="timeline-bullet-item">
+                  Conducted field data collection, waste management analysis, and environmental sampling.
                 </li>
               </ul>
             </div>
@@ -596,7 +644,7 @@ export default function InteractiveResume() {
               <div className="resume-languages-grid">
                 <div className="language-badge-card">
                   <div className="lang-title">English</div>
-                  <div className="lang-level">Professional</div>
+                  <div className="lang-level">Fluent</div>
                 </div>
                 <div className="language-badge-card">
                   <div className="lang-title">Hindi</div>
@@ -604,7 +652,7 @@ export default function InteractiveResume() {
                 </div>
                 <div className="language-badge-card">
                   <div className="lang-title">Kannada</div>
-                  <div className="lang-level">Native</div>
+                  <div className="lang-level">Fluent</div>
                 </div>
                 <div className="language-badge-card">
                   <div className="lang-title">Telugu</div>
@@ -612,7 +660,7 @@ export default function InteractiveResume() {
                 </div>
                 <div className="language-badge-card">
                   <div className="lang-title">Spanish</div>
-                  <div className="lang-level">Basic</div>
+                  <div className="lang-level">Conversational</div>
                 </div>
                 <div className="language-badge-card">
                   <div className="lang-title">Italian</div>
@@ -626,46 +674,102 @@ export default function InteractiveResume() {
 
       {/* TAB 6: TOOLS & CAPABILITIES */}
       {activeTab === "skills" && (
-        <div className="skills-container-grid">
-          <div className="skill-card">
-            <div className="skill-card-badge">TECHNICAL &amp; CAD</div>
-            <h4>Drafting &amp; Modeling</h4>
-            <div className="skill-tags-cloud">
-              <span className="skill-tag-pill">AutoCAD 2D</span>
-              <span className="skill-tag-pill">Revit Architecture</span>
-              <span className="skill-tag-pill">Revit Structure</span>
-              <span className="skill-tag-pill">Construction Drawing Packages</span>
-              <span className="skill-tag-pill">Elevation Drafting</span>
-              <span className="skill-tag-pill">3D Architectural Visualization</span>
-              <span className="skill-tag-pill">Spatial Layout Planning</span>
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          {/* CORE RESUME SKILLS HIGHLIGHT */}
+          <div
+            style={{
+              background: "var(--bg-surface)",
+              borderRadius: "var(--radius-lg)",
+              border: "1px solid var(--line-subtle)",
+              padding: "20px 24px",
+              boxShadow: "var(--shadow-sm)",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "11px",
+                fontFamily: "var(--font-mono)",
+                textTransform: "uppercase",
+                letterSpacing: "0.1em",
+                color: "var(--accent-terracotta)",
+                fontWeight: 600,
+                display: "block",
+                marginBottom: "12px",
+              }}
+            >
+              Primary Skillset &bull; Verified Resume Competencies
+            </span>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              {[
+                "Auto (CAD)",
+                "REVIT (BIM)",
+                "Sketchup",
+                "BOQ & Costing",
+                "Vendor Management",
+                "Project Management",
+                "Excel",
+                "PowerPoint",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  style={{
+                    display: "inline-block",
+                    padding: "8px 16px",
+                    borderRadius: "var(--radius-pill)",
+                    background: "var(--bg-subtle)",
+                    border: "1px solid var(--line-subtle)",
+                    fontSize: "13px",
+                    fontWeight: 600,
+                    color: "var(--ink-primary)",
+                  }}
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
 
-          <div className="skill-card">
-            <div className="skill-card-badge">RETAIL DESIGN</div>
-            <h4>Spatial &amp; Visual Experience</h4>
-            <div className="skill-tags-cloud">
-              <span className="skill-tag-pill">Retail Space Planning</span>
-              <span className="skill-tag-pill">Customer Circulation Flow</span>
-              <span className="skill-tag-pill">Visual Merchandising (VM)</span>
-              <span className="skill-tag-pill">Material Selection</span>
-              <span className="skill-tag-pill">Retail Lighting Design</span>
-              <span className="skill-tag-pill">Cash Counter &amp; POS Ergonomics</span>
-              <span className="skill-tag-pill">Store Space Optimization</span>
+          <div className="skills-container-grid">
+            <div className="skill-card">
+              <div className="skill-card-badge">TECHNICAL &amp; CAD</div>
+              <h4>Drafting &amp; Modeling</h4>
+              <div className="skill-tags-cloud">
+                <span className="skill-tag-pill">AutoCAD 2D</span>
+                <span className="skill-tag-pill">Revit Architecture</span>
+                <span className="skill-tag-pill">Revit Structure</span>
+                <span className="skill-tag-pill">Sketchup 3D</span>
+                <span className="skill-tag-pill">GFC Drawing Sets</span>
+                <span className="skill-tag-pill">Elevation Drafting</span>
+                <span className="skill-tag-pill">Spatial Layout Planning</span>
+              </div>
             </div>
-          </div>
 
-          <div className="skill-card">
-            <div className="skill-card-badge">ENGINEERING &amp; SITE</div>
-            <h4>Execution &amp; Coordination</h4>
-            <div className="skill-tags-cloud">
-              <span className="skill-tag-pill">Project Management</span>
-              <span className="skill-tag-pill">Labour &amp; Vendor Management</span>
-              <span className="skill-tag-pill">Site Execution &amp; Supervision</span>
-              <span className="skill-tag-pill">QA/QC Standards</span>
-              <span className="skill-tag-pill">Bill of Quantities (BOQ)</span>
-              <span className="skill-tag-pill">Material Quality Verification</span>
-              <span className="skill-tag-pill">Commercial Fit-Outs</span>
+            <div className="skill-card">
+              <div className="skill-card-badge">RETAIL DESIGN</div>
+              <h4>Spatial &amp; Visual Experience</h4>
+              <div className="skill-tags-cloud">
+                <span className="skill-tag-pill">Retail Space Planning</span>
+                <span className="skill-tag-pill">Customer Circulation Flow</span>
+                <span className="skill-tag-pill">Visual Merchandising (VM)</span>
+                <span className="skill-tag-pill">Material Selection</span>
+                <span className="skill-tag-pill">Retail Lighting Design</span>
+                <span className="skill-tag-pill">Façade Studies</span>
+                <span className="skill-tag-pill">Store Space Optimization</span>
+              </div>
+            </div>
+
+            <div className="skill-card">
+              <div className="skill-card-badge">ENGINEERING &amp; SITE</div>
+              <h4>Execution &amp; Coordination</h4>
+              <div className="skill-tags-cloud">
+                <span className="skill-tag-pill">Project Management</span>
+                <span className="skill-tag-pill">Vendor Management</span>
+                <span className="skill-tag-pill">Site Execution &amp; Supervision</span>
+                <span className="skill-tag-pill">QA/QC Standards</span>
+                <span className="skill-tag-pill">Bill of Quantities (BOQ)</span>
+                <span className="skill-tag-pill">MEP Coordination</span>
+                <span className="skill-tag-pill">Commercial Fit-Outs</span>
+              </div>
             </div>
           </div>
         </div>
