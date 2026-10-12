@@ -52,12 +52,12 @@ export default function PatentsPage() {
       badge: "SPATIAL DATA",
     },
     {
-      title: "Civil Engineering Site Execution",
-      issuer: "Site Engineer Internship Certification",
-      role: "Commercial Fit-Outs & Site Supervision",
+      title: "Civil Engineering Internship Certification",
+      issuer: "Internship Certification",
+      role: " ",
       pdf: "/certifications/civil-engineering-internship.pdf",
       img: "/certifications/civil-engineering-internship.jpg",
-      badge: "SITE EXECUTION",
+      badge: "Internship Certification",
     },
   ];
 
