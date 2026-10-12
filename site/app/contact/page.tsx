@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ScrollObserver from "../components/ScrollObserver";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -354,13 +355,65 @@ export default function Contact() {
                     Official Resume &amp; Portfolio
                   </strong>
                   <p style={{ fontSize: "13px", color: "var(--ink-secondary)", marginTop: "12px", lineHeight: 1.5 }}>
-                    Verified documentation of work history, German Utility Model certificate (DPMA No. 20 2022 106 106), CSIR First Prize award, and Autodesk BIM accreditations.
+                    Verified documentation of work history at DO MORE DESIGN PVT LTD, Altisource, Shah Enterprises (BLR Airport T2), German Utility Model certificate (DPMA No. 20 2022 106 106), and CSIR First Prize award.
                   </p>
+                </div>
+
+                {/* VISUAL RESUME PREVIEWS */}
+                <div style={{ display: "flex", gap: "12px", justifyContent: "center", width: "100%", maxWidth: "340px" }}>
+                  <a
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Click to view Page 1"
+                    style={{
+                      position: "relative",
+                      flex: 1,
+                      aspectRatio: "1 / 1.41",
+                      borderRadius: "var(--radius-sm)",
+                      overflow: "hidden",
+                      border: "1px solid var(--line-subtle)",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                      background: "#fff",
+                    }}
+                  >
+                    <Image
+                      src="/resume/resume-page-1.png"
+                      alt="Muhammad Rishad Resume - Page 1"
+                      fill
+                      sizes="170px"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </a>
+                  <a
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Click to view Page 2"
+                    style={{
+                      position: "relative",
+                      flex: 1,
+                      aspectRatio: "1 / 1.41",
+                      borderRadius: "var(--radius-sm)",
+                      overflow: "hidden",
+                      border: "1px solid var(--line-subtle)",
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                      background: "#fff",
+                    }}
+                  >
+                    <Image
+                      src="/resume/resume-page-2.png"
+                      alt="Muhammad Rishad Resume - Page 2"
+                      fill
+                      sizes="170px"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </a>
                 </div>
 
                 <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" }}>
                   <a
-                    href="/resume/Muhammad_Rishad_Resume.pdf"
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-pill btn-pill-primary"

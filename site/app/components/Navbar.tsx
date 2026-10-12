@@ -186,7 +186,7 @@ export default function Navbar() {
 
             <div style={{ display: "flex", flexDirection: "column", gap: "12px", paddingBottom: "24px" }}>
               <a
-                href="/resume/Muhammad_Rishad_Resume.pdf"
+                href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
                 className="btn-pill btn-pill-outline"
                 style={{ width: "100%", justifyContent: "center", padding: "14px" }}
                 download

@@ -286,7 +286,7 @@ const data: Record<string, ProjectData> = {
     meta: "Turquoise, Mumbai · Experience Center",
     area: "Luxury Experience Center",
     location: "Turquoise, Mumbai, Maharashtra",
-    client: "VOX / Do More Design Studio",
+    client: "VOX / DO MORE DESIGN PVT LTD",
     myRole: "Spatial Concept, VOX Catalog System Design, Curved Ceiling Detailing & Technical Set",
     firstPersonIntro:
       "“I designed this exclusive experience center by utilizing only the VOX product catalog and architectural systems. My design mission was to create an expansive, serene atmosphere where visiting architects, interior designers, and luxury homeowners could experience premium wall claddings and flooring without feeling confined.”",

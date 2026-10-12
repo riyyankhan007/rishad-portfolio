@@ -165,6 +165,33 @@ export default function BrandLogos() {
       ),
     },
     {
+      id: "sleepwell",
+      name: "Sleepwell",
+      category: "Home Comfort Retail",
+      scope: "Retail Experience & Displays",
+      svg: (
+        <svg
+          viewBox="0 0 135 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ height: "24px", width: "auto" }}
+          aria-label="Sleepwell Logo"
+        >
+          <text
+            x="2"
+            y="23"
+            fill="#111111"
+            fontFamily="var(--font-sans), 'Montserrat', sans-serif"
+            fontSize="18"
+            fontWeight="800"
+            letterSpacing="-0.02em"
+          >
+            Sleepwell
+          </text>
+        </svg>
+      ),
+    },
+    {
       id: "nobero",
       name: "Nobero",
       category: "Athleisure Retail",

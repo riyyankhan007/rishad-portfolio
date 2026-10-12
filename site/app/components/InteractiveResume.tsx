@@ -77,22 +77,29 @@ const certifications: CertificationItem[] = [
 ];
 
 export default function InteractiveResume() {
-  const [activeTab, setActiveTab] = useState<"sop" | "experience" | "patents" | "certifications" | "education" | "skills">("sop");
+  const [activeTab, setActiveTab] = useState<"resume" | "experience" | "sop" | "patents" | "certifications" | "education" | "skills">("resume");
+  const [resumePageView, setResumePageView] = useState<"both" | "page1" | "page2">("both");
 
   return (
     <div className="resume-widget">
       <div className="resume-tabs-nav">
         <button
-          className={`resume-tab-btn ${activeTab === "sop" ? "active" : ""}`}
-          onClick={() => setActiveTab("sop")}
+          className={`resume-tab-btn ${activeTab === "resume" ? "active" : ""}`}
+          onClick={() => setActiveTab("resume")}
         >
-          Statement of Purpose (SOP)
+          Official Resume Document
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "experience" ? "active" : ""}`}
           onClick={() => setActiveTab("experience")}
         >
           My Experience
+        </button>
+        <button
+          className={`resume-tab-btn ${activeTab === "sop" ? "active" : ""}`}
+          onClick={() => setActiveTab("sop")}
+        >
+          Statement of Purpose (SOP)
         </button>
         <button
           className={`resume-tab-btn ${activeTab === "patents" ? "active" : ""}`}
@@ -119,6 +126,267 @@ export default function InteractiveResume() {
           Tools &amp; Capabilities
         </button>
       </div>
+
+      {/* TAB 0: OFFICIAL RESUME DOCUMENT (PAGES 1 & 2) */}
+      {activeTab === "resume" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
+          {/* CONTROL BAR */}
+          <div
+            style={{
+              background: "var(--bg-surface)",
+              borderRadius: "var(--radius-lg)",
+              padding: "18px 24px",
+              border: "1px solid var(--line-subtle)",
+              boxShadow: "var(--shadow-sm)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "16px",
+            }}
+          >
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <span className="patent-eyebrow" style={{ margin: 0 }}>OFFICIAL CURRICULUM VITAE</span>
+                <span
+                  style={{
+                    background: "rgba(199, 91, 57, 0.12)",
+                    color: "var(--accent-terracotta)",
+                    fontSize: "11px",
+                    fontWeight: 700,
+                    fontFamily: "var(--font-mono)",
+                    padding: "2px 8px",
+                    borderRadius: "4px",
+                  }}
+                >
+                  NEW · OCT 2026 EDITION
+                </span>
+              </div>
+              <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "22px", fontWeight: 500, margin: "4px 0 2px" }}>
+                Muhammad Rishad &mdash; Civil Engineer / Retail Designer
+              </h3>
+              <p style={{ fontSize: "13px", color: "var(--ink-secondary)", margin: 0 }}>
+                DO MORE DESIGN PVT LTD &bull; BLR Airport T2 Fit-outs &bull; German Utility Model (DPMA) &bull; CSIR Award
+              </p>
+            </div>
+
+            {/* ACTION BUTTONS & VIEW SWITCHER */}
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", flexWrap: "wrap" }}>
+              <div
+                style={{
+                  display: "inline-flex",
+                  background: "var(--bg-subtle)",
+                  padding: "4px",
+                  borderRadius: "var(--radius-pill)",
+                  border: "1px solid var(--line-subtle)",
+                }}
+              >
+                <button
+                  onClick={() => setResumePageView("both")}
+                  style={{
+                    padding: "6px 14px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                    borderRadius: "var(--radius-pill)",
+                    border: "none",
+                    background: resumePageView === "both" ? "var(--ink-primary)" : "transparent",
+                    color: resumePageView === "both" ? "#ffffff" : "var(--ink-secondary)",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  Both Pages
+                </button>
+                <button
+                  onClick={() => setResumePageView("page1")}
+                  style={{
+                    padding: "6px 14px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                    borderRadius: "var(--radius-pill)",
+                    border: "none",
+                    background: resumePageView === "page1" ? "var(--ink-primary)" : "transparent",
+                    color: resumePageView === "page1" ? "#ffffff" : "var(--ink-secondary)",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  Page 1
+                </button>
+                <button
+                  onClick={() => setResumePageView("page2")}
+                  style={{
+                    padding: "6px 14px",
+                    fontSize: "12px",
+                    fontWeight: 600,
+                    borderRadius: "var(--radius-pill)",
+                    border: "none",
+                    background: resumePageView === "page2" ? "var(--ink-primary)" : "transparent",
+                    color: resumePageView === "page2" ? "#ffffff" : "var(--ink-secondary)",
+                    cursor: "pointer",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  Page 2
+                </button>
+              </div>
+
+              <a
+                href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-pill btn-pill-primary"
+                download
+                style={{ fontSize: "12.5px", padding: "10px 18px" }}
+              >
+                <span>Download PDF ↓</span>
+              </a>
+
+              <a
+                href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-pill btn-pill-outline"
+                style={{ fontSize: "12.5px", padding: "10px 18px" }}
+              >
+                <span>Fullscreen PDF ↗</span>
+              </a>
+            </div>
+          </div>
+
+          {/* VISUAL RESUME DOCUMENT CONTAINER */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns:
+                resumePageView === "both"
+                  ? "repeat(auto-fit, minmax(min(100%, 460px), 1fr))"
+                  : "1fr",
+              gap: "24px",
+              justifyContent: "center",
+              alignItems: "start",
+            }}
+          >
+            {/* PAGE 1 */}
+            {(resumePageView === "both" || resumePageView === "page1") && (
+              <div
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "var(--radius-md)",
+                  border: "1px solid var(--line-subtle)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: resumePageView === "page1" ? "820px" : "100%",
+                  margin: resumePageView === "page1" ? "0 auto" : "0",
+                  width: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    padding: "10px 16px",
+                    background: "var(--bg-subtle)",
+                    borderBottom: "1px solid var(--line-subtle)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    fontSize: "12px",
+                    fontFamily: "var(--font-mono)",
+                    color: "var(--ink-secondary)",
+                  }}
+                >
+                  <span>PAGE 1: Profile, Experience &amp; Honors</span>
+                  <a
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--accent-terracotta)", textDecoration: "underline", fontWeight: 600 }}
+                  >
+                    Open PDF ↗
+                  </a>
+                </div>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    aspectRatio: "1 / 1.414",
+                    background: "#ffffff",
+                  }}
+                >
+                  <Image
+                    src="/resume/resume-page-1.png"
+                    alt="Muhammad Rishad Resume - Page 1 (Civil Engineer / Retail Designer)"
+                    fill
+                    sizes="(max-width: 900px) 100vw, 600px"
+                    style={{ objectFit: "contain", background: "#ffffff" }}
+                    priority
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* PAGE 2 */}
+            {(resumePageView === "both" || resumePageView === "page2") && (
+              <div
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "var(--radius-md)",
+                  border: "1px solid var(--line-subtle)",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: resumePageView === "page2" ? "820px" : "100%",
+                  margin: resumePageView === "page2" ? "0 auto" : "0",
+                  width: "100%",
+                }}
+              >
+                <div
+                  style={{
+                    padding: "10px 16px",
+                    background: "var(--bg-subtle)",
+                    borderBottom: "1px solid var(--line-subtle)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    fontSize: "12px",
+                    fontFamily: "var(--font-mono)",
+                    color: "var(--ink-secondary)",
+                  }}
+                >
+                  <span>PAGE 2: Technical Skills, Languages &amp; History</span>
+                  <a
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "var(--accent-terracotta)", textDecoration: "underline", fontWeight: 600 }}
+                  >
+                    Open PDF ↗
+                  </a>
+                </div>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    aspectRatio: "1 / 1.414",
+                    background: "#ffffff",
+                  }}
+                >
+                  <Image
+                    src="/resume/resume-page-2.png"
+                    alt="Muhammad Rishad Resume - Page 2 (Skills, Languages, Altisource, Shah Enterprises, Ecoparadigm)"
+                    fill
+                    sizes="(max-width: 900px) 100vw, 600px"
+                    style={{ objectFit: "contain", background: "#ffffff" }}
+                    priority
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* TAB 1: STATEMENT OF PURPOSE (SOP) */}
       {activeTab === "sop" && (
@@ -220,7 +488,7 @@ export default function InteractiveResume() {
                 </div>
                 <div style={{ display: "flex", gap: "10px" }}>
                   <a
-                    href="/resume/Muhammad_Rishad_Resume.pdf"
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-pill btn-pill-primary"
@@ -785,7 +1053,7 @@ export default function InteractiveResume() {
           </span>
         </div>
         <a
-          href="/resume/Muhammad_Rishad_Resume.pdf"
+          href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-pill btn-pill-primary resume-download-btn"

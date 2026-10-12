@@ -7,7 +7,7 @@ import Image from "next/image";
 export const metadata = {
   title: "My Story, SOP & Resume — Muhammad Rishad",
   description:
-    "Learn about Muhammad Rishad's Statement of Purpose (SOP), journey from civil engineering to retail design across The Bear House, Sureena Chowdhri, VOX, Nobero, BLR T2, and his registered German Utility Model (DPMA).",
+    "Learn about Muhammad Rishad's Statement of Purpose (SOP), journey from civil engineering to retail design across Aditya Birla Group, The Bear House, Sureena Chowdhri, VOX, Sleepwell, Furlenco, BLR T2, and his registered German Utility Model (DPMA).",
 };
 
 export default function About() {
@@ -151,7 +151,7 @@ export default function About() {
                   </p>
 
                   <p>
-                    Today, at <strong>Do More Design Studio</strong>, I bring that engineering certainty directly into <strong>Retail Space Planning &amp; Interior Design</strong>. I design store concepts, customer circulation routes, custom fixtures, and technical drawing packages for major brands including <strong>The Bear House</strong>, <strong>Sureena Chowdhri</strong>, <strong>VOX</strong>, <strong>Nobero</strong>, and <strong>Aditya Birla Group</strong>.
+                    Today, at <strong>DO MORE DESIGN PVT LTD</strong>, I bring that engineering certainty directly into <strong>Retail Space Planning &amp; Interior Design</strong>. I design store concepts, customer circulation routes, custom fixtures, and technical drawing packages for marquee brands including <strong>Aditya Birla Group brands</strong>, <strong>VOX</strong>, <strong>Sureena Chowdhri</strong>, <strong>The Bear House</strong>, <strong>Sleepwell</strong>, and <strong>Furlenco</strong> across 40+ stores.
                   </p>
 
                   <p>
@@ -220,7 +220,7 @@ export default function About() {
 
                 <div style={{ marginTop: "24px" }}>
                   <a
-                    href="/resume/Muhammad_Rishad_Resume.pdf"
+                    href="/resume/Muhammad_Rishad_Resume.pdf?v=20261012"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-pill btn-pill-primary"

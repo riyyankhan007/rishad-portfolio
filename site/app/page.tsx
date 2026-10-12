@@ -478,7 +478,7 @@ export default function Home() {
               <span className="section-eyebrow">VERIFIED CREDENTIALS</span>
               <h2 className="section-title">My Journey, Experience &amp; Resume</h2>
               <p className="section-lead">
-                &ldquo;Explore my Statement of Purpose (SOP), project leadership across Do More Design Studio, commercial airport fit-out execution at BLR T2, civil engineering degree, and registered German Utility Model (DPMA).&rdquo;
+                &ldquo;Official curriculum vitae and portfolio for Muhammad Rishad &mdash; Civil Engineer &amp; Retail Designer at DO MORE DESIGN PVT LTD. Review verified experience across 40+ stores, airport fit-outs at BLR T2, German Utility Model (DPMA), and CSIR First Prize award.&rdquo;
               </p>
             </div>
 
